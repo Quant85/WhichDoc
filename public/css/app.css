@@ -10155,13 +10155,17 @@ body {
 #ciao .main_white .show-content .right-show .container_top .container_dati {
   width: 50%;
 }
+#ciao .main_white .show-content .right-show .container_top .container_dati .disabilita_show {
+  padding: 10px 0;
+}
 #ciao .main_white .show-content .right-show .container_top .container_img {
   width: 50%;
   height: 100%;
   justify-content: flex-end;
 }
 #ciao .main_white .show-content .right-show .container_top img {
-  width: 150px;
+  height: 80%;
+  width: auto;
 }
 #ciao .main_white .show-content .right-show .container_bottom {
   width: 100%;
