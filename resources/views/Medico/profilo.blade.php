@@ -1,7 +1,11 @@
 @extends('layouts.dashboard')
 
 @section('content')
-  @if ($errors->any())
+
+<div class="container main_white align-items-start card d-flex flex-row">
+  @include('_partials.left-side-bar')
+
+@if ($errors->any())
     <div class="alert alert-danger">
       <ul>
         @foreach ($errors->all() as $error)
@@ -11,7 +15,9 @@
     </div>
     <br/>
   @endif
+  <div class="edit-right-content">
   <form action="{{route('medico.profilo.update',$medico->id)}}" method="post" enctype="multipart/form-data">
+    
     @method('PATCH') 
     @csrf
     <div class="container rounded bg-white mt-5 mb-5">
@@ -174,4 +180,6 @@
       </div>
     </div>
   </form>
+</div>
+</div>
 @endsection
