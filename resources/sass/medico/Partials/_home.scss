@@ -1,0 +1,17 @@
+// Variabili
+$height_navbar: 60px;
+body{background-color: $teal;}
+#ciao {
+    height: 100vh;
+
+    .main_white {
+        padding-top: 50px;
+        padding-left: 50px;
+        width: 90vw;
+        min-height: 90%;
+        //File di left-side-bar layout
+        @import 'left-side-bar';
+        //File di central-bar layout
+        @import 'central-side-bar';
+    }
+}

@@ -1,28 +1,17 @@
 @extends('layouts.dashboard')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+@section('content')            
+    <div id="ciao" class="d-flex justify-content-center align-items-center">        
+        <!-- container bianco -->
+        <div class="main_white card d-flex flex-row">
+            
+            @include('_partials.left-side-bar')
+            
+            @include('_partials.central-side-bar')
+            
+            
+            
         </div>
+        <!-- /container bianco -->      
     </div>
-    <div class="dashboard-id">
-        <h1>Questa è la dashboard del Dott.      
-            {{$profilo->nome}}</h1>
-            <a href="{{route('medico.profilo.index')}}"> Profilo</a>
-        </div>
-</div>
 @endsection
