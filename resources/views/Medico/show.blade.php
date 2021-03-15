@@ -24,8 +24,8 @@
                             <strong>Non accetto disabilità</strong>
                         }
                         @endif
-                        {{$medico->profile->cv}}
-
+                        {{-- {{$medico->profile->cv}}
+ --}}
 
 
 
