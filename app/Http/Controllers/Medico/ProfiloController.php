@@ -22,7 +22,6 @@ class ProfiloController extends Controller
     {
         $medici = User::all();
         $medico = Auth::user();
-        dd($medici);
         return view('Medico.profilo', compact('medici','medico'));
         
     }
@@ -87,7 +86,7 @@ class ProfiloController extends Controller
     public function show($id, User $user)
     {
         $medico = Auth::user();
-        return view('medico.show',compact('user', 'medico'));
+        return view('Medico.show',compact('user', 'medico'));
 
     }
 
@@ -122,7 +121,7 @@ class ProfiloController extends Controller
             'user_id' => 'user_id',
             'genere' => 'required',
             'bio' => 'nullable',
-            'cv' => 'nullable | ',
+            'cv' => 'nullable | mimes:pdf,xlx,csv|max:2048',
             'foto' => 'nullable | image|mimes:jpeg,jpg,png,gif|max:10000',
             'cellulare' => 'required',
             'città' => 'required',
