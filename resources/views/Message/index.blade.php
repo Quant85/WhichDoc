@@ -6,7 +6,7 @@
                 <th scope="col">Mittente</th>
                 <th scope="col">Testo Messaggio</th>
                 <th scope="col">Email Mittente</th>
-                <th scope="col">Cellulare Mittente</th>
+                <th scope="col">Telefono Mittente</th>
             </tr>
         </thead>
         @foreach ($messages as $message)
