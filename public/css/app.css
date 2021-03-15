@@ -10142,15 +10142,27 @@ body {
 #ciao .main_white .show-content {
   height: 500px;
   width: 100%;
-  background-color: green;
 }
 #ciao .main_white .show-content .left-show {
   width: 50%;
-  background-color: red;
 }
 #ciao .main_white .show-content .right-show {
   width: 50%;
 }
-#ciao .main_white .show-content .right-show img {
-  width: 200px;
+#ciao .main_white .show-content .right-show .container_top {
+  height: 40%;
+}
+#ciao .main_white .show-content .right-show .container_top .container_dati {
+  width: 50%;
+}
+#ciao .main_white .show-content .right-show .container_top .container_img {
+  width: 50%;
+  height: 100%;
+  justify-content: flex-end;
+}
+#ciao .main_white .show-content .right-show .container_top img {
+  width: 150px;
+}
+#ciao .main_white .show-content .right-show .container_bottom {
+  width: 100%;
 }
