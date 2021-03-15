@@ -32,7 +32,7 @@
                     
                 </div>
                 <div class="right-show">
-                <img src="{{asset('storage/' . (optional($medico->profile)->foto))}}" alt="">
+                    <img src="{{asset('storage/' . (optional($medico->profile)->foto))}}" alt="">
                 </div>
             </div>
             
