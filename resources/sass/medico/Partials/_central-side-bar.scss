@@ -3,67 +3,67 @@ nav{
     justify-content: space-between;
     
     .top{
-        background: rgba(0, 255, 255, 0.493);
+        // background: rgba(0, 255, 255, 0.493);
         padding: 0 50px 0 35px;
         border-bottom: 2px solid gray;
         height: $height_navbar;
         .top_left {
-            background: rgba(2, 150, 14, 0.63);
+            // background: rgba(2, 150, 14, 0.63);
             width: 100%;
             padding: 0 0 0 20px;
         }
 
         .top_right {
-            background: rgba(173, 129, 63, 0.411);
+            // background: rgba(173, 129, 63, 0.411);
             width: 100%;
             border-left: 2px solid gray;
-                padding: 0 0 0 20px;
+            padding: 0 0 0 20px;
         }
     }
 
     .bottom{
         margin: 0 50px 50px 0;
         padding-left: 35px;
-        background: blanchedalmond;
+        // background: blanchedalmond;
         height: 100%;
     
         .bottom_left{
-            background: rgba(2, 150, 14, 0.63);
+            // background: rgba(2, 150, 14, 0.63);
             width: 100%;
             padding: 0 20px 0 0;
 
             .bottom_left_header{
-                background: rgba(0, 255, 179, 0.671);
+                // background: rgba(0, 255, 179, 0.671);
                 width: 100%;
                 height: calc(80%/3);
             }
 
             .bottom_left_main{
-                background: rgba(90, 2, 2, 0.808);
+                // background: rgba(90, 2, 2, 0.808);
                 width: 100%;
                 height: calc(80%/3);
             }
 
             .bottom_left_footer{
-                background: rgba(4, 65, 100, 0.671);
+                // background: rgba(4, 65, 100, 0.671);
                 width: 100%;
                 height: calc(80%/3);
             }
         }
         .bottom_right{
-            background: rgba(173, 129, 63, 0.411);
+            // background: rgba(173, 129, 63, 0.411);
             width: 100%;
             border-left: 2px solid gray;
-                padding: 25px 0 0 20px;
+            padding: 25px 0 0 20px;
 
             .bottom_right_top {
-                background: rgba(0, 255, 179, 0.671);
+                // background: rgba(0, 255, 179, 0.671);
                 width: 100%;
                 height: 50%;
                 // margin: 20px;
             }
             .bottom_right_bottom {
-                background: rgba(4, 65, 100, 0.671);
+                // background: rgba(4, 65, 100, 0.671);
                 width: 100%;
                 height: 50%;
                 // margin: 20px;

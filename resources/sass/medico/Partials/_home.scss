@@ -5,13 +5,29 @@ body{background-color: $teal;}
     height: 100vh;
 
     .main_white {
-        padding-top: 50px;
-        padding-left: 50px;
         width: 90vw;
         min-height: 90%;
+        border-radius: 5rem;
         //File di left-side-bar layout
         @import 'left-side-bar';
         //File di central-bar layout
         @import 'central-side-bar';
+        
+        .login_form{
+            width: 100%;
+            padding: 100px;
+            padding-bottom: 50px;
+            padding-right: 50px;
+            .login_precard{
+                border: 1px solid black;
+                padding: 2px;
+            }
+            .bottom_left{
+                padding: 50px;
+                // padding-left: 50px;
+                border: 1px solid red;
+
+            }
+        }
     }
 }

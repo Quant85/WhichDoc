@@ -9,8 +9,6 @@
             
             @include('_partials.central-side-bar')
             
-            
-            
         </div>
         <!-- /container bianco -->      
     </div>
