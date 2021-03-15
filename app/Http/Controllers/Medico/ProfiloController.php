@@ -22,6 +22,7 @@ class ProfiloController extends Controller
     {
         $medici = User::all();
         $medico = Auth::user();
+        dd($medici);
         return view('Medico.profilo', compact('medici','medico'));
         
     }

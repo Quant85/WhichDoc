@@ -24,4 +24,7 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
 
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('profilo', 'ProfiloController');
+    
 });
+
+Route::resource('message', 'Medico\MessageController');

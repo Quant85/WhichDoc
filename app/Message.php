@@ -12,7 +12,7 @@ class Message extends Model
         return $this->belongsTo('App\User');
     }
     protected $fillable = [
-        'nome_utente',
+        'nome_paziente',
         'testo_messaggio',
         'email',
         'cellulare',
