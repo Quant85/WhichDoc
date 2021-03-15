@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
+/* MIDDLEWARE PER LA VISUALE DEI PANNELLI DEL DOTTORE */
 Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.')->group(function(){
 
     Route::get('/home', 'HomeController@index')->name('home');
@@ -27,4 +27,5 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     
 });
 
+/* RESOURCE PER LA ROUTE DEI MESSAGGI */
 Route::resource('message', 'Medico\MessageController');
