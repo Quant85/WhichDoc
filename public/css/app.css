@@ -10139,3 +10139,18 @@ body {
   width: 100%;
   height: 50%;
 }
+#ciao .main_white .show-content {
+  height: 500px;
+  width: 100%;
+  background-color: green;
+}
+#ciao .main_white .show-content .left-show {
+  width: 50%;
+  background-color: red;
+}
+#ciao .main_white .show-content .right-show {
+  width: 50%;
+}
+#ciao .main_white .show-content .right-show img {
+  width: 200px;
+}

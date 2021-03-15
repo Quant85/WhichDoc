@@ -1,0 +1,15 @@
+.show-content{
+    height: 500px;
+    width: 100%;
+    background-color: green;
+    .left-show{
+        width: 50%;
+        background-color: red;
+    }
+    .right-show{
+        width: 50%;
+        img{
+            width: 200px;
+        }
+    }
+}

@@ -86,7 +86,8 @@ class ProfiloController extends Controller
      */
     public function show($id, User $user)
     {
-        return view('medico.show',compact('user'));
+        $medico = Auth::user();
+        return view('medico.show',compact('user', 'medico'));
 
     }
 
