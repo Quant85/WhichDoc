@@ -147,17 +147,15 @@
             <div class="col-md-6">
               <h4>Disability Friendly</h4>
               <label for="disabilità" class="labels" style="font-size: 1.25rem"><i class="far fa-grin-squint"></i> On</label>
-              <input type="radio" class="form-control" value="1" name="disabilità" {{optional($medico->profile)->disabilità == '1' ? 'checked' : ''}} style="height: 25px;">
+              <input type="radio" class="form-control" value="1" name="disabilità" {{optional($medico->prestazione)->disabilità == '1' ? 'checked' : ''}} style="height: 25px;">
 
               <label for="disabilità" class="labels" style="font-size: 1.25rem"><i class="far fa-dizzy"></i> Off </label>
-              <input type="radio" id="off" class="form-control" value="0" name="disabilità" {{optional($medico->profile)->disabilità == '0' ? 'checked' : ''}} style="height: 25px;">
+              <input type="radio" id="off" class="form-control" value="0" name="disabilità" {{optional($medico->prestazione)->disabilità == '0' ? 'checked' : ''}} style="height: 25px;">
             </div>
             @error('disabilità')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror       
-            
-          </div>
-        </div>
+          
       
 
       </div>

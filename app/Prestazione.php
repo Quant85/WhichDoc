@@ -11,6 +11,7 @@ class Prestazione extends Model
         return $this->belongsTo('App\User');
     }
     protected $fillable = [
+        'user_id',
         'nome',
         'tipo',
         'prezzo',
