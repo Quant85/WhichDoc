@@ -2,7 +2,9 @@
     <div class="sidebar_top">
         <div class="logo">
             <!-- logo -->
-            <a class="navbar-brand" href="{{ url('/') }}">LOGO</a>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="{{asset('img/WhichDoc-logo.png')}}" alt="">
+            </a>
         </div>
     </div>
 

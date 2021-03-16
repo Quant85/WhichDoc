@@ -1,19 +1,22 @@
+
 .left_side {
      width: 20%;
      border-right: 1px solid gray;
 
      .sidebar_top {
-         padding-bottom: 18px;
-         .logo {
+        padding-left: 50px;
+        padding-bottom: 18px;
+        .logo {
             height: $height_navbar;
-         }
-     }
+           .navbar-brand{img{width: 240px;}}
+        }
+    }
 
      .sidebar_bottom {
-         height: 100%;
-         padding: 10px;
-         justify-content: space-between;
-         flex-direction: column;
-         // .sidebar_foot{ }
+        height: 100%;
+        padding: 20px 0 0 50px;
+        justify-content: space-between;
+        flex-direction: column;
+        // .sidebar_foot{ }
      }
 }
