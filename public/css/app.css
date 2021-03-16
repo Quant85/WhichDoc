@@ -10003,75 +10003,34 @@ h3 {
   }
 }
 body {
-  background: #632778;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border-color: #BA68C8;
-}
-
-.profile-button {
-  background: #632778;
-  box-shadow: none;
-  border: none;
-}
-
-.profile-button:hover {
-  background: #682773;
-}
-
-.profile-button:focus {
-  background: #682773;
-  box-shadow: none;
-}
-
-.profile-button:active {
-  background: #682773;
-  box-shadow: none;
-}
-
-.back:hover {
-  color: #682773;
-  cursor: pointer;
-}
-
-.labels {
-  font-size: 11px;
-}
-
-.add-experience:hover {
-  background: #BA68C8;
-  color: #fff;
-  cursor: pointer;
-  border: solid 1px #BA68C8;
-}
-
-body {
   background-color: #4dc0b5;
 }
 
 #ciao {
-  height: 100vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 #ciao .main_white {
+  min-height: 90vh;
   width: 90vw;
-  min-height: 90%;
-  border-radius: 5rem;
 }
 #ciao .main_white .left_side {
   width: 20%;
   border-right: 1px solid gray;
 }
 #ciao .main_white .left_side .sidebar_top {
+  padding-left: 50px;
   padding-bottom: 18px;
 }
 #ciao .main_white .left_side .sidebar_top .logo {
   height: 60px;
 }
+#ciao .main_white .left_side .sidebar_top .logo .navbar-brand img {
+  width: 240px;
+}
 #ciao .main_white .left_side .sidebar_bottom {
   height: 100%;
-  padding: 10px;
+  padding: 20px 0 0 50px;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -10100,7 +10059,7 @@ body {
 }
 #ciao .main_white nav .bottom .bottom_left {
   width: 100%;
-  padding: 0 20px 0 0;
+  padding: 40px 20px 0 0;
 }
 #ciao .main_white nav .bottom .bottom_left .bottom_left_header {
   width: 100%;
@@ -10125,19 +10084,4 @@ body {
 }
 #ciao .main_white nav .bottom .bottom_right .bottom_right_bottom {
   width: 100%;
-  height: 50%;
-}
-#ciao .main_white .login_form {
-  width: 100%;
-  padding: 100px;
-  padding-bottom: 50px;
-  padding-right: 50px;
-}
-#ciao .main_white .login_form .login_precard {
-  border: 1px solid black;
-  padding: 2px;
-}
-#ciao .main_white .login_form .bottom_left {
-  padding: 50px;
-  border: 1px solid red;
 }
