@@ -192,9 +192,11 @@
             </div>
           </div>
         </form>
-        </div>    
+          
       </div>
-    </nav>      
+      <a name="" id="" class="btn btn-primary" href="{{route('medico.prestazione.create')}}" role="button">Nuova Prestazione</a>     
+    </div>
+  </nav>      
     <!-- /container bianco -->      
   </div>
 @endsection
