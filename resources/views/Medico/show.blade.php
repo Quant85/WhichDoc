@@ -7,30 +7,29 @@
             @include('_partials.left-side-bar')
             <div class="show-content d-flex">
                 <div class="left-show">
-  
                     
                 </div>
                     <div class="right-show">
                         <div class="container_top d-flex">
                             <div class="container_dati">
                                 <h3>@if(optional($medico->profile)->genere === 'maschio')
-                                    Dottor {{$medico->nome}} {{$medico->cognome}}
+                                    Dottor {{$medico->cognome}} {{$medico->nome}}
                                         
                                     @else
-                                    Dottoressa {{$medico->nome}} {{$medico->cognome}} 
+                                    Dottoressa {{$medico->cognome}} {{$medico->nome}}
                                         
                                     @endif
                                 </h3>
                                 <div><strong>CITT&Agrave;: </strong>{{optional($medico->profile)->città}}</div>
                                 <div><strong>INDIRIZZO: </strong>{{$medico->indirizzo}}</div>
                                 <div><strong>EMAIL: </strong>{{$medico->email}}</div>
-                                <div><strong>NUMERO TELEFONO: </strong>{{optional($medico->profile)->cellulare}}</div>
+                                <div><strong>CONTATTO TELEDONICO: </strong>{{optional($medico->profile)->cellulare}}</div>
                                 <div><strong>P.IVA: </strong>{{optional($medico->profile)->piva}}</div>
                                 <div class="disabilita_show">
                                     @if(optional($medico->profile)->disabilità == true)
-                                    <strong>Accetto disabilità</strong>
+                                    <strong>Disability Friendly On <i class="far fa-grin-squint"></i></strong>
                                     @else{
-                                        <strong>Non accetto disabilità</strong>
+                                        <strong>Disability Friendly Off <i class="far fa-dizzy"></i></strong>
                                     }
                                     @endif
                                 </div>
@@ -41,7 +40,7 @@
                             </div>
                         </div>
                         <div class="container_bottom">
-                            <div><strong>BIOGRAFIA: </strong>{{optional($medico->profile)->bio}}</div>                        
+                            <div><strong>BIOGRAFIA: </strong>{!!optional($medico->profile)->bio!!}</div>                        
                         </div>
                         
                 </div>

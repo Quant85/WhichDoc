@@ -20,9 +20,6 @@ class CreateSponsorsTable extends Migration
             $table->text('descrizione');
             $table->string('data', '30');
             $table->integer('durata');
-
-
-
             $table->timestamps();
         });
     }
