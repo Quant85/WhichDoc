@@ -190,10 +190,11 @@
               <div class="col-md-12">
                 @if (count($specializzazioni)>0)
                     <select class="form-control" name="specializzazione[]" id="specializzazine" multiple>
-                    <option value="null" disabled></option>
-                    @foreach ($specializzazioni as $specializzazione)
-                        <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
-                    @endforeach
+                      <optgroup label="Area Medica">
+                        @foreach ($specializzazioni as $specializzazione)
+                            <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                        @endforeach
+                      </optgroup>
                     </select>
                 @endif
 
