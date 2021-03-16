@@ -54,7 +54,17 @@
                             <label for="specializzazione" class="col-md-4 col-form-label text-md-right">{{ __('Specializzazione') }}</label>
 
                             <div class="col-md-6">
-                                <input id="specializzazione" type="text" class="form-control @error('specializzazione') is-invalid @enderror" name="specializzazione" value="{{ old('specializzazione') }}" required autocomplete="specializzazione" autofocus>
+                                {{-- Da sostituire con un input search --}}
+                                
+                                @if (count($specializzazioni)>0)
+                                    <select class=" selectpicker form-control @error('specializzazione') is-invalid @enderror" name="specializzazione[]" id="specializzazine" multiple>
+                                    <optgroup label="Area Medica">
+                                        @foreach ($specializzazioni as $specializzazione)
+                                            <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                                        @endforeach
+                                        </select>
+                                    </optgroup>
+                                @endif
 
                                 @error('specializzazione')
                                     <span class="invalid-feedback" role="alert">

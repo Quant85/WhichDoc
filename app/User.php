@@ -26,11 +26,11 @@ class User extends Authenticatable
     }
     public function Specializzaziones()
     {
-        return $this->belongsToMany('App\Specializzazione');
+        return $this->belongsToMany('App\Specializzazione')->withTimestamps();
     }
     public function Sponsors()
     {
-        return $this->belongsToMany('App\Sponsor');
+        return $this->belongsToMany('App\Sponsor')->withTimestamps();
     }
     use Notifiable;
 
@@ -40,7 +40,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nome', 'cognome', 'email', 'password', 'indirizzo', 'specializzazione'
+        'nome', 'cognome', 'email', 'password', 'indirizzo'
     ];
 
     /**

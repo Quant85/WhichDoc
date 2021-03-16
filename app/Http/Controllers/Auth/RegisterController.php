@@ -2,6 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
+/* add */
+
+use Illiminate\Http\Request;
+use Illuminate\Auth\Events\Registered;
+use App\Specializzazione;
+
+/* End add */
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -41,6 +49,12 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        $specializzazioni = Specializzazione::all();
+        return view('auth.register', compact('specializzazioni'));
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -55,7 +69,6 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'indirizzo' => ['required', 'string', 'min:5'],
-            'specializzazione' => ['required', 'string', 'min:5']
             ]);
     }
 
@@ -67,14 +80,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $users = User::create([
         
             'nome' => $data['nome'],
             'cognome' => $data['cognome'],
             'email' => $data['email'],
             'indirizzo' => $data['indirizzo'],
-            'specializzazione' => $data['specializzazione'],
             'password' => Hash::make($data['password']),
         ]);
+
+        $users->Specializzaziones()->sync($data['specializzazione']);
+        return $users;
     }
 }

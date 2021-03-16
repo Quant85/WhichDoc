@@ -20,15 +20,10 @@ class CreateMessagesTable extends Migration
             $table->string('nome_paziente', '80')->nullable();
             $table->text('testo_messaggio');
             $table->text('email');
-            //non sono riuscito a settare unique la mail, mi dava questo errore: Syntax error or access violation: 1170 BLOB/TEXT column 'email' used in key specification without a key length.
         
             $table->string('cellulare', '20')->nullable();
             $table->boolean('disabilità');
             //da verificare se usare boolean o altro
-
-
-
-            
             $table->timestamps();
         });
     }

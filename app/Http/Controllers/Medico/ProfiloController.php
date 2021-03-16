@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Medico;
 use App\User;
 use App\Profile;
+use App\Specializzazione;
 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -21,8 +22,9 @@ class ProfiloController extends Controller
     public function index()
     {
         $medici = User::all();
+        $specializzazioni = Specializzazione::all();
         $medico = Auth::user();
-        return view('Medico.profilo', compact('medici','medico'));
+        return view('Medico.profilo', compact('medici','medico','specializzazioni'));
         
     }
 
@@ -33,8 +35,8 @@ class ProfiloController extends Controller
      */
     public function create()
     {
-        $medico = Auth::user();
-        return view('Medico.createProfile', compact('medico'));
+        /* $medico = Auth::user();
+        return view('Medico.createProfile', compact('medico')); */
     }
 
     /**
@@ -45,35 +47,7 @@ class ProfiloController extends Controller
      */
     public function store(Request $request, Auth $medico)
     {
-        //dd($request);
-        /* $request['slug'] = Str::slug($medico->nome.$medico->cognome);
-        dd($request['slug']); */
-       /*  $dati_validati = $request->validate([
-            'user_id' => 'user_id',
-            'genere' => 'required',
-            'bio' => 'nullable',
-            'cv' => 'nullable | mimes:pdf|max:10000',
-            'foto' => 'required | mimes:jpeg,jpg,png,gif | max:500',
-            'cellulare' => 'required',
-            'città' => 'required',
-            'piva' => 'required',
-            'disabilità' => 'required',
-            'slug' => 'required'
-        ]); */
-
-        /* if ($request->foto) {
-            $foto = Storage::put('foto_profilo', $request->foto);
-            $validateDate['foto'] = $foto;
-        }
-        if ($request->cv) {
-            $cv = Storage::put('cv_profilo', $request->cv);
-            $validateDate['cv'] = $cv;
-        }
-
-        $medico =Auth::user()->id;
-        $dati_validati['user_id'] = $medico;
-        $newProfile=Profile::updateOrCreate(['user_id' => $medico],[$dati_validati]); */
-    
+        
         return redirect('medico/profilo')->with('success', 'Profile saved!');
     }
 
@@ -100,9 +74,9 @@ class ProfiloController extends Controller
     {
         //
         /* $profilo = Profile::find($id); */ //si raggiunge lo stesso obbiettivo ma si preferisce passare per la relazione tra utente autenticato e profilo associato 1 to 1
-        $medico = Auth::user();
+        //$medico = Auth::user();
         //dd($medico,$medico->profile,$id/* ,$profilo */);
-        return view('Medico.editProfile', compact('profile'));
+        //return view('Medico.editProfile', compact('profile'));
     }
 
     /**
@@ -115,9 +89,8 @@ class ProfiloController extends Controller
     public function update(Request $request)
     {
         //
-        /* $request['slug'] = Str::slug($medico->nome.$medico->cognome);
-        dd($request['slug']); */
-        $dati_validati = $request->validate([
+
+        $request->validate([
             'user_id' => 'user_id',
             'genere' => 'required',
             'bio' => 'nullable',
@@ -126,14 +99,10 @@ class ProfiloController extends Controller
             'cellulare' => 'required',
             'città' => 'required',
             'piva' => 'required',
-            'disabilità' => 'nullable',
-            /* 'slug' => 'required' */
+            'disabilità' => 'required',
         ]);
-           // dd($dati_validati);
+
         $medico =Auth::user();
-        /* $dati_validati['user_id'] = $medico->id; */
-        
-            //dd($request->foto);
 
             /* Gestione eventuali casistiche in fase di caricamento iniziale per l'immagine profilo*/
         if ($request->foto != null) {
@@ -193,7 +162,7 @@ class ProfiloController extends Controller
             'disabilità' => $request->get('disabilità'),
         ]);
 
-        User::updateOrCreate([
+        $users = User::updateOrCreate([
             'id' => Auth::user()->id
         ],
         [
@@ -202,9 +171,9 @@ class ProfiloController extends Controller
             'email' => $request->get('email'),
             'indirizzo' => $request->get('indirizzo'),
         ]);
-        //dd($newProfile->foto);
-        /* successivamente reindirizzereremo alla pagina di view del profilo del medico - show - al qualle implementeremo lo slug */
-        return redirect('medico/home')->with('success', 'Profile saved!');
+
+        $users->Specializzaziones()->sync($request->specializzazione);
+        return redirect('medico/profilo/show')->with('success', 'Profile saved!');
     }
 
     /**

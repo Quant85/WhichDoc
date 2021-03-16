@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container main_white align-items-start card d-flex flex-row">
+<div class="container main_white align-items-start card d-flex flex-row mt-5">
   @include('_partials.left-side-bar')
 
 @if ($errors->any())
@@ -42,6 +42,18 @@
             </div>
             @error('foto')
               <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+
+            <div class="form-group">
+              <label for="cv"><i class="fas fa-file-pdf"style="font-size: 40px; color: blue; margin-top: 20px; cursor: pointer;" title="Carica il tuo cv"></i></label>
+              <input type="file" class="form-control-file" name="cv" id="cv" placeholder="cerca" accept="{{-- image/*, --}}.pdf" aria-describedby="cvHelper" style="
+                opacity: 0;
+                position: absolute;
+                z-index: -1;">
+              <small id="cvHelper" class="form-text text-muted">Carica il tuo cv.pdf/img</small>
+            </div>
+            @error('cv')
+            <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
           </div>
@@ -114,37 +126,39 @@
             @enderror
           </div>
           <div class="row mt-2">
-            <div class="col-md-3">
+            <div class="col-md-4">
               <h4>Genere</h4>
-              <label for="genere" class="labels"><i class="fas fa-male"></i> Uomo</label>
-              <input type="radio" class="form-control" value="maschio" name="genere" {{optional($medico->profile)->genere === 'maschio' ? 'checked' : ''}}>
+              <label for="genere" class="labels" style="font-size: 1.25rem"><i class="fas fa-male"></i> Uomo</label>
+              <input type="radio" class="form-control" value="maschio" name="genere" {{optional($medico->profile)->genere === 'maschio' ? 'checked' : ''}} style="height: 25px;">
 
-              <label for="genere" class="labels"><i class="fas fa-female"></i> Donna </label>
-              <input type="radio" id="donna" class="form-control" value="femmina" name="genere" {{optional($medico->profile)->genere === 'femmina' ? 'checked' : ''}}>
+              <label for="genere" class="labels" style="font-size: 1.25rem"><i class="fas fa-female"></i> Donna </label>
+              <input type="radio" id="donna" class="form-control" value="femmina" name="genere" {{optional($medico->profile)->genere === 'femmina' ? 'checked' : ''}} style="height: 25px;">
             </div>
             @error('genere')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
 
-            <div class="form-group col-2">
-                <label for="disabilità">Attenzione alle disabilità:</label>
-                <input type="checkbox" name="disabilità" class="switch-input" value="1" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/>
+            {{-- <div class="custom-control custom-switch">
+              <h4>Disability Friendly</h4>
+              <input id="disabilità" type="checkbox" name="disabilità" class="custom-control-input" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/>
+              <label class="custom-control-label" for="disabilità">Disability Friendl</label>
             </div>
             @error('disabilità')
               <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-            
-            <div class="form-group">
-              <label for="cv"><i class="fas fa-file-pdf"style="font-size: 40px; color: blue; margin-top: 20px; cursor: pointer;" title="Carica il tuo cv"></i></label>
-              <input type="file" class="form-control-file" name="cv" id="cv" placeholder="cerca" accept="{{-- image/*, --}}.pdf" aria-describedby="cvHelper" style="
-                opacity: 0;
-                position: absolute;
-                z-index: -1;">
-              <small id="cvHelper" class="form-text text-muted">Carica il tuo cv.pdf/img</small>
+            @enderror --}}
+
+            <div class="col-md-6">
+              <h4>Disability Friendly</h4>
+              <label for="disabilità" class="labels" style="font-size: 1.25rem"><i class="far fa-grin-squint"></i> On</label>
+              <input type="radio" class="form-control" value="1" name="disabilità" {{optional($medico->profile)->disabilità == '1' ? 'checked' : ''}} style="height: 25px;">
+
+              <label for="disabilità" class="labels" style="font-size: 1.25rem"><i class="far fa-dizzy"></i> Off </label>
+              <input type="radio" id="off" class="form-control" value="0" name="disabilità" {{optional($medico->profile)->disabilità == '0' ? 'checked' : ''}} style="height: 25px;">
             </div>
-            @error('cv')
+            @error('disabilità')
             <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+            @enderror       
+            
           </div>
         </div>
       
@@ -171,6 +185,26 @@
                   <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
               </div> --}}
+              <div class="form-group row">
+              <label for="specializzazione" class="col-md-8 col-form-label text-md-right">{{ __('Specializzazione') }}</label>
+              <div class="col-md-12">
+                @if (count($specializzazioni)>0)
+                    <select class="form-control" name="specializzazione[]" id="specializzazine" multiple>
+                    <option value="null" disabled></option>
+                    @foreach ($specializzazioni as $specializzazione)
+                        <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                    @endforeach
+                    </select>
+                @endif
+
+
+                @error('specializzazione')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+              </div>
+          </div>
             </div>
           </div>
           <div class="col-md-12 d-flex justify-content-center align-items-center p-3">
