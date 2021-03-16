@@ -58,12 +58,12 @@
                                 
                                 @if (count($specializzazioni)>0)
                                     <select class=" selectpicker form-control @error('specializzazione') is-invalid @enderror" name="specializzazione[]" id="specializzazine" multiple>
-                                    <optgroup label="Area Medica">
-                                        @foreach ($specializzazioni as $specializzazione)
-                                            <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
-                                        @endforeach
-                                        </select>
-                                    </optgroup>
+                                        <optgroup label="Area Medica">
+                                            @foreach ($specializzazioni as $specializzazione)
+                                                <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                                            @endforeach
+                                        </optgroup>
+                                    </select>
                                 @endif
 
                                 @error('specializzazione')
