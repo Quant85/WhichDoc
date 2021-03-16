@@ -25,13 +25,9 @@
         <div class="col-md-3 border-right">
           <div class="d-flex flex-column align-items-center text-center p-3 py-5">
 
-            @if (optional($medico->profile)->foto)
-              <img src="{{asset( 'storage/'.$medico->profile->foto)}}" alt="foto profilo"
-              style="width: 150px; border-radius:10px">              
-            @else
-              <img class="rounded-circle mt-5" src={{asset('img/default/dottori.jpg')}} style="width: 150px; border-radius:10px">
-            @endif
+            <img src="{{optional($medico->profile)->foto ? asset( 'storage/'.$medico->profile->foto) : asset('img/default/dottori.jpg') }}" alt="foto profilo"style="width: 350px; border-radius:10px">  
             <div class="form-group">
+              
               <label for="foto"><i class="far fa-images"style="font-size: 40px; color: blue; margin-top: 20px; cursor: pointer;" title="Carica immagine profilo"></i></label>
               <input type="file" class="form-control-file" name="foto" id="foto" placeholder="cerca" aria-describedby="fotoHelper" 
               style="
