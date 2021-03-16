@@ -7,9 +7,13 @@
     .right-show{
         width: 50%;
         .container_top{
-            height: 40%;
+            min-height: 40%;
             .container_dati{
                 width: 50%;
+                text-transform: capitalize;
+                .email_show{
+                    text-transform: none;
+                }
                 .disabilita_show{
                     padding: 10px 0;
                 }
@@ -20,7 +24,7 @@
                 justify-content: flex-end;
             }
             img{
-                height: 80%;
+                height: 160px;
                 width: auto;
             }
         }
