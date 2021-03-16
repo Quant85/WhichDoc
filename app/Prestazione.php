@@ -6,10 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prestazione extends Model
 {
-    public function user()
-    {
-        return $this->belongsTo('App\User');
-    }
     protected $fillable = [
         'user_id',
         'nome',
@@ -18,4 +14,10 @@ class Prestazione extends Model
         'descrizione',
         'disabilità'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class,'user_id');
+    }
+    
 }

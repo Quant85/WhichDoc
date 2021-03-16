@@ -16,7 +16,8 @@ class PrestazioneController extends Controller
      */
     public function index()
     {
-        $prestaziones = Prestazione::all();
+        $prestazione = Prestazione::all()->sortBy('name');
+        return view('Medico.profilo', compact('prestazione'));
     }
 
     /**
@@ -39,6 +40,7 @@ class PrestazioneController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $validated_data = $request->validate([
             'user_id' => 'user_id',
             'nome' => 'required',
@@ -46,17 +48,14 @@ class PrestazioneController extends Controller
             'prezzo' => 'required',
             'descrizione' => 'nullable',
             'disabilità' => 'nullable',
-
         ]);
 
+        $medico =Auth::user();
+        $validated_data['user_id'] = $medico->id;
+        //dd($validated_data);
+
         Prestazione::create($validated_data);
-        $prestazione = Prestazione::all()->sortBy('name');
-        return redirect('Medico.Prestazioni.index',compact('prestazione') );
-
-
-
-
-
+        return redirect('medico/profilo')->with('success', 'Prestazione saved!');
     }
 
     /**
