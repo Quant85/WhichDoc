@@ -1,3 +1,4 @@
+
 @extends('layouts.dashboard')
 @section('content')
 <div id="ciao" class="d-flex justify-content-center align-items-center">        
@@ -22,17 +23,17 @@
                                 </h3>
                                 <div><strong>CITT&Agrave;: </strong>{{optional($medico->profile)->città}}</div>
                                 <div><strong>INDIRIZZO: </strong>{{$medico->indirizzo}}</div>
-                                <div><strong>EMAIL: </strong>{{$medico->email}}</div>
-                                <div><strong>CONTATTO TELEDONICO: </strong>{{optional($medico->profile)->cellulare}}</div>
+                                <div class="email_show"><strong>EMAIL: </strong>{{$medico->email}}</div>
+                                <div><strong>CONTATTO TELEFONICO: </strong>{{optional($medico->profile)->cellulare}}</div>
                                 <div><strong>P.IVA: </strong>{{optional($medico->profile)->piva}}</div>
                                 <div class="disabilita_show">
                                     @if(optional($medico->profile)->disabilità == true)
                                     <strong>Disability Friendly On <i class="far fa-grin-squint"></i></strong>
-                                    @else{
+                                    @else
                                         <strong>Disability Friendly Off <i class="far fa-dizzy"></i></strong>
-                                    }
                                     @endif
                                 </div>
+                                <!-- <div>{{$medico->profile->cv}}</div> -->
                                 
                             </div>
                             <div class="container_img d-flex">
