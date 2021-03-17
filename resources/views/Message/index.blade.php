@@ -9,14 +9,14 @@
                 <th scope="col">Telefono Mittente</th>
             </tr>
         </thead>
-        @foreach ($messages as $message)
+        @foreach ($medico->messages as $message)
         <tbody>
             <tr>
                 <td>{{$message->nome_paziente}}</td>
                 <td>
                     <div class="form-group">
-                      <label for=""></label>
-                      <textarea class="form-control" name="" id="" rows="3">{{$message->testo_messaggio}}</textarea>
+                        <label for=""></label>
+                        <textarea class="form-control" name="" id="" rows="3">{{$message->testo_messaggio}}</textarea>
                     </div>
                     
                 </td>
