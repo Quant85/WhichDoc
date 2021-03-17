@@ -18,10 +18,10 @@ class CreatePrestazionesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('nome', '50');
-            $table->string('tipo', '50');
+            $table->string('tipo', '50')->nullable();
             $table->float('prezzo');
-            $table->text('descrizione');
-            $table->boolean('disabilità');
+            $table->text('descrizione')->nullable();
+            $table->boolean('disabilità')->nullable();
             $table->timestamps();
         });
     }

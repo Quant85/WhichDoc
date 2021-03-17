@@ -1,4 +1,4 @@
-div
+
 <nav class="show_content d-flex flex-column">
 
     <div class="top d-flex flex-row">
@@ -12,12 +12,26 @@ div
                 {{-- Doc Nome Cognome --}}
                 <h3>
                     @if(optional($medico->profile)->genere === 'maschio')
-                        Dottor {{$medico->cognome}} {{$medico->nome}}
+                        Dott. {{$medico->cognome}} {{$medico->nome}}
                     @else
-                        Dottoressa {{$medico->cognome}} {{$medico->nome}}
+                        Dott.ssa {{$medico->cognome}} {{$medico->nome}}
                     @endif
                 </h3>
                 {{-- End Doc Nome Cognome --}}
+
+                {{-- Specializzazioni --}}
+
+                <div class="badge-specializzazioni">
+                    <small>Specializzazioni: </small>
+                    @if (count($medico->Specializzaziones) > 0 )
+                        @foreach ($medico->Specializzaziones as $specializzazione)
+                        <span class="badge badge-pill badge-light" style="font-size: 0.8rem;color: rgb(44, 44, 44); background-color: rgb(27, 171, 184);"><strong>{{$specializzazione->descrizione}}</strong></span>                      
+                        @endforeach
+                        @else
+                        N/a
+                    @endif
+                </div>
+                {{-- End Specializzazioni --}}
 
                 <div><strong>CITT&Agrave;: </strong>{{optional($medico->profile)->città}}</div>
                 <div><strong>INDIRIZZO: </strong>{{$medico->indirizzo}}</div>
@@ -27,12 +41,38 @@ div
             </div>
             <div class="bottom_left_main">
                 <div class="disabilita_show">
-                @if(optional($medico->profile)->disabilità == true)
-                <strong>Disability Friendly On <i class="far fa-grin-squint"></i></strong>
-                @else
-                    <strong>Disability Friendly Off <i class="far fa-dizzy"></i></strong>
-                @endif
-            </div>
+                    @if(optional($medico->profile)->disabilità == true)
+                        <strong>Disability Friendly On <i class="far fa-grin-squint"></i></strong>
+                    @else
+                        <strong>Disability Friendly Off <i class="far fa-dizzy"></i></strong>
+                    @endif
+                </div>
+                <div class="card text-dark bg-info mb-3" style="max-width: 36rem;">
+                    <div class="card-header"><h5 class="card-title">Prestazioni</h5></div>
+                    <div class="card-body">
+                        
+                        @if (count($medico->prestaziones) > 0 )
+                        <ul class="list-unstyled">
+                            @foreach ($medico->prestaziones as $prestazione)
+                                <li>
+                                    <span class="badge badge-pill badge-light" style="font-size: 0.8rem;color: rgb(44, 44, 44);"><strong>{{$prestazione->nome}}  <i class="fas fa-euro-sign px-2"></i > {{$prestazione->prezzo}}</strong></span>  
+                                    <span class="badge badge-pill badge-light" style="font-size: 0.8rem;color: rgb(44, 44, 44);"><strong>
+                                        @if ($prestazione->disabilità)
+                                            Disability Friendly  <i class="fas fa-thumbs-up"></i>
+                                        @endif
+                                    </strong></span> 
+                                </li>
+                            @endforeach
+                            @else
+                                N/a
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+                <div class="badge-specializzazioni">
+                    <h5>Prestazioni: </h5>
+                    
+                </div>
             </div>
             <div class="bottom_left_footer"></div>
         </div>

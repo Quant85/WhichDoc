@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Medico;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 use App\Message;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
-
-class MessageController extends Controller
+class MessaggioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,9 +19,9 @@ class MessageController extends Controller
     public function index()
     {
         //$messages = Message::all();
-        /* $medico = Auth::user();
+        $medico = Auth::user();
         Carbon::setLocale('it');
-        return view('Message.index', compact('medico')); */
+        return view('Message.index', compact('medico'));
     }
 
     /**
@@ -31,9 +31,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //Lo utiliziamo per reindirizzare alla modale/page di verifia invio messaggio con i dati ricapitolati del messaggio
-        $medico = Auth::user();
-        return view('Message.modaleMessaggio', compact('medico'));
+        //
     }
 
     /**
@@ -44,21 +42,7 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $validated_data = $request->validate([
-            'user_id' => 'user_id',
-            'nome_paziente' => 'required',
-            'testo_messaggio' => 'required',
-            'email' => 'required',
-            'cellulare' => 'nullable',
-            'disabilità' => 'nullable',
-        ]);
-        $medico =Auth::user();
-        $validated_data['user_id'] = $medico->id;
-        //dd($validated_data);
-
-        Message::create($validated_data);
-        return redirect('message/create')->with('success', 'Prestazione saved!');
+        //
     }
 
     /**
@@ -67,10 +51,12 @@ class MessageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($message)
+    public function show($id)
     {
-        $message = Message::find($message);
-        return view('Messaggio.show', compact('message'));
+        //
+        $messaggio = Message::find($id);
+        Carbon::setLocale('it');
+        return view('Message.dott.show', compact('messaggio'));
     }
 
     /**
@@ -105,5 +91,8 @@ class MessageController extends Controller
     public function destroy($id)
     {
         //
+        $messaggio = Message::find($id);
+        $messaggio->delete();
+        return redirect('medico/messaggi')->with('success', 'Post deleted!');
     }
 }
