@@ -1,0 +1,1 @@
+<h1>Messaggio Inviato con successo al Dott <span>{{$medico->nome}}</span></h1>

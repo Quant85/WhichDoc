@@ -99,7 +99,7 @@ class ProfiloController extends Controller
             'cellulare' => 'required',
             'città' => 'required',
             'piva' => 'required',
-            'disabilità' => 'required',
+            'disabilità' => 'nullable',
         ]);
 
         $medico =Auth::user();

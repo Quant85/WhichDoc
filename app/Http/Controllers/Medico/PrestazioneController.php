@@ -29,8 +29,7 @@ class PrestazioneController extends Controller
     public function create(Prestazione $prestazione)
     {
         $medico = Auth::user();
-        return view('Medico.Prestazioni.create', compact('prestazione', 'medico'));
-
+        return view('Medico.Prestazioni.create', compact('medico'));
     }
 
     /**

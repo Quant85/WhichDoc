@@ -22,7 +22,7 @@ class CreateMessagesTable extends Migration
             $table->text('email');
         
             $table->string('cellulare', '20')->nullable();
-            $table->boolean('disabilità');
+            $table->boolean('disabilità')->nullable();
             //da verificare se usare boolean o altro
             $table->timestamps();
         });

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Medico;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Message;
+use Illuminate\Support\Facades\Auth;
+
 
 class MessageController extends Controller
 {
@@ -15,8 +17,9 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
-        return view('Message.index', compact('messages'));
+        //$messages = Message::all();
+        $medico = Auth::user();
+        return view('Message.index', compact('medico'));
     }
 
     /**
@@ -27,6 +30,8 @@ class MessageController extends Controller
     public function create()
     {
         //
+        $medico = Auth::user();
+        return view('Message.modaleMessaggio', compact('medico'));
     }
 
     /**
@@ -37,14 +42,28 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        $newMessage = new Message;
+        
+        $validated_data = $request->validate([
+            'user_id' => 'user_id',
+            'nome_paziente' => 'required',
+            'testo_messaggio' => 'required',
+            'email' => 'required',
+            'cellulare' => 'nullable',
+            'disabilità' => 'nullable',
+        ]);
+        $medico =Auth::user();
+        $validated_data['user_id'] = $medico->id;
+        //dd($validated_data);
+
+        Message::create($validated_data);
+        return redirect('message/create')->with('success', 'Prestazione saved!');
+        /* $newMessage = new Message;
         $newMessage->nome_paziente = $request->nome_paziente;
         $newMessage->testo_messaggio = $request->testo_messaggio;
         $newMessage->email = $request->email;
         $newMessage->cellulare = $request->cellulare;
         $newMessage->disabilità;
-
-        $newMessage->save();
+        $newMessage->save(); */
     }
 
     /**

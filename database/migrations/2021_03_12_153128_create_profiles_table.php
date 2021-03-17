@@ -24,7 +24,7 @@ class CreateProfilesTable extends Migration
             $table->string('cellulare');
             $table->string('città');
             $table->string('piva');//ok
-            $table->boolean('disabilità');
+            $table->boolean('disabilità')->nullable();
             $table->timestamps();
         });
     }

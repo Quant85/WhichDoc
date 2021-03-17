@@ -22,6 +22,7 @@
                             <label for="nome">Nome</label>
                             <input class="form-control" type="text" name="nome" id="nome" value="{{ old('nome')}}">
                         </div>
+
                         @error('nome')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
