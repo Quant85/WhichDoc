@@ -10084,6 +10084,7 @@ body {
 #ciao .main_white nav .bottom .bottom_right .bottom_right_bottom {
   width: 100%;
 }
+<<<<<<< Updated upstream
 #ciao .main_white .show-content {
   height: 500px;
   width: 100%;
@@ -10159,4 +10160,9 @@ body {
 #ciao .main_white .form_message button:focus {
   border: 1px solid white;
   box-shadow: 1px 1px 2px white;
+=======
+#ciao .main_white .bottom_right_top > img {
+  width: 350px !important;
+  border-radius: 10px;
+>>>>>>> Stashed changes
 }
