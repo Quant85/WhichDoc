@@ -10119,3 +10119,44 @@ body {
 #ciao .main_white .show-content .right-show .container_bottom {
   width: 100%;
 }
+#ciao .main_white .form_message {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #000;
+  background: linear-gradient(270deg, white 0%, #4dc0b5 68%);
+}
+#ciao .main_white .form_message h3 {
+  text-shadow: 1px 1px 1px white;
+  font-weight: bold;
+}
+#ciao .main_white .form_message form .form_input_message input {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: none;
+}
+#ciao .main_white .form_message form .form_input_message input:focus {
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+#ciao .main_white .form_message form textarea {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+}
+#ciao .main_white .form_message form textarea:focus {
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+#ciao .main_white .form_message button {
+  background-color: black;
+  color: white;
+}
+#ciao .main_white .form_message button:focus {
+  border: 1px solid white;
+  box-shadow: 1px 1px 2px white;
+}
