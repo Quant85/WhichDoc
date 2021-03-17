@@ -7,7 +7,7 @@ body{background-color: $teal;}
     margin-bottom: 100px;
     .main_white {
         min-height: 90vh;
-        //width: 90vw;
+        width: 90vw;
         // min-height: 90%;
         // border-radius: 5rem;
         //File di left-side-bar layout
@@ -16,6 +16,5 @@ body{background-color: $teal;}
         @import 'central-side-bar';
         //File di show-content layouts
         @import 'show-content';
-
     }
 }
