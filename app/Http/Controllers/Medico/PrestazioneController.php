@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Medico;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Prestazione;
+use Illuminate\Support\Facades\Auth;
 
 class PrestazioneController extends Controller
 {
@@ -15,8 +16,9 @@ class PrestazioneController extends Controller
      */
     public function index()
     {
-        $prestaziones = Prestazione::all();
-        //return view('article.index', compact('articles'));
+        $medico = Auth::user();
+        /* $prestazioni = Prestazione::all()->sortBy('name'); */
+        return view('Medico.Prestazioni.index', compact('medico'));
     }
 
     /**
@@ -24,9 +26,11 @@ class PrestazioneController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Prestazione $prestazione)
     {
-        //
+        $medico = Auth::user();
+        return view('Medico.Prestazioni.create', compact('prestazione', 'medico'));
+
     }
 
     /**
@@ -37,7 +41,22 @@ class PrestazioneController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $validated_data = $request->validate([
+            'user_id' => 'user_id',
+            'nome' => 'required',
+            'tipo' => 'required',
+            'prezzo' => 'required',
+            'descrizione' => 'nullable',
+            'disabilità' => 'nullable',
+        ]);
+
+        $medico =Auth::user();
+        $validated_data['user_id'] = $medico->id;
+        //dd($validated_data);
+
+        Prestazione::create($validated_data);
+        return redirect('medico/profilo')->with('success', 'Prestazione saved!');
     }
 
     /**
@@ -59,7 +78,8 @@ class PrestazioneController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prestazione = Prestazione::find($id);
+        return view('Medico.Prestazioni.edit', compact('prestazione'));
     }
 
     /**
@@ -69,9 +89,21 @@ class PrestazioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Prestazione $prestazione)
+    
     {
-        //
+        /* valutare se usare $id con il find($id) */
+
+        $validated_data = $request->validate([
+            'nome' => 'required',
+            'tipo' => 'required',
+            'prezzo' => 'required',
+            'descrizione' => 'nullable',
+            'disabilità' => 'nullable',
+
+        ]);
+        $prestazione->update($validated_data);
+        return redirect('medico/prestazione')->with('success', 'Prestazione modificata!');
     }
 
     /**
@@ -80,8 +112,9 @@ class PrestazioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Prestazione $prestazione)
     {
-        //
+        $prestazione->delete();
+        return redirect('medico/prestazione')->with('succes', 'Prestazione eliminata!'); 
     }
 }

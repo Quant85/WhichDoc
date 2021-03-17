@@ -178,6 +178,10 @@
                 </div>
               </div>
             </div>
+            <div class="prestazioni">
+              <a name="" id="" class="btn btn-primary" href="{{route('medico.prestazione.create')}}" role="button">Nuova Prestazione</a>  
+              <a name="" id="" class="btn btn-primary" href="{{route('medico.prestazione.index')}}" role="button">Riepilogo Prestazioni</a>    
+            </div>
 
             <div class="bottom_right_bottom">
               @if ($errors->any())
@@ -191,10 +195,12 @@
               @endif
             </div>
           </div>
+          
         </form>
-        </div>    
+          
       </div>
-    </nav>      
+    </div>
+  </nav>      
     <!-- /container bianco -->      
   </div>
 @endsection
