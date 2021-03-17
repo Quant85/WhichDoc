@@ -16,8 +16,9 @@ class PrestazioneController extends Controller
      */
     public function index()
     {
-        $prestazione = Prestazione::all()->sortBy('name');
-        return view('Medico.profilo', compact('prestazione'));
+        $medico = Auth::user();
+        /* $prestazioni = Prestazione::all()->sortBy('name'); */
+        return view('Medico.Prestazioni.index', compact('medico'));
     }
 
     /**
@@ -78,8 +79,7 @@ class PrestazioneController extends Controller
     public function edit($id)
     {
         $prestazione = Prestazione::find($id);
-        
-        return view('Medico.Prestazione.edit', compact('prestazione'));
+        return view('Medico.Prestazioni.edit', compact('prestazione'));
     }
 
     /**
@@ -92,9 +92,9 @@ class PrestazioneController extends Controller
     public function update(Request $request, Prestazione $prestazione)
     
     {
+        /* valutare se usare $id con il find($id) */
 
         $validated_data = $request->validate([
-
             'nome' => 'required',
             'tipo' => 'required',
             'prezzo' => 'required',
@@ -103,6 +103,7 @@ class PrestazioneController extends Controller
 
         ]);
         $prestazione->update($validated_data);
+        return redirect('medico/prestazione')->with('success', 'Prestazione modificata!');
     }
 
     /**
@@ -111,10 +112,9 @@ class PrestazioneController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Prestazione $prestazione)
     {
-        $prestazione = Prestazione::find()->delete;
-
-        return redirect()->route('Medico.Prestazioni.index'); 
+        $prestazione->delete();
+        return redirect('medico/prestazione')->with('succes', 'Prestazione eliminata!'); 
     }
 }
