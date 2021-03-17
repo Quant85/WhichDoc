@@ -10084,42 +10084,6 @@ body {
 #ciao .main_white nav .bottom .bottom_right .bottom_right_bottom {
   width: 100%;
 }
-<<<<<<< Updated upstream
-#ciao .main_white .show-content {
-  height: 500px;
-  width: 100%;
-}
-#ciao .main_white .show-content .left-show {
-  width: 50%;
-}
-#ciao .main_white .show-content .right-show {
-  width: 50%;
-}
-#ciao .main_white .show-content .right-show .container_top {
-  min-height: 40%;
-}
-#ciao .main_white .show-content .right-show .container_top .container_dati {
-  width: 50%;
-  text-transform: capitalize;
-}
-#ciao .main_white .show-content .right-show .container_top .container_dati .email_show {
-  text-transform: none;
-}
-#ciao .main_white .show-content .right-show .container_top .container_dati .disabilita_show {
-  padding: 10px 0;
-}
-#ciao .main_white .show-content .right-show .container_top .container_img {
-  width: 50%;
-  height: 100%;
-  justify-content: flex-end;
-}
-#ciao .main_white .show-content .right-show .container_top img {
-  height: 160px;
-  width: auto;
-}
-#ciao .main_white .show-content .right-show .container_bottom {
-  width: 100%;
-}
 #ciao .main_white .form_message {
   width: 90%;
   margin: auto;
@@ -10160,9 +10124,8 @@ body {
 #ciao .main_white .form_message button:focus {
   border: 1px solid white;
   box-shadow: 1px 1px 2px white;
-=======
+}
 #ciao .main_white .bottom_right_top > img {
-  width: 350px !important;
+  width: 250px;
   border-radius: 10px;
->>>>>>> Stashed changes
 }

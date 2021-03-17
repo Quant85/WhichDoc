@@ -40,9 +40,10 @@
                                 <tr>
                                     <td>{{$prestazione->id}}</td>
                                     <td>{{$prestazione->nome}}</td>
+                                    <td>{{$prestazione->tipo}}</td>
                                     <td>{{$prestazione->prezzo}}</td>
                                     <td>
-                                      <textarea name="" id="" cols="30" rows="10">{{$prestazione->descrizione}}
+                                      <textarea  cols="20" rows="2" disabled>{{$prestazione->descrizione}}
                                       </textarea>
                                     </td>
                                     <td>{{$prestazione->created_at}}</td>

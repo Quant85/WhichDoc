@@ -17,8 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/* RESOURCE PER LA ROUTE DEI MESSAGGI */
+/* RESOURCE UI */
 Route::resource('message', 'MessageController');
+Route::get('medico/profilo/{id}', 'ProfiloDottController@showProfile')->name('medico.showProfile');
 
 Auth::routes();
 
@@ -28,6 +29,8 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('profilo', 'ProfiloController');
     Route::resource('prestazione', 'PrestazioneController');
+    Route::resource('messaggi', 'MessaggioController');
+
 });
 
 

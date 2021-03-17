@@ -59,6 +59,7 @@ class ProfiloController extends Controller
      */
     public function show($id, User $user)
     {
+        /* dd($user); */
         $medico = Auth::user();
         return view('Medico.show',compact('user', 'medico'));
 
@@ -86,9 +87,10 @@ class ProfiloController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //
+        /* dd($id); */
 
         $request->validate([
             'user_id' => 'user_id',
@@ -173,7 +175,7 @@ class ProfiloController extends Controller
         ]);
 
         $users->Specializzaziones()->sync($request->specializzazione);
-        return redirect('medico/profilo/show')->with('success', 'Profile saved!');
+        return redirect('medico/profilo')->with('success', 'Profile saved!');
     }
 
     /**
