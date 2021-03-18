@@ -30,6 +30,7 @@
                         <li>Contatti Mittente:</li>
                         <li ><i class="fas fa-at px-2"></i>Email: <a href="mailto:{{$messaggio->email}}"><strong> {{$messaggio->email}}</strong></a></li>
                         <li class="p-1"><strong><i class="fas fa-mobile-alt px-2"></i>Cell: {{$messaggio->cellulare ? $messaggio->cellulare : 'N/A'}}</strong></li>
+                        <li> appartenente alla legge 104: <strong>{{$messaggio->disabilità  ? 'si' : 'no' }} </strong></li>
                       </ul>
                     </address>
                   </div>
