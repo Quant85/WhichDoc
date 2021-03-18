@@ -58,9 +58,8 @@
                                 @error('tipo')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
-                                
-        
                             </div>
+                            
                             <div class="col-md-2 d-flex justify-content-around">
                                 <h4 class="px-2">Disability Friendly</h4>
                                 <label for="disabilità" class="labels px-2" style="font-size: 1.25rem"><i class="far fa-grin-squint"></i> On</label>
