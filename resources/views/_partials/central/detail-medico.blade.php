@@ -69,10 +69,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="badge-specializzazioni">
-                    <h5>Prestazioni: </h5>
-                    
-                </div>
             </div>
             <div class="bottom_left_footer"></div>
         </div>
@@ -85,7 +81,7 @@
             </div>
             <div class="bottom_right_bottom form_message">
                 <h3>CONTATTA IL MEDICO</h3>
-                <form action="{{route('message.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('message.store',$medico->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form_input_message">                        
                         <!-- nome -->

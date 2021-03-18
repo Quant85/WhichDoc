@@ -13,7 +13,7 @@
 
             <div class="bottom d-flex flex-row">
                 <div class="bottom_left d-flex justify-content-around flex-column">      
-                  <h1>Create a new Prestazione</h1>
+                  <h1>Nuova Prestazione</h1>
 
                     <main id="panel-main">
                       <div class="row container">
