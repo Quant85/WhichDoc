@@ -40,7 +40,7 @@ class PrestazioneController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
+        
         $validated_data = $request->validate([
             'user_id' => 'user_id',
             'nome' => 'required',
@@ -49,6 +49,7 @@ class PrestazioneController extends Controller
             'descrizione' => 'nullable',
             'disabilità' => 'nullable',
         ]);
+        //dd($validated_data);
 
         $medico =Auth::user();
         $validated_data['user_id'] = $medico->id;

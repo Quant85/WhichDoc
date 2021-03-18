@@ -58,7 +58,7 @@ class MessageController extends Controller
         //dd($validated_data);
 
         Message::create($validated_data);
-        return redirect('message/create')->with('success', 'Prestazione saved!');
+        return redirect('message/create')->with('success', 'Messaggio inviato!');
     }
 
     /**
