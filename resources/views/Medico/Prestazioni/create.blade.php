@@ -50,15 +50,17 @@
                                     <label for="tipo" class="labels" style="font-size: 1.25rem">Remoto<i class="fas fa-phone-laptop px-2"></i></label>
                                     <input type="radio" class="form-control" value="remoto" name="tipo" {{optional($medico->prestazione)->tipo === 'remoto' ? 'checked' : ''}} style="height: 25px;">
                                 </div>
+
+                                <div class="form-group col-2">
+                                    <label for="tipo" class="labels" style="font-size: 1.25rem"><i class="fas fa-phone-laptop px-2"></i>Entrambi<i class="fas fa-route px-2"></i></label>
+                                    <input type="radio" class="form-control" value="entrambi" name="tipo" {{optional($medico->prestazione)->tipo === 'entrambi' ? 'checked' : ''}} style="height: 25px;">
+                                </div>
         
                                 <div class="form-group col-2">
                                     <label for="tipo" class="labels" style="font-size: 1.25rem">Loco<i class="fas fa-route px-2"></i></label>
                                     <input type="radio" class="form-control" value="in-loco" name="tipo" {{optional($medico->prestazione)->tipo === 'in-loco' ? 'checked' : ''}} style="height: 25px;">
                                 </div>
-                                  <div class="form-group col-2">
-                                    <label for="tipo" class="labels" style="font-size: 1.25rem">disponibile sia in loco che in remoto<i class="fas fa-route px-2"></i></label>
-                                    <input type="radio" class="form-control" value="disponibile sia in loco che in remoto" name="tipo" {{optional($medico->prestazione)->tipo === 'disponibile sia in loco che in remoto' ? 'checked' : ''}} style="height: 25px;">
-                                </div>
+                                
                                 @error('tipo')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
