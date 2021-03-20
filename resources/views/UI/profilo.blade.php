@@ -19,8 +19,8 @@
                     @endauth
                 </div>
             @endif
-            
-            @include('_partials.central.detail-medico')            
+                    
+            @include('_partials.central.detail-medico')           
         </div>
         <!-- /container bianco -->      
     </div>

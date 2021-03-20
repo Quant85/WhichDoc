@@ -11,6 +11,7 @@ class Rating extends Model
         return $this->belongsTo('App\User');
     }
     protected $fillable = [
+        'user_id',
         'nome_utente',
         'data',
         'body',

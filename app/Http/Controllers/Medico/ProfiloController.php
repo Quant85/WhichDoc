@@ -59,9 +59,7 @@ class ProfiloController extends Controller
      */
     public function show($id, User $user)
     {
-        /* dd($user); */
-        $medico = Auth::user();
-        return view('Medico.show',compact('user', 'medico'));
+
 
     }
 
@@ -73,11 +71,7 @@ class ProfiloController extends Controller
      */
     public function edit($id, Auth $medico)
     {
-        //
-        /* $profilo = Profile::find($id); */ //si raggiunge lo stesso obbiettivo ma si preferisce passare per la relazione tra utente autenticato e profilo associato 1 to 1
-        //$medico = Auth::user();
-        //dd($medico,$medico->profile,$id/* ,$profilo */);
-        //return view('Medico.editProfile', compact('profile'));
+
     }
 
     /**
