@@ -23,7 +23,7 @@
               <img src="{{asset( 'storage/'.$medico->profile->foto)}}" alt="foto profilo"
               style="width: 150px; border-radius:10px">              
             @else
-              <img class="rounded-circle mt-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU">
+              <img id="category-img-tag" class="rounded-circle mt-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU">
             @endif
             <div class="form-group">
               <label for="foto"><i class="far fa-images"style="font-size: 40px; color: blue; margin-top: 20px; cursor: pointer;" title="Carica immagine profilo"></i></label>

@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 /* RESOURCE UI */
 Route::resource('message', 'MessageController');
+Route::resource('rating', 'RatingController');
 Route::get('medico/profilo/{id}', 'ProfiloDottController@showProfile')->name('medico.showProfile');
 
 Auth::routes();
