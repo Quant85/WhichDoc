@@ -20,34 +20,18 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('carousel-component', require('./components/Carousel.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+import Vue from 'vue'
+import VueSlickCarousel from 'vue-slick-carousel'
+
+Vue.component('VueSlickCarousel', VueSlickCarousel)
 
 const app = new Vue({
     el: '#app',
 });
-
-
-
-    function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            
-            reader.onload = function (e) {
-                $('#category-img-tag').attr('src', e.target.result);
-            }
-            
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-    
-    $("#cat_image").change(function(){
-        readURL(this);
-    });
-
-
-
