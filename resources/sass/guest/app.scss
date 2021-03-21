@@ -1,0 +1,19 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//Variabili
+@import 'common/variables';
+
+//mixin
+@import 'common/mixin';
+
+//navbar
+@import 'navbar/navbar';
+@import 'navbar/hamburger';
+// end navbar
+
+@import 'jumbotron/jumbo';
+
+
+// Media
+@import 'common/media';
