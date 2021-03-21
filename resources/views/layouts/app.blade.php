@@ -24,10 +24,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/guest/app.css') }}" rel="stylesheet">
 </head>
-<body>
+    <body>
+        <header>
+            @include('guest.navbar')
+        </header>
 
-    <main>
         @yield('content')
-    </main>
-</body>
+    </body>
 </html>

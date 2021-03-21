@@ -2,12 +2,18 @@
 @import '~bootstrap/scss/bootstrap';
 
 //Variabili
-@import 'variables';
+@import 'common/variables';
 
 //mixin
-@import 'mixin';
+@import 'common/mixin';
 
 //navbar
-@import 'navbar';
+@import 'navbar/navbar';
+@import 'navbar/hamburger';
+// end navbar
 
-@import 'media';
+@import 'jumbotron/jumbo';
+
+
+// Media
+@import 'common/media';
