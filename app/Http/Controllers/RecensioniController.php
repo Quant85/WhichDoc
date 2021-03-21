@@ -18,7 +18,7 @@ class RecensioniController extends Controller
     {
         # code...
         $medico = Auth::user();//questo andrà cambiato con il medico id User::find(id)nello show
-        $user = User::find(1);
+        $user = User::find(1);//questo andrà cambiato con la variabile $id che verrà passato dal form
         //dd($medico, $user,$_COOKIE);
         return view('UI.recensioni',compact('medico','user'));
     }
@@ -43,7 +43,7 @@ class RecensioniController extends Controller
             
         ]);
         $validated_data['user_id'] = $id;
-        dd($validated_data, $id, $request->cookie());
+        //dd($validated_data, $id, $request->cookie());
         Rating::create($validated_data);
 
         $name = 'name';
