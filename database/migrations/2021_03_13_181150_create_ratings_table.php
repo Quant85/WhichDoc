@@ -21,10 +21,6 @@ class CreateRatingsTable extends Migration
             $table->string('data', '20')->nullable();
             $table->text('body');
             $table->integer('voto');
-            //forse qui da modificare per dare voto da 0 a 5
-
-            //capire come inserire i cookie per non permettere all'utente non registrato di spammare recensioni.
-
             $table->timestamps();
             
         });
