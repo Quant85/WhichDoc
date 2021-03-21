@@ -1,0 +1,23 @@
+@media (max-width:980px) {
+    .hamburger{
+        visibility: visible;
+    }
+    .nav_principale{
+        display: none!important;
+    }
+}
+@media (min-width:980px) {
+    .hamburger {
+        display: none !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575px){
+    .jumbotron{
+        overflow: hidden;
+        img{
+            width: 150%;
+            transform: scale(1.29);
+        }
+    }
+}
