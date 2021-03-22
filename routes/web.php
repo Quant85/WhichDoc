@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/braintree', function () {
+    return view('braintree');
+})->name('braintree');
 /* test section */
 /* Cookie Route */
 
