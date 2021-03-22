@@ -6472,7 +6472,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.carousel-wrapper[data-v-fe98726a] {\r\n  padding: 40px;\n}\n.img-wrapper img[data-v-fe98726a] {\r\n  margin: auto;\r\n  width: 200px;\r\n  height: 100px;\r\n  background-image: linear-gradient(gray 100%, transparent 0);\n}\r\n", ""]);
+exports.push([module.i, "\n.carousel-wrapper[data-v-fe98726a] {\n  padding: 40px;\n}\n.img-wrapper img[data-v-fe98726a] {\n  margin: auto;\n  width: 200px;\n  height: 100px;\n  background-image: linear-gradient(gray 100%, transparent 0);\n}\n", ""]);
 
 // exports
 
@@ -61893,9 +61893,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\WhichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/repofinal/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/repofinal/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /var/www/html/esercizi-boolean/repofinal/resources/sass/guest/app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })

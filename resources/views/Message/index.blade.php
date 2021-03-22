@@ -26,8 +26,10 @@
                                     <th colspan = 2>Azioni</th>
                                 </tr>
                             </thead>
+
                             @foreach ($medico->messages as $message)
                             <tbody>
+                            
                                 <tr>
                                     <td>{{$message->nome_paziente}}</td>
                                     <td>

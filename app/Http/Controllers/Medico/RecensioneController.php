@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Medico;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Message;
+use App\Rating;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
-class MessaggioController extends Controller
+class RecensioneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +17,11 @@ class MessaggioController extends Controller
      */
     public function index()
     {
-        //$messages = Message::all();
         $medico = Auth::user();
+     
+       
         Carbon::setLocale('it');
-        return view('Message.index', compact('medico'));
-        
+        return view('Recensione.index', compact('medico'));
     }
 
     /**
@@ -53,10 +53,9 @@ class MessaggioController extends Controller
      */
     public function show($id)
     {
-        //
-        $messaggio = Message::find($id);
+        $recensione = Rating::find($id);
         Carbon::setLocale('it');
-        return view('Message.dott.show', compact('messaggio'));
+        return view('Recensione.dott.show', compact('recensione'));
     }
 
     /**
@@ -91,8 +90,5 @@ class MessaggioController extends Controller
     public function destroy($id)
     {
         //
-        $messaggio = Message::find($id);
-        $messaggio->delete();
-        return redirect('medico/messaggi')->with('success', 'Post deleted!');
     }
 }
