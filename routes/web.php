@@ -36,8 +36,6 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
     Route::resource('prestazione', 'PrestazioneController')->except('show');
-    Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
-
 });
 
 
