@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/doctors', 'API\DoctorController');
+Route::resource('/doctors', 'API\DoctorController')->only(['index','show']);
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

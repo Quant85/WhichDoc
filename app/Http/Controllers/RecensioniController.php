@@ -57,7 +57,7 @@ class RecensioniController extends Controller
             $name = 'name';
             $value = 'votato';
             $minutes = time()+30*24*60*60;
-            $path = '/';
+            $path = '/';//cambiare con il path dell'utente iesimo
             $cookie = cookie($name,$value,$minutes,$path);
             //dd('ciao');
             //dd( $request->cookie());
