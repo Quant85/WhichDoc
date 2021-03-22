@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/braintree', function () {
+    return view('braintree');
+})->name('braintree');
 /* test section */
 /* Cookie Route */
 
@@ -37,6 +39,7 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
     Route::resource('prestazione', 'PrestazioneController')->except('show');
     Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
+    Route::resource('recensioni', 'RecensioneController');
 });
 
 
