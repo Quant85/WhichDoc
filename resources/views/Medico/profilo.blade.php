@@ -165,9 +165,12 @@
                     <div class="col-md-6">
                       @if (count($specializzazioni)>0)
                           <select class="form-control" name="specializzazione[]" id="specializzazine" multiple>
-                          <option value="null" disabled></option>
-                          @foreach ($specializzazioni as $specializzazione)
-                              <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                          @foreach ($specializzazioni as $id => $specializzazione)
+                            @if (old('specializzazione'))
+                                <option value="{{$specializzazione->id}}" {{in_array($specializzazione->id, old('specializzazione')) ? 'selected' : ' '}}>{{$specializzazione->descrizione}} </option>    
+                              @else
+                                <option value="{{$specializzazione->id}}" {{$medico->Specializzaziones->contains($specializzazione->id) ? 'selected' : ' '}}>{{$specializzazione->descrizione}}</option>    
+                              @endif
                           @endforeach
                           </select>
                       @endif

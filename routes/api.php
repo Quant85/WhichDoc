@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/doctors', 'API\DoctorController');
+
+Route::resource('/doctors', 'API\DoctorController')->only(['index','show']);
 Route::get('token', 'BraintreeController@index');
 Route::post('token', 'BraintreeController@post');
 
