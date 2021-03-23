@@ -52,7 +52,7 @@ class RecensioniController extends Controller
         $path = '/';
         $cookie = cookie($name,$value,$minutes,$path);
         //dd('ciao ciao');
-        return redirect('recensioni')->withCookie($cookie);
+        return redirect('/')->withCookie($cookie);
         }else{
             $name = 'name';
             $value = 'votato';
@@ -62,7 +62,7 @@ class RecensioniController extends Controller
             //dd('ciao');
             //dd( $request->cookie());
             $user = User::find(1);
-            return response()->view('UI.recensioni',compact('user'))->withCookie($cookie);
+            return response()->view('welcome',compact('user'))->withCookie($cookie);
         }  
     }
 }
