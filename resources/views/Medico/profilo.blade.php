@@ -140,7 +140,7 @@
                   <button type="submit" class="btn btn-primary d-flex justify-content-center"><i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i></button>
                 </div>
               </div>
-              <div class="bottom_left_footer"></div>
+              <!-- <div class="bottom_left_footer"></div> -->
             </div>
             
 
