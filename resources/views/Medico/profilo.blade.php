@@ -175,7 +175,6 @@
                           </select>
                       @endif
 
-
                       @error('specializzazione')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
