@@ -1,6 +1,5 @@
-
-  <div class="bottom_right_bottom form_message container">
-        <h3>Lascia una recensione al medico</h3>
+<div class="bottom_right_bottom form_message container">
+    <h3>Lascia una recensione al medico</h3>
     <div class="card">
         <form action="{{route('medico.recensione.store',$medico->id)}}" method="post" enctype="multipart/form-data">
             @csrf
@@ -34,4 +33,4 @@
             <button type="submit" class="btn btn-primary">INVIO</button>
         </form>
     </div>
-  </div>
+</div>

@@ -1,0 +1,28 @@
+.sponsorizzati{
+    width: 100%;
+    background-color: $lavanda;
+    padding: 50px 0;
+    padding-bottom: 180px;
+    .container_sponsorizzati {
+        width: 90% !important;
+        margin: auto;
+
+        .card_container{
+            padding-top: 25px;
+            .card {
+                width: fit-content;
+                padding: 25px;
+
+                .foto_medico {
+                    height: 150px;
+                    img {height: 100%;}
+                }
+
+                .dettagli {padding: 15px 20px;}
+            }
+            .card_sponsorizzato:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}

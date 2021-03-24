@@ -26,6 +26,13 @@ Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico
 Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
 /* test */
 
+/* test section */
+/* Cookie Route */
+
+Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico.recensione.store');
+Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
+/* test */
+
 /* RESOURCE UI */
 Route::resource('message', 'MessageController');
 Route::get('medico/profilo/{id}', 'ProfiloDottController@showProfile')->name('medico.showProfile');
