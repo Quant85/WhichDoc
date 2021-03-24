@@ -18261,20 +18261,36 @@ __webpack_require__.r(__webpack_exports__);
         datasets: [{
           label: 'Messaggi ricevuti',
           data: this.dataProp,
-          backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-          borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)', 'rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-          borderWidth: 4
+          backgroundColor: "rgba(10,22,195,0.2)",
+          borderColor: "rgba(67,142,148,1)",
+          borderWidth: 2,
+          hoverBackgroundColor: "rgba(10,22,195,0.4)",
+          hoverBorderColor: "rgba(67,142,148,1)"
         }]
       },
       options: {
         scales: {
           yAxes: [{
+            stacked: true,
+            gridLines: {
+              display: true,
+              color: "rgba(255,99,132,0.2)"
+            },
             ticks: {
               beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              display: false
             }
           }]
         }
       }
+    });
+    Chart_js__WEBPACK_IMPORTED_MODULE_0__["Chart"].Bar('chart_0', {
+      options: option,
+      data: barData
     });
   }
 });
@@ -76256,11 +76272,18 @@ var render = function() {
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "card" }, [
         _vm.messages
-          ? _c("div", { staticClass: "container" }, [
-              _c("canvas", {
-                attrs: { id: "myChart", width: "600", height: "400" }
-              })
-            ])
+          ? _c(
+              "div",
+              {
+                staticClass: "container",
+                staticStyle: { background: "rgba(186, 255, 226, 0.34)" }
+              },
+              [
+                _c("canvas", {
+                  attrs: { id: "myChart", width: "600", height: "400" }
+                })
+              ]
+            )
           : _vm._e()
       ])
     ])

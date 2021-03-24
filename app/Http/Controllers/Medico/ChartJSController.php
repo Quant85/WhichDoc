@@ -33,14 +33,13 @@ class ChartJSController extends Controller
 
     function getMonthlyMessageCount( $month ) {
         $doctor_messages_date = json_decode(Auth::user()->messages->sortBy('created_at',false)->pluck('created_at'));
-        
         $month_array = array();
         if ( ! empty( $doctor_messages_date ) ) {
             //dd($doctor_messages_date);
 			foreach ( $doctor_messages_date as $i => $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
 				$month_no = $date->format( 'm' );
-                    array_push($month_array,$month_no);
+                array_push($month_array,$month_no);
 			}
 		}
         $monthly_array_message_count = array_count_values($month_array);
