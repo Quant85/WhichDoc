@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./chart');
 
 window.Vue = require('vue');
 
@@ -22,8 +23,13 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('carousel-component', require('./components/Carousel.vue').default);
 
-const newLocal = 'chart-component';
-Vue.component(newLocal, require('./components/MonthMessagesDoctorChart.vue').default);
+
+/* Chart - component */
+/* Vue.component('chart-month-messages-component', require('./components/MonthMessagesDoctorChart.vue').default);
+
+Vue.component('chart-years-messages-component', require('./components/YearMessagesDoctorChart.vue').default); */
+
+/*End Chart - component */
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

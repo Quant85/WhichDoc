@@ -12,16 +12,28 @@ use Illuminate\Http\Request;
 class ChartJSController extends Controller
 {
     //
-    public function getAllMonths()
+
+    /* Json */
+    public function jsonDataMessage()
+    {
+        return  json_decode(Auth::user()->messages->sortBy('created_at',false)->pluck('created_at'));
+    }
+
+    public function jsonDataRatings()
+    {
+        return  json_decode(Auth::user()->ratings->sortBy('created_at',false)->pluck('created_at'));
+    }
+
+    /*End Json */
+
+        /* Months */
+    public function getAllMonths($json)
     {
         $month_array = array();
-        $doctor_messages_date = Auth::user()->messages->sortBy('created_at',false)->pluck('created_at');//con false riordino in modo crescente - dal più vecchio messaggio all'ultimo arrivato
-        $doctor_messages_date = json_decode($doctor_messages_date);
+        $doctor_date = $json;
 
-        /* dd($doctor_messages_date); */
-        
-        if ( ! empty( $doctor_messages_date ) ) {
-			foreach ( $doctor_messages_date as $unformatted_date ) {
+        if ( ! empty( $doctor_date ) ) {
+			foreach ( $doctor_date as $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
 				$month_no = $date->format( 'm y' );
 				$month_name = $date->format( 'M Y' );
@@ -31,47 +43,152 @@ class ChartJSController extends Controller
         return $month_array;
     }
 
-    function getMonthlyMessageCount( $month ) {
-        $doctor_messages_date = json_decode(Auth::user()->messages->sortBy('created_at',false)->pluck('created_at'));
+
+    function getMonthlyElementCount( $month, $json ) {
+        $doctor_date = $json;
         $month_array = array();
-        if ( ! empty( $doctor_messages_date ) ) {
+        if ( ! empty( $doctor_date ) ) {
             //dd($doctor_messages_date);
-			foreach ( $doctor_messages_date as $i => $unformatted_date ) {
+			foreach ( $doctor_date as $i => $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
 				$month_no = $date->format( 'm y' );
                 array_push($month_array,$month_no);
 			}
 		}
-        $monthly_array_message_count = array_count_values($month_array);
+        $monthly_array_element_count = array_count_values($month_array);
         //dd($monthly_array_message_count[$month]);
 
-		return $monthly_array_message_count[$month];
+		return $monthly_array_element_count[$month];
 	}
 
-    function getMonthlyMessageData() {
+        /* End Months */
 
-		$monthly_message_count_array = array();
-		$month_array = $this->getAllMonths();
-		$month_name_array = array();
-		if ( ! empty( $month_array ) ) {
-            foreach ( $month_array as $month_no => $month_name ){
-				$monthly_message_count = $this->getMonthlyMessageCount( $month_no );
-				array_push( $monthly_message_count_array, $monthly_message_count );
-				array_push( $month_name_array, $month_name );
+        /* Years */
+    public function getAllYears($json)
+    {
+        $year_array = array();
+        $doctor_date = $json;
+
+        if ( ! empty( $doctor_date ) ) {
+			foreach ( $doctor_date as $unformatted_date ) {
+                $date = new \DateTime($unformatted_date);
+				$year_no = $date->format( 'y' );
+				$year_name = $date->format( 'Y' );
+				$year_array[ $year_no ] = $year_name;
 			}
 		}
+        return $year_array;
+    }
+
+    public function getYearsElementCount ( $year, $json ){
+        $doctor_date = $json;
+        $year_array = array();
+        if ( ! empty( $doctor_date ) ) {
+            //dd($doctor_messages_date);
+			foreach ( $doctor_date as $i => $unformatted_date ) {
+                $date = new \DateTime($unformatted_date);
+				$year_no = $date->format( 'y' );
+                array_push($year_array,$year_no);
+			}
+		}
+        $year_array_element_count = array_count_values($year_array);
+        //dd($year_array_message_count[$year]);
+
+		return $year_array_element_count[$year];
+    }
+
+         /*End Years */
+
+
+
+    
+
+    function getChartsData() {
+
+        /*Messages */
+             /* Mounth */
+		$monthly_message_count_array = array();
+		$month_array_message = $this->getAllMonths($this->jsonDataMessage());
+		$month_name_array_message = array();
+		if ( ! empty( $month_array_message ) ) {
+            foreach ( $month_array_message as $month_no => $month_name ){
+				$monthly_message_count = $this->getMonthlyElementCount( $month_no, $this->jsonDataMessage() );
+				array_push( $monthly_message_count_array, $monthly_message_count );
+				array_push( $month_name_array_message, $month_name );
+			}
+		}
+             /*End Mounth */
+
+            /* Year */
+
+        $year_message_count_array = array();
+		$year_array_message = $this->getAllYears($this->jsonDataMessage());
+		$year_name_array_message = array();
+        if ( ! empty( $year_array_message ) ) {
+            foreach ( $year_array_message as $year_no => $year_name ){
+				$years_message_count = $this->getYearsElementCount( $year_no, $this->jsonDataMessage() );
+				array_push( $year_message_count_array, $years_message_count );
+				array_push( $year_name_array_message, $year_name );
+			}
+		}
+            /* End year */
+
+        /*End Messages */
+
+        /*Rating */
+            /* Mounth */
+
+		$month_array_rating = $this->getAllMonths($this->jsonDataRatings());
+        $monthly_rating_count_array = array();
+		$month_name_array_rating = array();
+		if ( ! empty( $month_array_rating ) ) {
+            foreach ( $month_array_rating as $month_no => $month_name ){
+				$monthly_rating_count = $this->getMonthlyElementCount( $month_no, $this->jsonDataRatings() );
+				array_push( $monthly_rating_count_array, $monthly_rating_count );
+				array_push( $month_name_array_rating, $month_name );
+			}
+		}
+            /*End Mounth */
+
+            /*Year */
+        $year_array_rating = $this->getAllYears($this->jsonDataRatings());
+        $year_rating_count_array = array();
+		$year_name_array_rating = array();
+        if ( ! empty( $year_array_rating ) ) {
+            foreach ( $year_array_rating as $year_no => $year_name ){
+				$years_rating_count = $this->getYearsElementCount( $year_no, $this->jsonDataRatings() );
+				array_push( $year_rating_count_array, $years_rating_count );
+				array_push( $year_name_array_rating, $year_name );
+			}
+		}
+
+            /* End Year */
+
 
 		/* $max_no = max( $monthly_message_count_array );
         dd($max_no);
 		$max = round(( $max_no + 10/2 ) / 10 ) * 10; */
-		$monthly_message_data_array = array(
-                'months' => $month_name_array,
-                'message_count_data' => $monthly_message_count_array,
-                //'max' => $max,
-            
+		$data_array = array(
+            'resources'=>[
+                /* Messages */
+                    'messages'=>[
+                        'months_message' => $month_name_array_message,
+                        'message_count_data' => $monthly_message_count_array,    
+                        'years_message' => $year_name_array_message,
+                        'years_message_count_data' => $year_message_count_array, 
+                    ],
+                 /*End Messages */
+                 /*Retings */
+                'ratings'=>[
+                    'months_rating' => $month_name_array_rating,
+                    'rating_count_data' => $monthly_rating_count_array,    
+                    'years_rating' => $year_name_array_rating,
+                    'years_rating_count_data' => $year_rating_count_array,
+                ]
+            ]
 		);
 
-		return $monthly_message_data_array;
+		return $data_array;
 
     }
 }
