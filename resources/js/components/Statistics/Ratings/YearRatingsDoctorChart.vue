@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="card">
-                <div class="container" v-if="messages" style="background: rgba(186, 255, 226, 0.34);">
-                    <canvas id="myChart" width="600" height="400"></canvas>
+                <div class="container" v-if="yearRatings" style="background: rgba(186, 255, 226, 0.34);">
+                    <canvas id="myChartYearRating" width="550" height="300"></canvas>
                 </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
     export default {
         data() {
             return {
-                messages:""
+                yearRatings:""
             }
         },
         methods: {
@@ -26,13 +26,16 @@
             },
             ajaxGetPostMonthlyData: function() {
 
-                let month = '/medico/get-chart';
+                let data = '/medico/get-chart';
                 
-                this.getData(month).then((response) => {
+                this.getData(data).then((response) => {
                     console.log(response.data);
-                    this.messages = response.data.months
-                    this.labels = response.data.months
-                    this.dataProp = response.data.message_count_data
+
+                    /* Years */
+                    this.yearRatings = response.data.resources.ratings.years_rating
+                    this.yearLabels = response.data.resources.ratings.years_rating
+                    this.dataYears = response.data.resources.ratings.years_rating_count_data
+                    /*End Years */
                     
                 })
                 .catch(error => {
@@ -46,16 +49,16 @@
             console.log('Component mounted.')
         },
         updated(){
-            var ctx = document.getElementById('myChart');
-            var myChart = new Chart(ctx, {
+            var ctx = document.getElementById('myChartYearRating');
+            var myChartYear = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: this.labels,
+                    labels: this.yearLabels,
                     datasets: [{
                         label: 'Messaggi ricevuti',
-                        data: this.dataProp,
+                        data: this.dataYears,
                         
-                        backgroundColor: "rgba(10,22,195,0.2)",
+                        backgroundColor: ['#ff6384','#36a2eb'],
                         borderColor: "rgba(67,142,148,1)",
                         borderWidth: 2,
                         hoverBackgroundColor: "rgba(10,22,195,0.4)",
@@ -81,10 +84,6 @@
                         }]
                     }
                 }
-            });
-            Chart.Bar('chart_0', {
-                options: option,
-                data: barData
             });
         }
     }

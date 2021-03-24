@@ -13,7 +13,6 @@
         </div>
         <div class="bottom_right d-flex justify-content-around flex-column">
             <div class="bottom_right_top">
-                @include('Medico.Statistiche.statistiche')
             </div>
             <div class="bottom_right_bottom"></div>
         </div>
