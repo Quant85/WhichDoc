@@ -26,6 +26,13 @@ Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico
 Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
 /* test */
 
+/* test section */
+/* Cookie Route */
+
+Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico.recensione.store');
+Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
+/* test */
+
 /* RESOURCE UI */
 Route::resource('message', 'MessageController');
 Route::get('medico/profilo/{id}', 'ProfiloDottController@showProfile')->name('medico.showProfile');
@@ -39,7 +46,7 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
     Route::resource('prestazione', 'PrestazioneController')->except('show');
     Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
-    Route::resource('recensioni', 'RecensioneController')->only(['index','show']);;
+    Route::resource('recensioni', 'RecensioneController')->only(['index','show']);
     Route::get('/get-chart', 'ChartJSController@getMonthlyMessageData');
 
 });

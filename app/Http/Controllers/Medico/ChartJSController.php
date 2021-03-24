@@ -23,8 +23,8 @@ class ChartJSController extends Controller
         if ( ! empty( $doctor_messages_date ) ) {
 			foreach ( $doctor_messages_date as $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
-				$month_no = $date->format( 'm' );
-				$month_name = $date->format( 'M' );
+				$month_no = $date->format( 'm y' );
+				$month_name = $date->format( 'M Y' );
 				$month_array[ $month_no ] = $month_name;
 			}
 		}
@@ -38,7 +38,7 @@ class ChartJSController extends Controller
             //dd($doctor_messages_date);
 			foreach ( $doctor_messages_date as $i => $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
-				$month_no = $date->format( 'm' );
+				$month_no = $date->format( 'm y' );
                 array_push($month_array,$month_no);
 			}
 		}
