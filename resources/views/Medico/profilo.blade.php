@@ -140,7 +140,7 @@
                   <button type="submit" class="btn btn-primary d-flex justify-content-center"><i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i></button>
                 </div>
               </div>
-              <div class="bottom_left_footer"></div>
+              <!-- <div class="bottom_left_footer"></div> -->
             </div>
             
 
@@ -165,13 +165,15 @@
                     <div class="col-md-6">
                       @if (count($specializzazioni)>0)
                           <select class="form-control" name="specializzazione[]" id="specializzazine" multiple>
-                          <option value="null" disabled></option>
-                          @foreach ($specializzazioni as $specializzazione)
-                              <option value="{{$specializzazione->id}}">{{$specializzazione->descrizione}}</option>    
+                          @foreach ($specializzazioni as $id => $specializzazione)
+                            @if (old('specializzazione'))
+                                <option value="{{$specializzazione->id}}" {{in_array($specializzazione->id, old('specializzazione')) ? 'selected' : ' '}}>{{$specializzazione->descrizione}} </option>    
+                              @else
+                                <option value="{{$specializzazione->id}}" {{$medico->Specializzaziones->contains($specializzazione->id) ? 'selected' : ' '}}>{{$specializzazione->descrizione}}</option>    
+                              @endif
                           @endforeach
                           </select>
                       @endif
-
 
                       @error('specializzazione')
                           <span class="invalid-feedback" role="alert">
