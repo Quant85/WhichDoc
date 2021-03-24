@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* test section */
+/* Cookie Route */
+
+Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico.recensione.store');
+Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
+/* test */
+
 /* RESOURCE UI */
 Route::resource('message', 'MessageController');
 Route::get('medico/profilo/{id}', 'ProfiloDottController@showProfile')->name('medico.showProfile');
@@ -27,9 +34,9 @@ Auth::routes();
 Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.')->group(function(){
 
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::resource('profilo', 'ProfiloController');
-    Route::resource('prestazione', 'PrestazioneController');
-    Route::resource('messaggi', 'MessaggioController');
+    Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
+    Route::resource('prestazione', 'PrestazioneController')->except('show');
+    Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
 
 });
 
