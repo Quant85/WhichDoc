@@ -39,7 +39,7 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
     Route::resource('prestazione', 'PrestazioneController')->except('show');
     Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
-    Route::resource('recensioni', 'RecensioneController')->only(['index','show']);;
+    Route::resource('recensioni', 'RecensioneController')->only(['index','show']);
     Route::get('/get-chart', 'ChartJSController@getMonthlyMessageData');
 
 });
