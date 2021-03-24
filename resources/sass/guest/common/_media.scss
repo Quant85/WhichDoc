@@ -1,23 +1,189 @@
-@media (max-width:980px) {
-    .hamburger{
-        visibility: visible;
-    }
-    .nav_principale{
-        display: none!important;
-    }
-}
-@media (min-width:980px) {
-    .hamburger {
-        display: none !important;
-    }
+@media (max-width:992px) {
+    .hamburger{visibility: visible;}
+    .nav_principale{display: none!important;}
 }
 
-@media (min-width: 375px) and (max-width: 575px){
-    .jumbotron{
+@media (min-width:993px) {
+    .hamburger {display: none !important;}
+    .card_specializzazione {width: 150px;}
+    // footer {
+    //     .container_footer {
+    //         // display: flex !important;
+    //         // flex-direction: column;
+    //         .left_footer {
+    //             // width: 100%;
+    //         }
+    //         .center_footer {
+    //             // width: 100%;
+                
+    //         }
+    //         .right_footer {
+    //             // width: 100%;
+    //         }
+    //     }
+    // }
+
+
+}
+// @media (min-width: 768px){
+//      footer {
+//          .container_footer {
+//              .left_footer {}
+
+//              .center_footer {
+//                 .iphone_top {}
+//                 }
+//              .right_footer {}
+//          }
+//      }
+// }
+@media (min-width: 575px) and (max-width: 768px) {
+    .card_ricerca_rapida {
+        padding: 30px 0;
+        .card_specializzazione {
+            width: 100px;
+            // height: 100px;
+        }
+    }
+    .card_sponsorizzato {flex-direction: column!important;}
+    .iphone_frame {
+        .angolo_destra_alto {
+            width: 75px;
+            height: 75px;
+        }
+        .angolo_sinistra_alto {
+            width: 75px;
+            height: 75px;
+        }
+        .angolo_destra_basso {
+            width: 75px;
+            height: 75px;
+        }
+        .angolo_sinistra_basso {
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    footer{
+        .container_footer{
+            display: flex !important;
+            flex-direction: column;
+            .left_footer{width: 100%;}
+            .center_footer{
+                width: 60%;
+                .iphone_top{top: 20%;}
+                margin: auto;
+            }
+            .right_footer{width: 100%;}
+        }
+    }
+}
+@media (min-width: 375px) and (max-width: 575px) {
+    .jumbotron {
         overflow: hidden;
-        img{
+        img {
             width: 150%;
             transform: scale(1.29);
+        }
+    }
+    .card_ricerca_rapida {
+        padding: 30px 0;
+
+        .card_specializzazione {
+            width: 75px;
+            //   height: 75px;
+        }
+    }
+    .card_sponsorizzato {flex-direction: column !important;}
+    .iphone_frame {
+        .angolo_destra_alto {
+            width: 50px;
+            height: 50px;
+        }
+        .angolo_sinistra_alto {
+            width: 50px;
+            height: 50px;
+        }
+        .angolo_destra_basso {
+            width: 50px;
+            height: 50px;
+        }
+        .angolo_sinistra_basso {
+            width: 50px;
+            height: 50px;
+        }
+        .container_frame {
+            height: 350px;
+            .iphone_label {
+                top: 112px;
+                height: 76px;
+                padding-left: 170px;
+                span {
+                    padding: 0 15px;
+                    font-size: 11px;
+                    a {
+                        padding: 5px 12px;
+                        font-size: 12px;
+                        margin-left: 3px;
+                        line-height: 3;
+                    }
+                }
+            }
+            .iphone_top {
+                width: 151.6px;
+                margin-left: 11.7px;
+                padding: 5px 4px;
+                h4 {font-size: 15px;}
+            }
+            .iphone_middle {
+                top: 115px;
+                width: 151.6px;
+                margin-left: 11.7px;
+                padding: 0;
+                div {
+                    font-size: 12px;
+                    padding: 5px 0;
+                    margin: 0px 0 2px 10px;
+                    a {padding: 5px;}
+                }
+                .btn_offerte {
+                    color: $verde_acqua_scuro;
+                    margin: 0 5px 0 5px;
+                    padding: 5px 15px !important;
+                    background-color: $viola;
+                    color: #68ffd4;
+                    margin-left: 5px;
+                    padding: 10px 30px;
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 5px;
+                    &:hover {text-decoration: none;}
+                }
+            }
+            .iphone_bottom {
+                bottom: 75px;
+                width: 151.6px;
+                margin-left: 11.7px;
+                border-radius: 0 0 17px 17px;
+            }
+        }
+
+    }
+    footer {
+        .container_footer {
+            display: flex !important;
+            flex-direction: column;
+            .left_footer {width: 100%;}
+            .center_footer {
+                width: 60%;
+                margin: auto;
+                .iphone_top{
+                    padding: 10px;
+                    top: 20%;
+                }
+            }
+            .right_footer {width: 100%;}
         }
     }
 }

@@ -1,0 +1,135 @@
+.iphone_frame{
+    position: relative;
+    .angolo_destra_alto {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: $verde_acqua;
+        border-radius: 0px 0px 106px 0px;
+    }
+    
+    .angolo_sinistra_alto {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: $rosa;
+        border-radius: 0px 0px 106px 0px;
+        transform: rotate(90deg);
+    }
+    
+    .angolo_destra_basso {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: $lilla;
+        border-radius: 0px 0px 106px 0px;
+        transform: rotate(-90deg);
+    }
+    
+    .angolo_sinistra_basso {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: $viola;
+        border-radius: 0px 0px 106px 0px;
+        transform: rotate(-180deg);
+    }
+    .container_frame{
+        position: relative;
+        height: 550px;
+        width: 90%;
+        margin: auto;
+        .iphone_label {
+            position: absolute;
+            top: 150px;
+            left: 3px;
+            background-color: $lavanda;
+            height: 130px;
+            padding-left: 280px;
+            display: flex;
+            align-items: center;
+            span {
+                padding: 10px 30px;
+                a {
+                    color: $verde_acqua_scuro;
+                    background-color: $blu_viola;
+                    margin-left: 5px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 24px;
+                    &:hover {text-decoration: none;}
+                }
+            }
+        }
+        img{
+            position: absolute;
+            top: -65px;
+            left: 0;
+            height: 100%;
+            filter: drop-shadow(7px 10px 4px rgba(0, 0, 0, 0.25));
+        }
+        .iphone_top{
+            position: absolute;
+            z-index: 1;
+            top: -10px;
+            width: 238.4px;
+            margin-left: 18.4px;    
+            background: rgb(255, 255, 255);
+            background: linear-gradient(370deg, #ffffff00 28%, #dcdcdc 56%);
+            text-align: end;
+            padding: 15px 10px;
+            h4{
+                font-size: 18px;
+                padding: 10px 0;
+            }
+            small, span{color: $lavanda;}
+        }
+        .iphone_middle{
+            position: absolute;
+            z-index: 1;
+            top: 160px;
+            width: 238.4px;
+            margin-left: 18.4px;
+            text-align: start;
+            font-size: small;
+            padding: 15px 10px;
+            div {
+                font-size: 14px;
+                padding: 10px 0;
+                margin: 0px 0 10px 10px;
+            }
+            .btn_offerte {
+                color: $verde_acqua_scuro;
+                &:hover{text-decoration: none;}
+                background-color: $viola;
+                color: #68ffd4;
+                margin-left: 5px;
+                padding: 10px 30px;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+            }
+        }
+        .iphone_bottom{
+            position: absolute;
+            z-index: 1;
+            bottom: 175px;
+            width: 238.4px;
+            margin-left: 18.4px;    
+            background: rgb(255, 255, 255);
+            background: linear-gradient(167deg, #ffffff00 38%, #dcdcdc 150%);
+            text-align: end;
+            font-size: small;
+            padding: 15px 10px;
+            span{color: $lavanda;}
+        }
+    }
+}

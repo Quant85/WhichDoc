@@ -1,0 +1,80 @@
+// variabili posizione cerchi (Inserisci nelle variabili il top: $C e muovi i cerchi on Hover o con css-animations )
+
+.our_team{
+    width: 100%;
+    background-color: blueviolet;
+    .container_team{
+        padding: 50px 0;
+        .card_foto{
+            // // // // // // // // // // // // // &:hover .ellisse_2{
+               
+            // // // // // // // // // // // // //         bottom: 10px;
+            // // // // // // // // // // // // //         right: 10px;                     SVILUPPA IDEA
+                
+            // // // // // // // // // // // // // }
+            text-align: center;
+            display: flex;
+            .foto_cerchi{
+                padding: 6px 25px;
+                position: relative;
+                img{
+                    // position: absolute;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 100px;
+                }
+                /* Ellipse 1  alto sinistra*/
+                .elisse_1{
+                    position: absolute;
+                    width: 75px;
+                    height: 75px;
+                    background: rgba(205, 129, 219, 0.75);
+                    border-radius: 100px;
+                    top: 0;
+                    left: 20px;
+                }
+                .elisse_2{
+                    /* Ellipse 2 basso spigolo*/
+                    position: absolute;
+                    width: 75px;
+                    height: 75px;
+                    background: #4E54D7;
+                    border-radius: 100px;
+                    bottom: 0;
+                    right: 0;
+                }
+                .elisse_3{
+                    /* Ellipse 3 basso sopra spigolo*/
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(160, 129, 219, 0.95);
+                    border-radius: 100px;
+                    bottom: 50px;
+                    right: 0;
+                }
+                .elisse_4{
+                    /* Ellipse 4 alto sinistra*/
+                    position: absolute;
+                    width: 50px;
+                    height: 50px;
+                    background: rgba(219, 129, 187, 0.7);
+                    border-radius: 100px;
+                    top: 50px;
+                    left: 0;
+                }
+                // /* Nome Descrizione */
+                // position: absolute;
+                // width: 155px;
+                // height: 52px;
+                // font-family: Roboto;
+                // font-style: normal;
+                // font-weight: normal;
+                // font-size: 24px;
+                // line-height: 28px;
+                // text-align: center;
+                // color: #000000;
+            }
+        }
+    }
+}
