@@ -10,6 +10,7 @@ use App\User;
 use App\Http\Resources\DoctorResource;
 
 use App\Http\Resources\DoctorCollection;
+use Illuminate\Support\Facades\Auth;
 
 class DoctorController extends Controller
 {
@@ -20,8 +21,7 @@ class DoctorController extends Controller
      * @return 
      */
     public function index(Request $request)
-    {
-    
+    {    
         return (new DoctorCollection(User::paginate()));
     }
     

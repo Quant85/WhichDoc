@@ -22,15 +22,18 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('carousel-component', require('./components/Carousel.vue').default);
 
+const newLocal = 'chart-component';
+Vue.component(newLocal, require('./components/MonthMessagesDoctorChart.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-import Vue from 'vue'
-import VueSlickCarousel from 'vue-slick-carousel'
+import Vue from 'vue';
+import VueSlickCarousel from 'vue-slick-carousel';
 
-Vue.component('VueSlickCarousel', VueSlickCarousel)
+Vue.component('VueSlickCarousel', VueSlickCarousel);
 
 const app = new Vue({
     el: '#app',
