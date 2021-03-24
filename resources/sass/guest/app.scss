@@ -1,6 +1,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;800&display=swap');
+//Common
+@import 'common/common';
+
 //Variabili
 @import 'common/variables';
 
@@ -12,8 +17,27 @@
 @import 'navbar/hamburger';
 // end navbar
 
+// Jumbotron
 @import 'jumbotron/jumbo';
+// end Jumbotron
 
+// Ricerca Rapida
+@import 'main/card_ricerca_rapida';
+
+// Sponsorizzati
+@import 'main/sponsorizzati';
+
+// Iphone_frame
+@import 'main/iphone_frame';
+
+// Statistiche
+@import 'main/statistiche';
+
+// Footer
+@import 'footer';
+
+// Il nostro Team
+@import 'our';
 
 // Media
 @import 'common/media';

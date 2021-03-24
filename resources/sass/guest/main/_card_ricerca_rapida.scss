@@ -1,0 +1,20 @@
+.card_ricerca_rapida{
+    width: 90% !important;
+    margin: auto;
+    padding: 50px 0;
+    .card_specializzazione{
+        &:hover{transform: scale(1.2);}
+        width: 200px;
+        // height: 125px;
+        padding: 20px;
+        background: $verde_acqua;
+        box-shadow: 3px 1px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 11px;
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
