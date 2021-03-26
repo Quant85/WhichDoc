@@ -21,10 +21,10 @@
                                 <div><a class="justify-content-flex-end" href="{{ url('/medico/home') }}">Home</a></div>
                             </div>
                         @else
-                            <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-grad-secondary" href="{{ route('login') }}">Login</a>
 
                             @if (Route::has('register'))
-                                <a class="btn btn-primary" href="{{ route('register') }}">Sei un medico? Registrati</a>
+                                <a class="btn btn-grad" href="{{ route('register') }}">Sei un medico? Registrati</a>
                             @endif
                         @endauth
                     </div>

@@ -2,6 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // font-family: 'Poppins', sans-serif;
     font-family: 'Sansita',sans-serif;
+}
+
+.card {
+transition: transform 0.5s;
+transform-style: preserve-3d;
+cursor: pointer;
+}
+
+.btn-grad {
+    @include baseButton($verde_acqua_scuro, $blu_viola_chiaro, $blu_viola, $white, right, right);
+}
+
+.btn-grad-secondary {
+    @include baseButton($blu_viola, $blu_viola_chiaro, $verde_acqua_scuro, $white, right, right);
+}
+
+
+.btn-grad-dark {
+    @include baseButton($blu_viola_chiaro, $blu_viola, $viola, $white, right, right);
+}
+
+.btn-grad-secondary-dark {
+    @include baseButton($blu_viola_chiaro, $blu_viola, $viola, $white, right, right);
 }
