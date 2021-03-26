@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/','HomeController@index')->name('home');
+Route::post('/search','HomeController@search')->name('home.search');
 Route::get('/braintree', function () {
     return view('braintree');
 })->name('braintree');
