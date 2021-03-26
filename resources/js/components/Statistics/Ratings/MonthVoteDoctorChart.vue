@@ -16,7 +16,7 @@
     export default {
         data() {
             return {
-                messages:""
+                votes:""
             }
         },
         methods: {
@@ -29,9 +29,9 @@
                 let vote = '/medico/get-chart';
                 
                 this.getData(vote).then((response) => {
-                    console.log(response.data);
-                    this.messages = response.data.months_message
-                    this.labels = response.data.months_message
+                    console.log(response.data.resources.votes.range_vote);
+                    this.votes = response.data.resources.votes.range_vote
+                    this.labels = response.data.resources.votes.range_vote
                     this.dataProp = response.data.message_count_data
                     
                 })

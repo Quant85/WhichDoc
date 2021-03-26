@@ -10,6 +10,7 @@ use App\User;
 use App\Http\Resources\DoctorResource;
 
 use App\Http\Resources\DoctorCollection;
+use App\Specializzazione;
 use Illuminate\Support\Facades\Auth;
 
 class DoctorController extends Controller
@@ -22,7 +23,12 @@ class DoctorController extends Controller
      */
     public function index(Request $request)
     {    
-        return (new DoctorCollection(User::paginate()));
+        $specializzazioni = Specializzazione::all();
+        $doctor = User::all();
+        
+
+        $newCollectio = new DoctorCollection(User::paginate());
+        return ($newCollectio);
     }
     
     /**

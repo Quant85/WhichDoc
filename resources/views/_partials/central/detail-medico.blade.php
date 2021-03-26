@@ -76,5 +76,4 @@
         </div>
         @include('_partials.central.form-messaggi')
     </div>
-
 </nav>

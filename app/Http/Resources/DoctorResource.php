@@ -22,7 +22,7 @@ class DoctorResource extends JsonResource
             'indirizzo' => $this->indirizzo,
             'profilo' => $this->profile, 
             'prestazioni' => PerformanceResource::collection($this->prestaziones),
-            'specializzazioni' => $this->Specializzaziones,
+            'specializzazioni' => SpecializationResource::collection($this->Specializzaziones),
             'recensioni' => $this->ratings,
         ];
     }
