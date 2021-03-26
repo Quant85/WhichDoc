@@ -5,12 +5,27 @@
                 <img src="{{asset('img/logo.jpeg')}}" alt="">
             </div>
             <div class="search_bar col-md-5">
-                <div class="search-box">
+              <form action="{{route('doctors.index'/* ,$medico->id */)}}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('GET')
+                {{-- <div class="search-box">
                     <input type="text" placeholder="Type to search..">
                     <div class="search-icon"><i class="fas fa-search"></i></div>
                     <div class="cancel-icon"> <i class="fas fa-times"></i> </div>
                     <div class="search-data"></div>
-                </div>
+                </div> --}}
+
+                @if (count($specializzazioni)>0)
+                  <select class=" selectpicker form-control @error('specializzazione') is-invalid @enderror" name="specializzazione" id="specializzazione" multiple>
+                      <optgroup label="Area Medica">
+                          @foreach ($specializzazioni as $specializzazione)
+                              <option value="{{$specializzazione->descrizione}}">{{$specializzazione->descrizione}}</option>    
+                          @endforeach
+                      </optgroup>
+                  </select>
+                @endif
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
             <div class="login col-md-5">
                 @if (Route::has('login'))
@@ -21,10 +36,10 @@
                                 <div><a class="justify-content-flex-end" href="{{ url('/medico/home') }}">Home</a></div>
                             </div>
                         @else
-                            <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
+                            <a class="btn btn-grad-secondary" href="{{ route('login') }}">Login</a>
 
                             @if (Route::has('register'))
-                                <a class="btn btn-primary" href="{{ route('register') }}">Sei un medico? Registrati</a>
+                                <a class="btn btn-grad" href="{{ route('register') }}">Sei un medico? Registrati</a>
                             @endif
                         @endauth
                     </div>

@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Medico;
-
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Message;
-use Carbon\Carbon;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 
-class MessaggioController extends Controller
+use App\Http\Controllers\Controller;
+use App\Sponsor;
+use Illuminate\Http\Request;
+
+class SponsorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +17,8 @@ class MessaggioController extends Controller
      */
     public function index()
     {
-        //$messages = Message::all();
-        $medico = Auth::user();
-        Carbon::setLocale('it');
-        return view('Message.index', compact('medico'));
-        
+        $user = Auth::user();
+        $sponsor = Sponsor::all();
     }
 
     /**
@@ -54,9 +51,6 @@ class MessaggioController extends Controller
     public function show($id)
     {
         //
-        $messaggio = Message::find($id);
-        Carbon::setLocale('it');
-        return view('Message.dott.show', compact('messaggio'));
     }
 
     /**
@@ -91,8 +85,5 @@ class MessaggioController extends Controller
     public function destroy($id)
     {
         //
-        $messaggio = Message::find($id);
-        $messaggio->delete();
-        return redirect('medico/messaggi')->with('success', 'Post deleted!');
     }
 }

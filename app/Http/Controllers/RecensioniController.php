@@ -52,17 +52,17 @@ class RecensioniController extends Controller
         $path = '/';
         $cookie = cookie($name,$value,$minutes,$path);
         //dd('ciao ciao');
-        return redirect('recensioni')->withCookie($cookie);
+        return redirect('/')->withCookie($cookie);
         }else{
             $name = 'name';
             $value = 'votato';
             $minutes = time()+30*24*60*60;
-            $path = '/';
+            $path = '/';//cambiare con il path dell'utente iesimo
             $cookie = cookie($name,$value,$minutes,$path);
             //dd('ciao');
             //dd( $request->cookie());
             $user = User::find(1);
-            return response()->view('UI.recensioni',compact('user'))->withCookie($cookie);
+            return response()->view('welcome',compact('user'))->withCookie($cookie);
         }  
     }
 }

@@ -71,3 +71,93 @@
 
     </div>
 </div>
+
+
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
+<script>
+  jQuery(document).ready(function($){
+    $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+//    autoplay:true,
+//    autoplayHoverPause:true,
+//    autoplayTimeout:3000,
+      responsive:{
+        0:{
+          items:1
+        },
+        575:{
+          items:2
+        },
+        768:{items:2},
+        769:{items:1},
+        900:{items:2},
+        1100:{items:3},
+        1400:{items:4},
+        2000:{items:5}
+      }
+    })
+  })
+  </script>
+
+
+{{-- DA TESTARE 
+autoplay
+    Type: Boolean
+    Default: false
+    desc: Autoplay.
+
+autoplayTimeout
+    Type: Number
+    Default: 5000
+    Desc: Autoplay interval timeout.
+
+autoplayHoverPause
+    Type: Boolean
+    Default: false
+    Desc: Pause on mouse hover.
+
+smartSpeed
+    Type: Number
+    Default: 250
+    Desc: Speed Calculate. More info to come..
+
+fluidSpeed
+    Type: Boolean
+    Default: Number
+    Desc: Speed Calculate. More info to come..
+
+autoplaySpeed
+    Type: Number/Boolean
+    Default: false
+    Desc: autoplay speed.
+
+navSpeed
+    Type: Number/Boolean
+    Default: false
+    Desc: Navigation speed.
+
+dotsSpeed
+    Type: Boolean
+    Default: Number/Boolean
+    Desc: Pagination speed.
+
+dragEndSpeed
+    Type: Number/Boolean
+    Default: false
+    Desc: Drag end speed. 
+
+animateOut
+    Type: String/Boolean
+    Default: false
+    Desc: Class for CSS3 animation out.
+
+animateIn
+    Type: String/Boolean
+    Default: false
+    Desc: Class for CSS3 animation in.
+--}}

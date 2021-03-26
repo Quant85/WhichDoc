@@ -13,9 +13,17 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index')->name('home');
+Route::post('/search','HomeController@search')->name('home.search');
+Route::get('/braintree', function () {
+    return view('braintree');
+})->name('braintree');
+/* test section */
+/* Cookie Route */
+
+Route::post('recensioni/store/{id}', 'RecensioniController@store')->name('medico.recensione.store');
+Route::get('recensioni', 'RecensioniController@index');//andra modificata /eliminata
+/* test */
 
 /* test section */
 /* Cookie Route */
@@ -37,7 +45,8 @@ Route::middleware('auth')->namespace('Medico')->prefix('medico')->name('medico.'
     Route::resource('profilo', 'ProfiloController')->except(['create','show','edit']);
     Route::resource('prestazione', 'PrestazioneController')->except('show');
     Route::resource('messaggi', 'MessaggioController')->only(['index','show','destroy']);
+    Route::resource('recensioni', 'RecensioneController')->only(['index','show']);
+    Route::get('/get-chart', 'ChartJSController@getChartsData');
+    Route::get('statistiche', 'StatisticheController@index')->name('statistiche');
 
 });
-
-

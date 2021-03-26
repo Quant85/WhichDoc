@@ -15,7 +15,8 @@
                 <li><a href="{{ url('/medico/home') }}"><i class="fas fa-tachometer-alt fa-lg fa-fw"></i>Dashboard</a></li>
                 <li><a href="{{route('medico.profilo.index')}}"><i class="fas fa-book-open fa-lg fa-fw"></i>Mio Profilo</a></li>
                 <li><a href="{{route('medico.messaggi.index')}}"><i class="fas fa-book-open fa-lg fa-fw"></i>Messaggi Ricevuti</a></li>
-                <li><a href="#"><i class="fas fa-folder-open fa-lg fa-fw"></i>Statistiche</a></li>
+                 <li><a href="{{route('medico.recensioni.index')}}"><i class="fas fa-book-open fa-lg fa-fw"></i>Recensioni Ricevute</a></li>
+                <li><a href="{{route('medico.statistiche')}}"><i class="fas fa-folder-open fa-lg fa-fw"></i>Statistiche</a></li>
                 <li><a href="#"><i class="fas fa-print fa-lg fa-fw"></i>Sponsorizzazioni</a></li>
             </ul>
             <!-- /lista link -->

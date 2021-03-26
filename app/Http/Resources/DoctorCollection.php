@@ -3,6 +3,8 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
+use App\Specializzazione;
+use Illuminate\Support\Facades\Auth;
 
 class DoctorCollection extends ResourceCollection
 {
@@ -17,6 +19,7 @@ class DoctorCollection extends ResourceCollection
         return [
             'data' => DoctorResource::collection($this->collection),
             'meta' => ['user_count' => $this->collection->count()],
+            'specializzazioni' => request('specializzazione'),
         ];
     }
 }

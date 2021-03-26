@@ -1,0 +1,42 @@
+@mixin baseButton($bgColor1, $bgColor2, $bgColor3, $txtColor, $to, $bgPosition) {
+    background-image: linear-gradient(to $to, $bgColor1 0%, $bgColor2 51%, $bgColor3 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: $txtColor;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    // display: block;
+    border: transparent;
+    text-shadow: -2px 0px 10px black;
+
+    &:hover {
+        background-position: $bgPosition center;
+        /* change the direction of the change here */
+        color: $txtColor;
+        text-decoration: none;
+    }
+}
+
+@mixin bgGradient43($saveBgColor, $primary, $secondary) {
+    background-color: $saveBgColor;
+    background-image: linear-gradient(43deg, $secondary 0%, $primary 100%);
+    
+}
+
+@mixin bgGradient62($saveBgColor, $primary, $secondary) {
+    background-color: $saveBgColor;
+    background-image: linear-gradient(62deg, $secondary 0%, $primary 100%);
+
+}
+
+@mixin hovShadow($white, $bgColor) {
+    box-shadow: 12px 13px 14px -7px $bgColor;
+    &:hover {
+        box-shadow: 2px 2px 14px -7px $white;
+    }    
+    
+}

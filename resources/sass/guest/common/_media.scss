@@ -37,6 +37,11 @@
 //          }
 //      }
 // }
+@media(max-width: 768px) {
+    .card_sponsorizzato {
+        margin-bottom: 10px;
+    }
+}
 @media (min-width: 575px) and (max-width: 768px) {
     .card_ricerca_rapida {
         padding: 30px 0;
@@ -187,3 +192,4 @@
         }
     }
 }
+
