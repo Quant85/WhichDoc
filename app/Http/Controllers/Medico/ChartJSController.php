@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use DateTime;
 
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Foreach_;
+
+use function PHPUnit\Framework\objectEquals;
 
 class ChartJSController extends Controller
 {
@@ -48,7 +51,6 @@ class ChartJSController extends Controller
         $doctor_date = $json;
         $month_array = array();
         if ( ! empty( $doctor_date ) ) {
-            //dd($doctor_messages_date);
 			foreach ( $doctor_date as $i => $unformatted_date ) {
                 $date = new \DateTime($unformatted_date);
 				$month_no = $date->format( 'm y' );
@@ -104,7 +106,7 @@ class ChartJSController extends Controller
     
 
     function getChartsData() {
-
+        
         /*Messages */
              /* Mounth */
 		$monthly_message_count_array = array();
@@ -163,6 +165,51 @@ class ChartJSController extends Controller
 		}
 
             /* End Year */
+            $contenitore_voti =array();
+            $json_voti = json_decode(Auth::user()->ratings->sortBy('created_at',false)->pluck('voto'));
+            $json_data = json_decode(Auth::user()->ratings->sortBy('created_at',false)->pluck('created_at'));
+
+            function array_combine_($keys, $values)
+            {
+                $result = array();
+                foreach ($keys as $i => $k) {
+                    $result[$k][] = $values[$i];
+                }
+                
+                array_walk($result, function($v){
+                    $v = (count($v) == 1)? array_pop($v): $v;
+                });
+                return    $result;
+            }
+            $newArray = array_combine_($json_data,$json_voti);
+            if (!empty($newArray)) {
+                foreach ($month_name_array_rating as $key => $value) {
+                    $oggetto_voto = array();
+    
+                    //dd($newArray);
+                    $oggetto_voto[ 'data_range' ] = $value;
+                    for ($z=1; $z <= 5 ; $z++) { 
+                        $i=0;
+                        foreach ($newArray as $key => $voti) {
+                            $oggetto_voto[ 'voto_'.($z) ] = $i;
+                            $date = new \DateTime($key);
+                            $referent_month = $date->format( 'M Y' ); 
+                            //dd($key,$voti,$referent_month,$value);
+                                foreach ($voti as $voto) {
+                                    ((($voto == $z) && ($referent_month == $value) )? ($i = ++$i): $i);
+                                    /* if ($voto == $z) {
+                                        $i = ++$i;
+                                    } */
+                            }//questo if potrtebbe esser eliminato
+                        }//il problema della contabilizzazione è su questo foreach
+                    }
+                    array_push( $contenitore_voti, $oggetto_voto );
+                }
+            }
+            //dd($contenitore_voti,$month_name_array_rating,$newArray,$key,$referent_month,$value,$voti,$voto,$z,$i);
+            //dd($array_voti,$contenitore_voti,$oggetto_voto);
+
+            
 
 
 		/* $max_no = max( $monthly_message_count_array );
@@ -184,6 +231,10 @@ class ChartJSController extends Controller
                     'rating_count_data' => $monthly_rating_count_array,    
                     'years_rating' => $year_name_array_rating,
                     'years_rating_count_data' => $year_rating_count_array,
+                ],
+                'votes'=>[
+                    'range_vote' => $contenitore_voti,
+                    /* 'media' => $contenitore_voti, */
                 ]
             ]
 		);

@@ -22,6 +22,11 @@
             
             <h3>Statistiche Recensioni Annuali</h3>
             <chart-years-ratings-component></chart-years-ratings-component>
+
+            <h3>Statistiche Mensili per Fasce di Voti</h3>
+            <chart-month-vote-component></chart-month-vote-component>
+            <h5>devi funzionare</h5>
+
           </div>  
         </nav>      
     </div>

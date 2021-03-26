@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Braintree_Transaction;
 
 class BraintreeController extends Controller
 {
@@ -26,6 +27,7 @@ class BraintreeController extends Controller
                 'submitForSettlement' => True
             ]
         ]);
+        dd($nonceFromTheClient);
         return redirect()->route('braintree');
     }
 }
