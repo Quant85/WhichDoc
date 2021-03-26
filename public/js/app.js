@@ -2322,6 +2322,101 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// import {Chart} from 'Chart.js';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      votes: ""
+    };
+  },
+  methods: {
+    getData: function getData(url) {
+      return axios.get(url);
+    },
+    ajaxGetPostMonthlyData: function ajaxGetPostMonthlyData() {
+      var _this = this;
+
+      var vote = '/medico/get-chart';
+      this.getData(vote).then(function (response) {
+        console.log(response.data.resources.votes.range_vote);
+        _this.votes = response.data.resources.votes.range_vote;
+        _this.labels = response.data.resources.votes.range_vote;
+        _this.dataProp = response.data.message_count_data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.ajaxGetPostMonthlyData();
+    console.log('Component mounted.');
+  },
+  updated: function updated() {
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: this.labels,
+        datasets: [{
+          label: 'Messaggi ricevuti',
+          data: this.dataProp,
+          backgroundColor: "rgba(10,22,195,0.2)",
+          borderColor: "rgba(67,142,148,1)",
+          borderWidth: 2,
+          hoverBackgroundColor: "rgba(10,22,195,0.4)",
+          hoverBorderColor: "rgba(67,142,148,1)"
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            stacked: true,
+            gridLines: {
+              display: true,
+              color: "rgba(255,99,132,0.2)"
+            },
+            ticks: {
+              beginAtZero: true
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              display: false
+            }
+          }]
+        }
+      }
+    });
+    Chart.Bar('chart_0', {
+      options: option,
+      data: barData
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue?vue&type=script&lang=js& ***!
@@ -38986,6 +39081,49 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "card" }, [
+        _vm.votes
+          ? _c(
+              "div",
+              {
+                staticClass: "container",
+                staticStyle: { background: "rgba(186, 255, 226, 0.34)" }
+              },
+              [
+                _c("canvas", {
+                  attrs: { id: "myChart", width: "600", height: "400" }
+                })
+              ]
+            )
+          : _vm._e()
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue?vue&type=template&id=4e30a860&":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue?vue&type=template&id=4e30a860& ***!
@@ -62391,6 +62529,7 @@ Vue.component('chart-month-messages-component', __webpack_require__(/*! ./compon
 Vue.component('chart-years-messages-component', __webpack_require__(/*! ./components/Statistics/Messages/YearMessagesDoctorChart.vue */ "./resources/js/components/Statistics/Messages/YearMessagesDoctorChart.vue")["default"]);
 Vue.component('chart-month-retings-component', __webpack_require__(/*! ./components/Statistics/Ratings/MonthRatingDoctorChart.vue */ "./resources/js/components/Statistics/Ratings/MonthRatingDoctorChart.vue")["default"]);
 Vue.component('chart-years-ratings-component', __webpack_require__(/*! ./components/Statistics/Ratings/YearRatingsDoctorChart.vue */ "./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue")["default"]);
+Vue.component('chart-month-vote-component', __webpack_require__(/*! ./components/Statistics/Ratings/MonthVoteDoctorChart.vue */ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue")["default"]);
 /*End Chart - component */
 
 /***/ }),
@@ -62758,6 +62897,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MonthVoteDoctorChart.vue?vue&type=template&id=18de761f& */ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f&");
+/* harmony import */ var _MonthVoteDoctorChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MonthVoteDoctorChart.vue?vue&type=script&lang=js& */ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _MonthVoteDoctorChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MonthVoteDoctorChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./MonthVoteDoctorChart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MonthVoteDoctorChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./MonthVoteDoctorChart.vue?vue&type=template&id=18de761f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Statistics/Ratings/MonthVoteDoctorChart.vue?vue&type=template&id=18de761f&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MonthVoteDoctorChart_vue_vue_type_template_id_18de761f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/Statistics/Ratings/YearRatingsDoctorChart.vue ***!
@@ -62856,9 +63064,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/sass/guest/app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })

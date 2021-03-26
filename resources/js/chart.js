@@ -9,4 +9,6 @@ Vue.component('chart-years-messages-component', require('./components/Statistics
 Vue.component('chart-month-retings-component', require('./components/Statistics/Ratings/MonthRatingDoctorChart.vue').default);
 
 Vue.component('chart-years-ratings-component', require('./components/Statistics/Ratings/YearRatingsDoctorChart.vue').default);
+
+Vue.component('chart-month-vote-component', require('./components/Statistics/Ratings/MonthVoteDoctorChart.vue').default);
 /*End Chart - component */

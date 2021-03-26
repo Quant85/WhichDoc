@@ -17,6 +17,7 @@ class DoctorCollection extends ResourceCollection
         return [
             'data' => DoctorResource::collection($this->collection),
             'meta' => ['user_count' => $this->collection->count()],
+            'specializzazioni' => request('specializzazione')
         ];
     }
 }
