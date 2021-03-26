@@ -9,7 +9,7 @@
         {{-- Label accanto Iphone-Frame --}}
         <div class="iphone_label">
             <span class="text-white">Solo per te oggi il 50% di sconto. Se non hai ancora un account 
-                <a href="">REGISTRATI</a>
+                <a href="" class="btn-grad-dark">REGISTRATI</a>
             </span>
         </div>
         {{-- End Label accanto Iphone-Frame --}}
@@ -27,7 +27,7 @@
         {{-- Container middle Dentro Iphone --}}
         <div class="iphone_middle">
             <div class="text-white ">Consulti medici online</div>
-            <a href="{{-- Sponsorizzazioni --}}" class="btn_offerte">Vedi le nostre offerte</a>
+            <a href="{{-- Sponsorizzazioni --}}" class="bnt btn-grad-secondary-dark btn_offerte ">Vedi le nostre offerte</a>
         </div>
         {{-- End Container middle Dentro Iphone --}}
 

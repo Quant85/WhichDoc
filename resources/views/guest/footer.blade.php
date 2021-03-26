@@ -10,20 +10,20 @@
         <img src="{{ asset('/img/default/iphone-frame.png')}}" alt="">
 
         {{-- Container top Dentro Iphone --}}
-        <div class="iphone_top">
+        <div class="iphone_top d-flex justify-content-beetween">
             <h6>Restiamo in contatto</i></h6>
-            <div class="socials">
-                <span> <i class="fa fa-facebook" aria-hidden="true"></i></span>
-                <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-                <span><i class="fa fa-twitter"></i></span>
-                <span><i class="fa fa-github"></i></span>
+            <div class="socials d-flex justify-content-around">
+                <div> <i class="fa fa-facebook" aria-hidden="true"></i></div>
+                <div><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                <div><i class="fa fa-twitter"></i></div>
+                <div><i class="fa fa-github"></i></div>
             </div>
-            <hr>
+            {{-- <hr> --}}
             <h6>Iscriviti alla nostra newsletter</h6>
             <div class="form-group">
                 <label for="email">Indirizzo email</label>
                 <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="">
-                <button class="btn_news">Invia</button>
+                <button class="btn-grad-secondary-dark btn_news">Invia</button>
             </div>
         </div>
         {{-- End Container bottom Dentro Iphone --}}

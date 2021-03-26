@@ -6,12 +6,13 @@ footer{background-color: $verde_acqua;
         .left_footer {
             width: calc(50% - 100px);
             div{
-                width: 80%;
+                width: 75%;
                 margin: auto;
+                // h2{font-size: 3rem;}
+                p{font-size: 18px;}
             }
         }
-        .center_footer {
-            // width: 20%;                    
+        .center_footer {                 
             width: 200px;
             height: 295px;
             position: relative;
@@ -24,22 +25,25 @@ footer{background-color: $verde_acqua;
                 color: white;
                 position: absolute;
                 width: 86.6%;
-                top: 10%;
+                top: 12%;
                 bottom: 0;
                 left: 0;
                 margin-left: 6.6%;
                 background-color: $blu_viola;
+                @include bgGradient62($blu_viola_chiaro, $blu_viola, $viola);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 20px 10px;
+                padding: 15px 10px 0 9px;
                 text-align: center;
             }
             .socials {
-                span{
+                width: 100%;
+                div{
                     padding: 5px 10px;
                     background: $blu_viola_chiaro;
                     border-radius: 82%;
+                    &:hover{transform: scale(1.1);}
                 }
             }
             .form-group{
@@ -50,10 +54,13 @@ footer{background-color: $verde_acqua;
                     margin: 0;
                 }
                 .btn_news {
+                    @include hovShadow($white, $blu_viola_chiaro);
                     color: $verde_acqua_scuro;
-                    background-color: $viola;
-                    border-radius: 5px;
+                    // background-color: $viola;
                     width: 100%;
+                    border-radius: 5px;
+                    margin: 0;
+                    padding: 5px;
                     &:hover {text-decoration: none;}
                 }
                 .form-control {
@@ -69,6 +76,8 @@ footer{background-color: $verde_acqua;
             div {
                 width: 60%;
                 margin: auto;
+                p{font-size: 18px;}
+
             }
         }
     }

@@ -63064,9 +63064,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /var/www/html/esercizi-boolean/whichdocofficial/resources/sass/guest/app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })

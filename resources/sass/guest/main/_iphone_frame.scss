@@ -1,5 +1,6 @@
 .iphone_frame{
     position: relative;
+    text-shadow: 3px 2px 20px black;
     .angolo_destra_alto {
         position: absolute;
         top: 0;
@@ -48,6 +49,7 @@
         width: 90%;
         margin: auto;
         .iphone_label {
+            @include bgGradient62($lavanda, $lavanda, $viola);
             position: absolute;
             top: 150px;
             left: 3px;
@@ -56,6 +58,8 @@
             padding-left: 280px;
             display: flex;
             align-items: center;
+            box-shadow: 1px 1px 10px -7px #8f76bbc4;
+            border-radius: 20px;
             span {
                 padding: 10px 30px;
                 a {
@@ -65,7 +69,7 @@
                     padding: 10px 20px;
                     border-radius: 5px;
                     font-size: 24px;
-                    &:hover {text-decoration: none;}
+                    @include hovShadow($white, $lavanda);
                 }
             }
         }
@@ -74,7 +78,7 @@
             top: -65px;
             left: 0;
             height: 100%;
-            filter: drop-shadow(7px 10px 4px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(0px -5px 4px rgba(0, 0, 0, 0.25));
         }
         .iphone_top{
             position: absolute;
@@ -107,8 +111,8 @@
                 margin: 0px 0 10px 10px;
             }
             .btn_offerte {
+                box-shadow: 0 0 4px #eee;
                 color: $verde_acqua_scuro;
-                &:hover{text-decoration: none;}
                 background-color: $viola;
                 color: #68ffd4;
                 margin-left: 5px;
@@ -116,6 +120,8 @@
                 display: flex;
                 justify-content: center;
                 border-radius: 5px;
+                @include hovShadow($white, $lavanda);
+                &:hover{text-decoration: none;}
             }
         }
         .iphone_bottom{
@@ -133,3 +139,4 @@
         }
     }
 }
+
