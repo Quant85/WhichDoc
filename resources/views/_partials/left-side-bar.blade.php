@@ -4,7 +4,7 @@
             <!-- logo -->
             <a class="navbar-brand" href="{{ url('/') }}">
                 <div class="immagine">
-                    
+                    <img src="{{asset('/img/doc19.jpeg')}}" alt="">
                 </div>
                 {{-- <img src="{{asset('img/WhichDoc-logo.png')}}" alt=""> --}}
             </a>

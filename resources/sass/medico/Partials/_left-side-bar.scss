@@ -1,4 +1,8 @@
 .left_side {
+    .navbar-brand {
+        margin: 1rem !important;
+    }
+
     width: 20%;
     border-radius: 20px;
     padding: 2rem 0;
@@ -22,15 +26,18 @@
 
             .navbar-brand {
                 .immagine {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 200px;
                     height: 200px;
-
                     border: 2px solid white;
                     border-radius: 50%;
+                    overflow: hidden;
                 }
 
                 img {
-                    width: 240px;
+                    width: 100%;
                 }
             }
         }
