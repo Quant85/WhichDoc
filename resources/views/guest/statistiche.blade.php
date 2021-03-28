@@ -1,3 +1,5 @@
 <div class="statistiche">
-    <H1>STATISTICHE</H1>
+    
+<h2>Riserviamo un servizio specializzato e su misura per le persone con disabilità</h2>
+
 </div>

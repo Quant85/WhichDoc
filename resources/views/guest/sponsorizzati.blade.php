@@ -1,6 +1,6 @@
 <div class="sponsorizzati">
     <div class="container_sponsorizzati d-flex flex-column">
-        <h2>I nostri medici</h2>
+        <h2>I nostri migliori medici sponsorizzati:</h2>
         <div class="card_container d-flex justify-content-between owl-carousel owl-theme flex-column">
             
             {{-- <div class="flip-card">

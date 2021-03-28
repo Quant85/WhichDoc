@@ -13,9 +13,11 @@ class HomeController extends Controller
     public function index()
     {
         $specializzazioni = Specializzazione::all();
+        $medico = User::all();
+
         //dd($user);
 
-        return view('welcome',compact('specializzazioni'));
+        return view('welcome',compact('specializzazioni', 'medico'));
     }
 
     public function search(Request $request)
