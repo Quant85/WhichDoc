@@ -31,10 +31,17 @@
         <div v-for="doctor in doctors">
             <!-- <div class="card" v-if="selected == doctor.specializzazioni && doctor.visible == true"> -->
             <a :href="`/medico/profilo/` + doctor.id">
-                <div class="card"  v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true">
-                    <p>{{doctor.nome}}</p>
-                    <p>{{doctor.id}}</p>
-                    <p>{{doctor.specializzazioni}}</p>
+                <div class="card"  v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true && doctor.profilo !== null">
+                    <div class="immagine_dottore_ricerca">
+                        <img :src="`storage/${doctor.profilo.foto}`" alt="" style="width: 100px;">
+                    </div>
+                    <h4 v-if="doctor.profilo.genere == 'maschio'">Dottore <br>{{doctor.nome}} {{doctor.cognome}}</h4>
+                    <h4 v-else-if="doctor.profilo.genere == 'femmina'">Dottoressa <br>{{doctor.nome}} {{doctor.cognome}}</h4>
+                    <p v-for="speci in doctor.somma_specializzazioni">{{speci.descrizione}}</p>
+                    <p>{{doctor.profilo.città}}</p>
+                    <p>{{doctor.media_voto}}</p>
+                    <p>{{doctor.somma_recensione}}</p>
+
                 </div>
             </a>
         </div>
@@ -68,17 +75,20 @@
                         id:el.id,
                         nome:el.nome,
                         cognome:el.cognome,
+                        genere:el.genere,
                         email:el.email,
                         indirizzo:el.indirizzo,
                         prestazioni:el.prestazioni,
                         visible: true,
                         visibleMV: true,
+                        somma_specializzazioni: el.specializzazioni,
                         specializzazioni:element.descrizione,
                         somma_recensione: el.somma_recensione,
                         media_voto: el.media_voto,
+                        profilo: el.profilo,
                         })
                     })
-                    //console.log(this.doctors);
+                    console.log(this.doctors);
                 })
             })
             console.log('Component mounted.')
@@ -90,7 +100,7 @@
                     this.special.push(spec.descrizione);
 
                 })
-                console.log(this.special);
+                //console.log(this.special);
             })
 
             if (localStorage.name) this.selected = localStorage.name;

@@ -2093,6 +2093,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2119,16 +2126,20 @@ __webpack_require__.r(__webpack_exports__);
             id: el.id,
             nome: el.nome,
             cognome: el.cognome,
+            genere: el.genere,
             email: el.email,
             indirizzo: el.indirizzo,
             prestazioni: el.prestazioni,
             visible: true,
             visibleMV: true,
+            somma_specializzazioni: el.specializzazioni,
             specializzazioni: element.descrizione,
             somma_recensione: el.somma_recensione,
-            media_voto: el.media_voto
+            media_voto: el.media_voto,
+            profilo: el.profilo
           });
-        }); //console.log(this.doctors);
+        });
+        console.log(_this.doctors);
       });
     });
     console.log('Component mounted.');
@@ -2138,8 +2149,7 @@ __webpack_require__.r(__webpack_exports__);
 
       specializzazioni.forEach(function (spec) {
         _this.special.push(spec.descrizione);
-      });
-      console.log(_this.special);
+      }); //console.log(this.special);
     });
     if (localStorage.name) this.selected = localStorage.name;
   },
@@ -39366,14 +39376,52 @@ var render = function() {
           _c("a", { attrs: { href: "/medico/profilo/" + doctor.id } }, [
             _vm.selected == doctor.specializzazioni &&
             doctor.visible == true &&
-            doctor.visibleMV == true
-              ? _c("div", { staticClass: "card" }, [
-                  _c("p", [_vm._v(_vm._s(doctor.nome))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(doctor.id))]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(doctor.specializzazioni))])
-                ])
+            doctor.visibleMV == true &&
+            doctor.profilo !== null
+              ? _c(
+                  "div",
+                  { staticClass: "card" },
+                  [
+                    _c("div", { staticClass: "immagine_dottore_ricerca" }, [
+                      _c("img", {
+                        staticStyle: { width: "100px" },
+                        attrs: {
+                          src: "storage/" + doctor.profilo.foto,
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    doctor.profilo.genere == "maschio"
+                      ? _c("h4", [
+                          _vm._v("Dottore "),
+                          _c("br"),
+                          _vm._v(
+                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
+                          )
+                        ])
+                      : doctor.profilo.genere == "femmina"
+                      ? _c("h4", [
+                          _vm._v("Dottoressa "),
+                          _c("br"),
+                          _vm._v(
+                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm._l(doctor.somma_specializzazioni, function(speci) {
+                      return _c("p", [_vm._v(_vm._s(speci.descrizione))])
+                    }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(doctor.profilo.città))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(doctor.media_voto))]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(doctor.somma_recensione))])
+                  ],
+                  2
+                )
               : _vm._e()
           ])
         ])
@@ -63741,9 +63789,9 @@ Vue.component('advanced-page-component', __webpack_require__(/*! ./components/Ho
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/ReezDev/Documents/Coding/whichDoc/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Users/ReezDev/Documents/Coding/whichDoc/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/ReezDev/Documents/Coding/whichDoc/resources/sass/guest/app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })
