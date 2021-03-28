@@ -30,11 +30,13 @@
 
         <div v-for="doctor in doctors">
             <!-- <div class="card" v-if="selected == doctor.specializzazioni && doctor.visible == true"> -->
-            <div class="card"  v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true">
-                <p>{{doctor.nome}}</p>
-                <p>{{doctor.id}}</p>
-                <p>{{doctor.specializzazioni}}</p>
-            </div>
+            <a :href="`/medico/profilo/` + doctor.id">
+                <div class="card"  v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true">
+                    <p>{{doctor.nome}}</p>
+                    <p>{{doctor.id}}</p>
+                    <p>{{doctor.specializzazioni}}</p>
+                </div>
+            </a>
         </div>
         
     </div>
@@ -47,6 +49,7 @@
             selected: '',
             doctors: [],
             special: [],
+            
         }
       },
         mounted() {
@@ -135,7 +138,7 @@
           
     zero(){
         this.doctors.forEach(element =>{
-            if (element.media_voto < 1) {
+            if (element.media_voto < 0.5) {
                 //console.log(element.media_voto);
                 element.visibleMV = true
             }else
@@ -145,7 +148,7 @@
     }, 
     uno(){
         this.doctors.forEach(element =>{
-            if (element.media_voto >= 1 && element.media_voto < 2) {
+            if (element.media_voto >= 0.5 && element.media_voto < 1.5) {
                 element.visibleMV = true
             }else
                 element.visibleMV = false
@@ -154,7 +157,7 @@
     },       
     due(){
         this.doctors.forEach(element =>{
-            if (element.media_voto >= 2 && element.media_voto < 3) {
+            if (element.media_voto >= 1.5 && element.media_voto < 2.5) {
                 element.visibleMV = true
             }else
                 element.visibleMV = false
@@ -164,7 +167,7 @@
                   
     tre(){
         this.doctors.forEach(element =>{
-            if (element.media_voto >= 3 && element.media_voto < 4) {
+            if (element.media_voto >= 2.5 && element.media_voto < 3.5) {
                 
                 element.visibleMV = true
             }else
@@ -174,7 +177,7 @@
     
     quattro(){
         this.doctors.forEach(element =>{
-            if (element.media_voto >= 4 && element.media_voto < 5) {
+            if (element.media_voto >= 3.5 && element.media_voto < 4.5) {
                 element.visibleMV = true
             }else
                 element.visibleMV = false
@@ -184,7 +187,7 @@
                   
     cinque(){
         this.doctors.forEach(element =>{
-            if (element.media_voto == 5) {
+            if (element.media_voto > 4.5) {
                 
                 element.visibleMV = true
             }else

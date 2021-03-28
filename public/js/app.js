@@ -2091,6 +2091,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2173,7 +2175,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     zero: function zero() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto < 1) {
+        if (element.media_voto < 0.5) {
           //console.log(element.media_voto);
           element.visibleMV = true;
         } else element.visibleMV = false;
@@ -2181,35 +2183,35 @@ __webpack_require__.r(__webpack_exports__);
     },
     uno: function uno() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto >= 1 && element.media_voto < 2) {
+        if (element.media_voto >= 0.5 && element.media_voto < 1.5) {
           element.visibleMV = true;
         } else element.visibleMV = false;
       });
     },
     due: function due() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto >= 2 && element.media_voto < 3) {
+        if (element.media_voto >= 1.5 && element.media_voto < 2.5) {
           element.visibleMV = true;
         } else element.visibleMV = false;
       });
     },
     tre: function tre() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto >= 3 && element.media_voto < 4) {
+        if (element.media_voto >= 2.5 && element.media_voto < 3.5) {
           element.visibleMV = true;
         } else element.visibleMV = false;
       });
     },
     quattro: function quattro() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto >= 4 && element.media_voto < 5) {
+        if (element.media_voto >= 3.5 && element.media_voto < 4.5) {
           element.visibleMV = true;
         } else element.visibleMV = false;
       });
     },
     cinque: function cinque() {
       this.doctors.forEach(function (element) {
-        if (element.media_voto == 5) {
+        if (element.media_voto > 4.5) {
           element.visibleMV = true;
         } else element.visibleMV = false;
       });
@@ -39361,17 +39363,19 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.doctors, function(doctor) {
         return _c("div", [
-          _vm.selected == doctor.specializzazioni &&
-          doctor.visible == true &&
-          doctor.visibleMV == true
-            ? _c("div", { staticClass: "card" }, [
-                _c("p", [_vm._v(_vm._s(doctor.nome))]),
-                _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(doctor.id))]),
-                _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(doctor.specializzazioni))])
-              ])
-            : _vm._e()
+          _c("a", { attrs: { href: "/medico/profilo/" + doctor.id } }, [
+            _vm.selected == doctor.specializzazioni &&
+            doctor.visible == true &&
+            doctor.visibleMV == true
+              ? _c("div", { staticClass: "card" }, [
+                  _c("p", [_vm._v(_vm._s(doctor.nome))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(doctor.id))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(doctor.specializzazioni))])
+                ])
+              : _vm._e()
+          ])
         ])
       })
     ],
