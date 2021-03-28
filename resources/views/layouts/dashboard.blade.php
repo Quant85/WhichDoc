@@ -5,7 +5,7 @@
 
 <body>
     {{-- <div id="app"></div> --}}
-    <main>
+    <main id="main-container">
         @yield('content')
     </main> 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
