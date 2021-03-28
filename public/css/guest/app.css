@@ -10009,6 +10009,11 @@ h3 {
   font-family: "Sansita", sans-serif;
 }
 
+body {
+  max-width: 2140px;
+  margin: auto;
+}
+
 .card {
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -10291,9 +10296,17 @@ nav .login .top-right .loggedin .notification {
 .card_ricerca_rapida {
   width: 90% !important;
   margin: auto;
+}
+.card_ricerca_rapida .container_card {
+  flex-direction: column;
+}
+.card_ricerca_rapida .container_card .owl-stage {
   padding: 50px 0;
 }
-.card_ricerca_rapida .card_specializzazione {
+.card_ricerca_rapida .container_card .owl-dots {
+  display: none;
+}
+.card_ricerca_rapida .container_card .card_specializzazione {
   width: 200px;
   padding: 20px;
   background: linear-gradient(45deg, #D9FFF4 30%, #ffffff 50%, #D9FFF4 60%);
@@ -10301,13 +10314,13 @@ nav .login .top-right .loggedin .notification {
   border: 7px double #D9FFF4;
   border-radius: 25px;
 }
-.card_ricerca_rapida .card_specializzazione:hover {
+.card_ricerca_rapida .container_card .card_specializzazione:hover {
   transform: scale(1.2);
 }
-.card_ricerca_rapida .card_specializzazione:not(:first-child) {
+.card_ricerca_rapida .container_card .card_specializzazione:not(:first-child) {
   margin-left: 15px;
 }
-.card_ricerca_rapida .card_specializzazione img {
+.card_ricerca_rapida .container_card .card_specializzazione img {
   width: 100%;
   border-radius: 10px;
 }
@@ -10331,10 +10344,10 @@ nav .login .top-right .loggedin .notification {
   min-height: fit-content;
   display: flex;
   position: relative;
+  z-index: 1;
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer {
   padding: 80px 10px 30px 10px;
-  z-index: 1;
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .owl-stage {
   display: flex;
@@ -10344,7 +10357,7 @@ nav .login .top-right .loggedin .notification {
   justify-content: center;
   margin: 0 10px;
 }
-.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card {
+.sponsorizzati .container_sponsorizzati .card_container .card {
   background: linear-gradient(41deg, rgba(217, 255, 244, 0) 19%, #03a9f4 25%, rgba(217, 255, 244, 0) 32%, rgba(217, 255, 244, 0) 44%, #db81bb 47%, rgba(40, 58, 52, 0.11) 50%, rgba(217, 255, 244, 0) 75%, rgba(255, 255, 255, 0.46) 79%, rgba(217, 255, 244, 0) 84%);
   box-shadow: 0px 0px 35px -19px rgba(0, 0, 0, 0.51);
   border: 3px double #7176d1;
@@ -10355,18 +10368,18 @@ nav .login .top-right .loggedin .notification {
   width: fit-content;
   padding: 25px;
 }
-.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card .foto_medico {
+.sponsorizzati .container_sponsorizzati .card_container .card .foto_medico {
   height: 150px;
 }
-.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card .foto_medico img {
+.sponsorizzati .container_sponsorizzati .card_container .card .foto_medico img {
   border-radius: 10px;
   height: 100%;
   width: auto;
 }
-.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card .dettagli {
+.sponsorizzati .container_sponsorizzati .card_container .card .dettagli {
   padding: 15px 20px;
 }
-.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card_sponsorizzato:hover {
+.sponsorizzati .container_sponsorizzati .card_container .card_sponsorizzato:hover {
   transform: scale(1.1);
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-dots {
@@ -10529,11 +10542,8 @@ nav .login .top-right .loggedin .notification {
 }
 
 .statistiche {
-  background-color: aquamarine;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: aqua;
+  height: 550px;
 }
 
 footer {
@@ -10639,12 +10649,14 @@ footer .container_footer .right_footer div p {
   padding: 50px 0;
 }
 .our_team .container_team .card_foto {
+  width: 250px;
   text-align: center;
   display: flex;
 }
 .our_team .container_team .card_foto .foto_cerchi {
   padding: 6px 25px;
   position: relative;
+  width: 250px;
   /* Ellipse 1  alto sinistra*/
 }
 .our_team .container_team .card_foto .foto_cerchi img {
@@ -10780,6 +10792,11 @@ footer .container_footer .right_footer div p {
 
   .card_sponsorizzato {
     flex-direction: column !important;
+    width: 70%;
+    align-items: center;
+  }
+  .card_sponsorizzato .foto_medico {
+    height: 200px;
   }
 
   .iphone_frame .angolo_destra_alto {

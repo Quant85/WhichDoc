@@ -51,25 +51,29 @@
 </div> --}}
 
 <div class="card_ricerca_rapida ">
-    <div class="container_card d-flex justify-content-between">
-        {{-- @foreach ($collection as $item) --}}
-        <div class="card_specializzazione card">
-            <div class="d-flex justify-content-center flex-column">
-                <img src="{{ asset('/img/logo.jpeg')}}" alt="">
-                <small>Specializzazione</small>
-            </div>
+  <div class="container_card d-flex justify-content-between owl-carousel owl-theme ">
+    {{-- @foreach ($collection as $item) --}}
+    <div class="card_specializzazione card">
+        <div class="d-flex justify-content-center flex-column">
+            <img src="{{ asset('/img/logo.jpeg')}}" alt="">
+            <small>Specializzazione</small>
         </div>
-        {{-- @endforeach --}}
-        
-        {{-- Eliminare --}}
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-        {{-- Eliminare --}}
-
     </div>
+    {{-- @endforeach --}}
+    
+    {{-- Eliminare --}}
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+        <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+    {{-- Eliminare --}}
+
+  </div>
 </div>
 
 
@@ -79,30 +83,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
 <script>
   jQuery(document).ready(function($){
-    $('.owl-carousel').owlCarousel({
+    $('.container_card').owlCarousel({
       loop:true,
       margin:10,
       nav:false,
-//    autoplay:true,
-//    autoplayHoverPause:true,
-//    autoplayTimeout:3000,
+  //    autoplay:true,
+  //    autoplayHoverPause:true,
+  //    autoplayTimeout:3000,
       responsive:{
         0:{
           items:1
         },
-        575:{
+        500:{
           items:2
         },
-        768:{items:2},
-        769:{items:1},
-        900:{items:2},
-        1100:{items:3},
-        1400:{items:4},
-        2000:{items:5}
+        768:{items:3},
+        // 769:{items:3},
+        900:{items:3},
+        1100:{items:4},
+        1400:{items:6},
+        2000:{items:8}
       }
     })
   })
-  </script>
+</script>
 
 
 {{-- DA TESTARE 

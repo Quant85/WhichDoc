@@ -23,6 +23,7 @@
                         margin: 0 10px;
                     }
                 }
+            }
                 .card {
                     // font-size: 24px!important;//  CAMBIA LA SCRITTA
                     background: linear-gradient(41deg, rgba(217, 255, 244, 0) 19%, #03a9f4 25%, rgba(217, 255, 244, 0) 32%, rgba(217, 255, 244, 0) 44%, rgb(219 129 187) 47%, rgb(40 58 52 / 11%) 50%, rgba(217, 255, 244, 0) 75%, rgb(255 255 255 / 46%) 79%, rgba(217, 255, 244, 0) 84%);
@@ -44,7 +45,6 @@
                 }
                 .card_sponsorizzato:hover{transform: scale(1.1);}
                 z-index: 1;
-            }
             // .owl-nav{//avanti indietro
             //     position: absolute !important;
             //     display: flex;
@@ -57,13 +57,12 @@
             //         width: 100%;
             //     }
             // } //avanti indietro// Decommentando questo i tasti Next & Prev perdono il display: none 
-            .owl-dots{
-                display: block;
-                span{
-                    box-shadow: inset 1px 1px 3px 0px #000000a8;
-                }
-
-            }
+             .owl-dots{
+                 display: block;
+                 span{
+                     box-shadow: inset 1px 1px 3px 0px #000000a8;
+                 }
+             }
         }
     }
 }

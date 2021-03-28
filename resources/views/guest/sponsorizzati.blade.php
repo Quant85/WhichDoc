@@ -1,7 +1,7 @@
 <div class="sponsorizzati">
     <div class="container_sponsorizzati d-flex flex-column">
         <h2>I nostri medici</h2>
-        <div class="card_container d-flex justify-content-between owl-carousel owl-theme flex-column">
+        <div class="card_container card_container_sponsorizzati d-flex justify-content-between flex-column owl-carousel owl-themes">
             
             {{-- <div class="flip-card">
 
@@ -185,3 +185,31 @@
 
     </div>
 </div>
+
+
+<script>
+  jQuery(document).ready(function($){
+    $('.card_container_sponsorizzati').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:false,
+  //    autoplay:true,
+  //    autoplayHoverPause:true,
+  //    autoplayTimeout:3000,
+      responsive:{
+        0:{
+          items:1
+        },
+        575:{
+          items:1
+        },
+        768:{items:2},
+        769:{items:2},
+        900:{items:2},
+        1100:{items:3},
+        1400:{items:4},
+        2000:{items:5}
+      }
+    })
+  })
+</script>

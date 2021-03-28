@@ -5,6 +5,10 @@
     font-family: 'Sansita',sans-serif;
 }
 
+body{
+    max-width: 2140px;
+    margin: auto;
+}
 .card {
 transition: transform 0.5s;
 transform-style: preserve-3d;

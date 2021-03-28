@@ -100,7 +100,14 @@
             //   height: 75px;
         }
     }
-    .card_sponsorizzato {flex-direction: column !important;}
+    .card_sponsorizzato {
+        flex-direction: column !important;
+        width: 70%;
+        align-items: center;
+        .foto_medico{
+            height: 200px;
+        }
+    }
     .iphone_frame {
         .angolo_destra_alto {
             width: 50px;
