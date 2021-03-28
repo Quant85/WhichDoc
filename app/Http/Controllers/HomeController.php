@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Specializzazione;
 
 use App\User;
+use App\Profile;
 
 class HomeController extends Controller
 {
@@ -15,7 +16,10 @@ class HomeController extends Controller
         $specializzazioni = Specializzazione::all();
         //dd($user);
 
-        return view('welcome',compact('specializzazioni'));
+        $medici = User::all();
+        $profilo = Profile::all();
+
+        return view('welcome',compact('specializzazioni', 'medici','profilo'));
     }
 
     public function search(Request $request)

@@ -3,183 +3,20 @@
         <h2>I nostri medici</h2>
         <div class="card_container d-flex justify-content-between owl-carousel owl-theme flex-column">
             
-            {{-- <div class="flip-card">
-
-                <div class="flip-card-inner">
-                
-
-
-                    <div class="card card_sponsorizzato flex-row flip-card-front">
-                        <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                        <div class="dettagli">
-                            <div>Nome</div>
-                            <div>Cognome</div>
-                            <div>Specializzazione</div>
-                            <div>Città</div>
-                            <div>*****</div>
-                        </div>
-                    </div>    
-
-
-                    <div class="flip-card-back">
-                        <div class="dettagli">
-                            <div>Nome</div>
-                            <div>Cognome</div>
-                            <div>Specializzazione</div>
-                            <div>Città</div>
-                            <div>*****</div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div> --}}
-
             {{-- Card Medico sponsiorizzato --}}
-            <div class="card card_sponsorizzato flex-row">
-                <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
+            @foreach($medici as $medico)
+            <div class="card card_sponsorizzato flex-row" >
+                <div class="foto_medico"><img src="{{optional($medico->profile)->foto ? asset( 'storage/'.$medico->profile->foto) : asset('img/default/dottori.jpg') }}" alt="foto profilo"></div>
                 <div class="dettagli">
-                    <div>Nome</div>
-                    <div>Cognome</div>
-                    <div>Specializzazione</div>
-                    <div>Città</div>
+                    <div>{{$medico->nome }}</div>
+                    <div>{{$medico->cognome}}</div>
+                    <div>{{$medico->specializzazione}}</div>
+                    <div>{{optional($medico->profile)->città}}</div>
                     <div>*****</div>
                 </div>
             </div>
+            @endforeach
             {{-- End Card Medico specializzato --}}
-
-            {{-- Da eliminare --}}
-                <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-                 <div class="card card_sponsorizzato flex-row">
-                    <div class="foto_medico"><img src="{{ asset('/img/logo.jpeg')}}" alt=""></div>
-                    <div class="dettagli">
-                        <div>Nome</div>
-                        <div>Cognome</div>
-                        <div>Specializzazione</div>
-                        <div>Città</div>
-                        <div>*****</div>
-                    </div>
-                </div>
-            {{-- Da eliminare --}}
             
         </div>
 
