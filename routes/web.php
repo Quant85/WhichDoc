@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+
+/* test search */
 Route::get('/','HomeController@index')->name('home');
-Route::post('/search','HomeController@search')->name('home.search');
+
+Route::get('/search','SearchController@red')->name('home.search');
+/* end test search */
+
 Route::get('/braintree', function () {
     return view('braintree');
 })->name('braintree');

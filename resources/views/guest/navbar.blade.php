@@ -5,27 +5,7 @@
                 <img src="{{asset('img/logo.jpeg')}}" alt="">
             </div>
             <div class="search_bar col-md-5">
-              <form action="{{route('doctors.index'/* ,$medico->id */)}}" method="post" enctype="multipart/form-data">
-                @csrf
-                @method('GET')
-                {{-- <div class="search-box">
-                    <input type="text" placeholder="Type to search..">
-                    <div class="search-icon"><i class="fas fa-search"></i></div>
-                    <div class="cancel-icon"> <i class="fas fa-times"></i> </div>
-                    <div class="search-data"></div>
-                </div> --}}
-
-                @if (count($specializzazioni)>0)
-                  <select class=" selectpicker form-control @error('specializzazione') is-invalid @enderror" name="specializzazione" id="specializzazione" multiple>
-                      <optgroup label="Area Medica">
-                          @foreach ($specializzazioni as $specializzazione)
-                              <option value="{{$specializzazione->descrizione}}">{{$specializzazione->descrizione}}</option>    
-                          @endforeach
-                      </optgroup>
-                  </select>
-                @endif
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              <search-component></search-component>
             </div>
             <div class="login col-md-5">
                 @if (Route::has('login'))
@@ -98,55 +78,3 @@
   </nav>
   <!--/.Navbar-->
 </div>
-
-
-
-<script>
-    // Search bar
-    const searchBox = document.querySelector(".search-box");
-      const searchBtn = document.querySelector(".search-icon");
-      const cancelBtn = document.querySelector(".cancel-icon");
-      const searchInput = document.querySelector("input");
-      const searchData = document.querySelector(".search-data");
-      searchBtn.onclick =()=>{
-        searchBox.classList.add("active");
-        searchBtn.classList.add("active");
-        searchInput.classList.add("active");
-        cancelBtn.classList.add("active");
-        searchInput.focus();
-        if(searchInput.value != ""){
-          var values = searchInput.value;
-          searchData.classList.remove("active");
-          searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
-        }else{
-          searchData.textContent = "";
-        }
-      }
-      cancelBtn.onclick =()=>{
-        searchBox.classList.remove("active");
-        searchBtn.classList.remove("active");
-        searchInput.classList.remove("active");
-        cancelBtn.classList.remove("active");
-        searchData.classList.toggle("active");
-        searchInput.value = "";
-      }
-      // End search bar
-  //Hamburger
-    $(document).ready(function () {
-    $('.first-button').on('click', function () {
-
-      $('.animated-icon1').toggleClass('open');
-    });
-    $('.second-button').on('click', function () {
-
-      $('.animated-icon2').toggleClass('open');
-    });
-    $('.third-button').on('click', function () {
-
-      $('.animated-icon3').toggleClass('open');
-    });
-  });
-  // End Hamburger
-
-</script>
-
