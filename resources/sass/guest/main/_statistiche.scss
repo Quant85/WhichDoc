@@ -1,8 +1,28 @@
-.statistiche{
-    background-color: aquamarine;
+.statistiche {
     height: 300px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.statistiche-left{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.statistiche-right{
+    height: 100%;
+    background: #cff7ff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    img{
+        height: 100%;
+    }
+
 }
