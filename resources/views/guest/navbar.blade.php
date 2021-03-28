@@ -2,7 +2,9 @@
     <div class="container-lg ">
         <div class="row">
             <div class="logo col-md-2">
+              <a href="{{ url('/') }}">
                 <img src="{{asset('img/logo.jpeg')}}" alt="">
+              </a>
             </div>
             <div class="search_bar col-md-5">
               <search-component></search-component>
