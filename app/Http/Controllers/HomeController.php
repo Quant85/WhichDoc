@@ -20,8 +20,10 @@ class HomeController extends Controller
 
     public function search(Request $request)
     {
+        //dd($request->specializzazione);
         $doctors = new \App\User();
-
+        //$doctors->select('Specializzaziones','profile','prestaziones','ratings')->get();
+        //dd($doctors);
         if (!empty(request('specializzazione'))) {
             $doctors= $doctors->whereHas('specializzaziones',function($query)
             {
@@ -29,8 +31,10 @@ class HomeController extends Controller
             } );
         }
 
-        $doctors = $doctors->get();
+        $doctors->has('ratings');
 
-        dd($doctors);
+        //dd($doctors);
+        $doctors = $doctors->get();
+        
     }
 }

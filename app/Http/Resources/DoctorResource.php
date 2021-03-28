@@ -14,8 +14,7 @@ class DoctorResource extends JsonResource
      */
     public function toArray($request)
     {
-        $specializzazione = SpecializationResource::collection($this->Specializzaziones)/* ->where('descrizione','==', 'Medicina') *//* ->where('Nome') */;
-        //dd($request);
+        $specializzazione = SpecializationResource::collection($this->Specializzaziones);
         $recensioni = $this->ratings;
         $recensione_voto = $recensioni->where('voto')->pluck('voto');
         $sum =0;
