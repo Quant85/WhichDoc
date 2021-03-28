@@ -16,9 +16,10 @@
         padding-bottom: 18px;
 
         .logo {
-         display: flex;
-         justify-content: center;
-         overflow: hidden;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
             .navbar-brand {
                 .immagine {
                     width: 200px;
@@ -67,8 +68,8 @@
 }
 
 
-#navbarDropdown{
-   a{
-      text-transform:capitalize;
-   }
+#navbarDropdown {
+
+    text-transform: capitalize !important;
+
 }

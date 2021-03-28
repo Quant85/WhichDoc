@@ -1,7 +1,5 @@
 <nav class="d-flex flex-column">
     <div id="app">
-
-
         <div class=" component-main-container">
             <div class="chart-component-container">
                 <h3>Statistiche Recensioni Mensili</h3>
