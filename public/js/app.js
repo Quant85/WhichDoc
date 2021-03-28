@@ -2072,30 +2072,146 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      selected: ''
+      selected: '',
+      doctors: [],
+      special: []
     };
   },
   mounted: function mounted() {
+    var _this = this;
+
     console.log('Component mounted.');
+    axios.get('api/doctors').then(function (response) {
+      //console.log(response.data.data);
+      var dati = response.data.data; // this.doctors = dati;
+      //console.log(this.doctors);
 
-    if (localStorage.name) {
-      this.selected = localStorage.name;
-    }
-    /* this.callApi(); */
+      dati.forEach(function (el) {
+        var spec = el.specializzazioni; //console.log(el);
 
+        spec.forEach(function (element) {
+          //console.log(element);
+          _this.doctors.push({
+            id: el.id,
+            nome: el.nome,
+            cognome: el.cognome,
+            email: el.email,
+            indirizzo: el.indirizzo,
+            prestazioni: el.prestazioni,
+            visible: true,
+            visibleMV: true,
+            specializzazioni: element.descrizione,
+            somma_recensione: el.somma_recensione,
+            media_voto: el.media_voto
+          });
+        }); //console.log(this.doctors);
+      });
+    });
+    console.log('Component mounted.');
+    axios.get('api/specializzazioni').then(function (response) {
+      //console.log(response.data);
+      var specializzazioni = response.data; //console.log(specializzazioni);
+
+      specializzazioni.forEach(function (spec) {
+        _this.special.push(spec.descrizione);
+      });
+      console.log(_this.special);
+    });
+    if (localStorage.name) this.selected = localStorage.name;
   },
   methods: {
-    getData: function getData(url) {
-      return axios.get(url);
+    max: function max() {
+      this.doctors.forEach(function (element) {
+        if (element.somma_recensione > 30) {
+          //console.log(element.somma_recensione);
+          element.visible = true;
+        } else element.visible = false;
+      });
     },
-    callApi: function callApi() {
-      var doctors = "".concat(this.currentUrl);
-      console.log(doctors);
-      this.getData(doctors).then(function (response) {
-        console.log(response);
+    mid: function mid() {
+      this.doctors.forEach(function (element) {
+        if (element.somma_recensione > 10 && element.somma_recensione <= 30) {
+          element.visible = true;
+        } else element.visible = false;
+      });
+    },
+    min: function min() {
+      this.doctors.forEach(function (element) {
+        if (element.somma_recensione >= 0 && element.somma_recensione <= 10) {
+          element.visible = true;
+        } else element.visible = false;
+      });
+    },
+    all: function all() {
+      this.doctors.forEach(function (element) {
+        if (element.somma_recensione >= 0) {
+          element.visible = true;
+        }
+      });
+    },
+    zero: function zero() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto < 1) {
+          //console.log(element.media_voto);
+          element.visibleMV = true;
+        } else element.visibleMV = false;
+      });
+    },
+    uno: function uno() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto >= 1 && element.media_voto < 2) {
+          element.visibleMV = true;
+        } else element.visibleMV = false;
+      });
+    },
+    due: function due() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto >= 2 && element.media_voto < 3) {
+          element.visibleMV = true;
+        } else element.visibleMV = false;
+      });
+    },
+    tre: function tre() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto >= 3 && element.media_voto < 4) {
+          element.visibleMV = true;
+        } else element.visibleMV = false;
+      });
+    },
+    quattro: function quattro() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto >= 4 && element.media_voto < 5) {
+          element.visibleMV = true;
+        } else element.visibleMV = false;
+      });
+    },
+    cinque: function cinque() {
+      this.doctors.forEach(function (element) {
+        if (element.media_voto == 5) {
+          element.visibleMV = true;
+        } else element.visibleMV = false;
       });
     }
   },
@@ -2158,20 +2274,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      name: ''
+      name: '',
+      special: []
     };
   },
   mounted: function mounted() {
+    var _this = this;
+
     console.log("Component mounted.");
 
     if (localStorage.name) {
       this.name = localStorage.name;
     }
+
+    console.log('Component mounted.');
+    axios.get('api/specializzazioni').then(function (response) {
+      //console.log(response.data);
+      var specializzazioni = response.data; //console.log(specializzazioni);
+
+      specializzazioni.forEach(function (spec) {
+        _this.special.push(spec.descrizione);
+      });
+      console.log(_this.special);
+    });
   },
   methods: {
     searchResult: function searchResult() {
@@ -39120,61 +39248,135 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _vm._v("Example Component")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "" } }),
-            _vm._v(" "),
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.selected,
-                    expression: "selected"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: { name: "", id: "" },
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.selected = $event.target.multiple
-                      ? $$selectedVal
-                      : $$selectedVal[0]
-                  }
-                }
-              },
-              [
-                _c("option", [_vm._v("Medicina dello sport")]),
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selected,
+              expression: "selected"
+            }
+          ],
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.selected = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.special, function(spec) {
+          return _c("option", [_vm._v(_vm._s(spec))])
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _c("form", { attrs: { action: "" } }, [
+        _c("input", {
+          attrs: { type: "radio", id: "max", name: "somma" },
+          on: { change: _vm.max }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "max" } }, [_vm._v("+30voti")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "mid", name: "somma" },
+          on: { change: _vm.mid }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "mid" } }, [_vm._v("tra 10 e 30voti")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "min", name: "somma" },
+          on: { change: _vm.min }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "min" } }, [_vm._v("tra 0 e 10voti")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "all", name: "somma" },
+          on: { change: _vm.all }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "all" } }, [_vm._v("tutti")])
+      ]),
+      _vm._v(" "),
+      _c("form", { attrs: { action: "" } }, [
+        _c("input", {
+          attrs: { type: "radio", id: "zero", name: "media" },
+          on: { change: _vm.zero }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "zero" } }, [_vm._v("media voto 0")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "uno", name: "media" },
+          on: { change: _vm.uno }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "uno" } }, [_vm._v("media voto 1")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "due", name: "media" },
+          on: { change: _vm.due }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "due" } }, [_vm._v("media voto 2")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "tre", name: "media" },
+          on: { change: _vm.tre }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "tre" } }, [_vm._v("media voto 3")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "quattro", name: "media" },
+          on: { change: _vm.quattro }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "quattro" } }, [_vm._v("media voto 4")]),
+        _vm._v(" "),
+        _c("input", {
+          attrs: { type: "radio", id: "cinque", name: "media" },
+          on: { change: _vm.cinque }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "cinque" } }, [_vm._v("media voto 5")])
+      ]),
+      _vm._v(" "),
+      _vm._l(_vm.doctors, function(doctor) {
+        return _c("div", [
+          _vm.selected == doctor.specializzazioni &&
+          doctor.visible == true &&
+          doctor.visibleMV == true
+            ? _c("div", { staticClass: "card" }, [
+                _c("p", [_vm._v(_vm._s(doctor.nome))]),
                 _vm._v(" "),
-                _c("option", [_vm._v("Rosso")]),
+                _c("p", [_vm._v(_vm._s(doctor.id))]),
                 _vm._v(" "),
-                _c("option", [_vm._v("Giallo")])
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" })
+                _c("p", [_vm._v(_vm._s(doctor.specializzazioni))])
+              ])
+            : _vm._e()
         ])
-      ])
-    ])
-  ])
+      })
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39238,13 +39440,10 @@ var render = function() {
                   }
                 }
               },
-              [
-                _c("option", [_vm._v("Medicina dello sport")]),
-                _vm._v(" "),
-                _c("option", [_vm._v("Rosso")]),
-                _vm._v(" "),
-                _c("option", [_vm._v("Giallo")])
-              ]
+              _vm._l(_vm.special, function(spec) {
+                return _c("option", [_vm._v(_vm._s(spec))])
+              }),
+              0
             ),
             _vm._v(" "),
             _c(
@@ -63538,9 +63737,9 @@ Vue.component('advanced-page-component', __webpack_require__(/*! ./components/Ho
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\USER\Programmazione\Team-1\whichdoc\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })
