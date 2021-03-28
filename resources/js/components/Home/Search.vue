@@ -28,9 +28,7 @@
                     <div class="form-group">
                       <label for=""></label>
                       <select class="form-control" name="" id="" v-model="name">
-                        <option>Medicina dello sport</option>
-                        <option>Rosso</option>
-                        <option>Giallo</option>
+                        <option v-for="spec in special">{{spec}}</option>
                       </select>
 
                       <a type="submit" class="btn btn-primary" href="/search">Cliccami</a>
@@ -46,6 +44,7 @@ export default {
     data(){
         return{
             name: '',
+            special: [],
         };
     },
     mounted() {
@@ -53,6 +52,17 @@ export default {
         if (localStorage.name) {
             this.name = localStorage.name;
         }
+        console.log('Component mounted.')
+            axios.get('api/specializzazioni').then(response => {
+                //console.log(response.data);
+                const specializzazioni = response.data;
+                //console.log(specializzazioni);
+                specializzazioni.forEach(spec=>{
+                    this.special.push(spec.descrizione);
+
+                })
+                console.log(this.special);
+        })
     },
     methods: {
         searchResult() {

@@ -1,23 +1,42 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-                    <div class="form-group">
-                      <label for=""></label>
-                      <select class="form-control" name="" id="" v-model="selected">
-                        <option>Medicina dello sport</option>
-                        <option>Rosso</option>
-                        <option>Giallo</option>
-                      </select>
-                    </div>
-                    <div class="card-body">
-                      
-                    </div>
-                </div>
+        <select v-model="selected">
+            <option v-for="spec in special">{{spec}}</option>
+        </select>
+        <form action="">
+            <input type="radio" id="max" name="somma" @change='max'>
+            <label for="max">+30voti</label>
+            <input type="radio" id="mid" name="somma" @change='mid'>
+            <label for="mid">tra 10 e 30voti</label>
+            <input type="radio" id="min" name="somma" @change='min'>
+            <label for="min">tra 0 e 10voti</label>
+            <input type="radio" id="all" name="somma" @change='all'>
+            <label for="all">tutti</label>
+        </form>
+        <form action="">
+            <input type="radio" id="zero" name="media" @change='zero'>
+            <label for="zero">media voto 0</label>
+            <input type="radio" id="uno" name="media" @change='uno'>
+            <label for="uno">media voto 1</label>
+            <input type="radio" id="due" name="media" @change='due'>
+            <label for="due">media voto 2</label>
+            <input type="radio" id="tre" name="media" @change='tre'>
+            <label for="tre">media voto 3</label>
+            <input type="radio" id="quattro" name="media" @change='quattro'>
+            <label for="quattro">media voto 4</label>
+            <input type="radio" id="cinque" name="media" @change='cinque'>
+            <label for="cinque">media voto 5</label>
+        </form>
+
+        <div v-for="doctor in doctors">
+            <!-- <div class="card" v-if="selected == doctor.specializzazioni && doctor.visible == true"> -->
+            <div class="card"  v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true">
+                <p>{{doctor.nome}}</p>
+                <p>{{doctor.id}}</p>
+                <p>{{doctor.specializzazioni}}</p>
             </div>
         </div>
+        
     </div>
 </template>
 
@@ -25,30 +44,154 @@
     export default {
       data(){
         return{
-          selected: '',
-
+            selected: '',
+            doctors: [],
+            special: [],
         }
       },
         mounted() {
+         console.log('Component mounted.')
+            axios.get('api/doctors').then(response => {
+                //console.log(response.data.data);
+                const dati = response.data.data;
+                // this.doctors = dati;
+                //console.log(this.doctors);
+                dati.forEach(el=>{
+                    const spec = el.specializzazioni
+                    //console.log(el);
+                    spec.forEach(element=>{
+                    //console.log(element);
+                        this.doctors.push({
+                        id:el.id,
+                        nome:el.nome,
+                        cognome:el.cognome,
+                        email:el.email,
+                        indirizzo:el.indirizzo,
+                        prestazioni:el.prestazioni,
+                        visible: true,
+                        visibleMV: true,
+                        specializzazioni:element.descrizione,
+                        somma_recensione: el.somma_recensione,
+                        media_voto: el.media_voto,
+                        })
+                    })
+                    //console.log(this.doctors);
+                })
+            })
             console.log('Component mounted.')
-            if (localStorage.name) {
-              this.selected = localStorage.name;
-            }
-            /* this.callApi(); */
-      },
-      methods: {
-        getData(url){
-          return axios.get(url);
-        },
-        callApi: function(){
-          let doctors = `${this.currentUrl}`;
-          console.log(doctors);
+            axios.get('api/specializzazioni').then(response => {
+                //console.log(response.data);
+                const specializzazioni = response.data;
+                //console.log(specializzazioni);
+                specializzazioni.forEach(spec=>{
+                    this.special.push(spec.descrizione);
 
-          this.getData(doctors).then(response => {
-          console.log(response);
-          })
-        }
+                })
+                console.log(this.special);
+            })
+
+            if (localStorage.name) this.selected = localStorage.name;
       },
+  methods: {
+    max(){
+        this.doctors.forEach(element =>{
+            if (element.somma_recensione > 30) {
+                //console.log(element.somma_recensione);
+                element.visible = true
+            }else
+                element.visible = false
+
+        })
+    }, 
+    mid(){
+        this.doctors.forEach(element =>{
+            if (element.somma_recensione > 10 && element.somma_recensione <= 30) {
+                element.visible = true
+            }else
+                element.visible = false
+
+        })
+    },       
+    min(){
+        this.doctors.forEach(element =>{
+            if (element.somma_recensione >= 0 && element.somma_recensione <= 10) {
+                element.visible = true
+            }else
+                element.visible = false
+
+        })
+    }, 
+                  
+    all(){
+        this.doctors.forEach(element =>{
+            if (element.somma_recensione >= 0) {
+                
+                element.visible = true
+            }
+            
+
+        })
+    },
+          
+    zero(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto < 1) {
+                //console.log(element.media_voto);
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+
+        })
+    }, 
+    uno(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto >= 1 && element.media_voto < 2) {
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+
+        })
+    },       
+    due(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto >= 2 && element.media_voto < 3) {
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+
+        })
+    }, 
+                  
+    tre(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto >= 3 && element.media_voto < 4) {
+                
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+        })
+    },
+    
+    quattro(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto >= 4 && element.media_voto < 5) {
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+
+        })
+    }, 
+                  
+    cinque(){
+        this.doctors.forEach(element =>{
+            if (element.media_voto == 5) {
+                
+                element.visibleMV = true
+            }else
+                element.visibleMV = false
+        })
+    }, 
+  },
       watch: {
         selected(newSelected){
           localStorage.name = newSelected;
