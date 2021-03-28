@@ -5,7 +5,7 @@ nav{
     .top{
         // background: rgba(0, 255, 255, 0.493);
         padding: 0 50px 0 35px;
-        border-bottom: 2px solid gray;
+        /* border-bottom: 2px solid gray; */
         height: $height_navbar;
         .top_left {
             // background: rgba(2, 150, 14, 0.63);
@@ -16,7 +16,7 @@ nav{
         .top_right {
             // background: rgba(173, 129, 63, 0.411);
             width: 100%;
-            border-left: 2px solid gray;
+            /* border-left: 2px solid gray; */
             padding: 0 0 0 20px;
         }
     }
@@ -53,7 +53,7 @@ nav{
         .bottom_right{
             // background: rgba(173, 129, 63, 0.411);
             width: 100%;
-            border-left: 2px solid gray;
+            /* border-left: 2px solid gray; */
             padding: 25px 0 0 20px;
 
             .bottom_right_top {
