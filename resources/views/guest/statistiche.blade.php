@@ -1,10 +1,14 @@
-<div class="statistiche row" >
-    <div class="statistiche-left col col-sm">
-       <h2>WhichDoc sostiene la disabilità</h2> <br>
-       <p>Abbiamo a cuore le vostre necessità</p>
-       <a type="button" class="btn btn-grad-secondary" href="">Clicca per saperne di più</a>
-    </div>
-    <div class="statistiche-right col col-sm">
-        <img src="{{asset('/img/disabilità2.jpg')}}" alt="">
+<div class="statistiche" >
+    <div class="angolo_sinistra_alto"></div>
+    <div class="angolo_destra_basso"></div>
+    <div class="container_statistiche d-flex justify-content-center align-items-center">
+        <div class="statistiche_left d-flex align-items-center justify-content-center flex-column">
+            <h2>WhichDoc sostiene la disabilità</h2> <br>
+            <p>Abbiamo a cuore le vostre necessità</p>
+            <a type="button" class="btn btn-grad-secondary" href="">Clicca per saperne di più</a>
+        </div>
+       <div class="statistiche-right">
+           <img src="{{asset('/img/disabilità4.jpg')}}" alt="">
+       </div>
     </div>
 </div>

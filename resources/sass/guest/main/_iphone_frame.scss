@@ -33,16 +33,7 @@
         transform: rotate(-90deg);
     }
     
-    .angolo_sinistra_basso {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100px;
-        height: 100px;
-        background: $viola;
-        border-radius: 0px 0px 106px 0px;
-        transform: rotate(-180deg);
-    }
+
     .container_frame{
         position: relative;
         height: 550px;

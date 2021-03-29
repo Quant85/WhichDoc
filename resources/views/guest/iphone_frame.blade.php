@@ -3,12 +3,11 @@
     <div class="angolo_destra_alto"></div>
     <div class="angolo_sinistra_alto"></div>
     <div class="angolo_destra_basso"></div>
-    <div class="angolo_sinistra_basso"></div>
     {{-- angoli --}}
     <div class="container_frame">
         {{-- Label accanto Iphone-Frame --}}
         <div class="iphone_label">
-            <span class="text-white">Solo per te oggi il 50% di sconto. Se non hai ancora un account 
+            <span class="text-white">Consulta il tuo medico direttamente da cellulare!
                 <a href="" class="btn-grad-dark">REGISTRATI</a>
             </span>
         </div>

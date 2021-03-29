@@ -17,11 +17,13 @@
     
     {{-- Cdn jQuerry --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     {{-- Cdn Popper --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    {{-- Cdn bootstrap --}}
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
 
 
 
@@ -36,54 +38,95 @@
     
             @yield('content')
         </div>
+
+
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-            // Search bar
-            /* const searchBox = document.querySelector(".search-box");
-            const searchBtn = document.querySelector(".search-icon");
-            const cancelBtn = document.querySelector(".cancel-icon");
-            const searchInput = document.querySelector("input");
-            const searchData = document.querySelector(".search-data");
-            searchBtn.onclick =()=>{
-                searchBox.classList.add("active");
-                searchBtn.classList.add("active");
-                searchInput.classList.add("active");
-                cancelBtn.classList.add("active");
-                searchInput.focus();
-                if(searchInput.value != ""){
-                var values = searchInput.value;
-                searchData.classList.remove("active");
-                searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
-                }else{
-                searchData.textContent = "";
+            //Hamburger
+                $(document).ready(function () {
+                $('.first-button').on('click', function () {
+
+                $('.animated-icon1').toggleClass('open');
+                });
+                $('.second-button').on('click', function () {
+
+                $('.animated-icon2').toggleClass('open');
+                });
+                $('.third-button').on('click', function () {
+
+                $('.animated-icon3').toggleClass('open');
+                });
+            });
+            // End Hamburger
+            // Carousel specializzazioni
+            jQuery(document).ready(function($){
+                $('.container_card').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                //autoplay:true,
+                //autoplayHoverPause:true,
+                //autoplayTimeout:3000,
+                responsive:{
+                    0:{
+                    items:1
+                    },
+                    500:{
+                    items:2
+                    },
+                    768:{items:3},
+                    // 769:{items:3},
+                    900:{items:3},
+                    1100:{items:4},
+                    1400:{items:6},
+                    2000:{items:8}
                 }
-            }
-            cancelBtn.onclick =()=>{
-                searchBox.classList.remove("active");
-                searchBtn.classList.remove("active");
-                searchInput.classList.remove("active");
-                cancelBtn.classList.remove("active");
-                searchData.classList.toggle("active");
-                searchInput.value = "";
-            } */
-            // End search bar
-        //Hamburger
-            $(document).ready(function () {
-            $('.first-button').on('click', function () {
-
-            $('.animated-icon1').toggleClass('open');
-            });
-            $('.second-button').on('click', function () {
-
-            $('.animated-icon2').toggleClass('open');
-            });
-            $('.third-button').on('click', function () {
-
-            $('.animated-icon3').toggleClass('open');
-            });
-        });
-        // End Hamburger
-
+                })
+            })
+            // Carousel Sponsorizzati 
+            jQuery(document).ready(function($){
+                $('.card_container_sponsorizzati').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                //autoplay:true,
+                //autoplayHoverPause:true,
+                //autoplayTimeout:3000,
+                responsive:{
+                    0:{
+                    items:1
+                    },
+                    575:{
+                    items:1
+                    },
+                    768:{items:2},
+                    769:{items:2},
+                    900:{items:2},
+                    1100:{items:3},
+                    1400:{items:4},
+                    2000:{items:5}
+                }
+                })
+            })
+            // Carousel our_team
+            jQuery(document).ready(function($){
+                $('.container_team').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                //autoplay:true,
+                //autoplayHoverPause:true,
+                //autoplayTimeout:3000,
+                responsive:{
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    769:{items:3},
+                    900:{items:4},
+                    1200:{items:5},
+                }
+                })
+            })
         </script>
     </body>
 </html>

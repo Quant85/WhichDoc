@@ -1,5 +1,5 @@
 <div class="our_team">
-    <div class="container_team d-flex flex-wrap justify-content-around">
+    <div class="container_team d-flex flex-wrap justify-content-around owl-carousel owl-themes">
         <div class="card_foto flex-column justify-content-around ">
             <div class="foto_cerchi">
                 <div class="elisse_1"></div>
