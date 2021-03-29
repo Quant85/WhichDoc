@@ -1,4 +1,16 @@
 footer{background-color: $verde_acqua;
+    position: relative;
+        .angolo_destra_alto {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: $viola;
+            border-radius: 0px 0px 106px 0px;
+            transform: rotate(90deg);
+        }
+
     .container_footer{
         width: 90%;
         margin: auto;

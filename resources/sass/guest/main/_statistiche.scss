@@ -1,28 +1,49 @@
 .statistiche {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.statistiche-left{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.statistiche-right{
-    height: 100%;
-    background: #cff7ff;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    img{
-        height: 100%;
+    position: relative;
+    box-shadow: inset 0px 20px 20px 0px white;
+    padding: 50px 0;
+    // background: #cff7ff;
+    background: #f9fafe;
+    // height: 300px;
+    .angolo_sinistra_alto{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: $lilla;
+        border-radius: 0px 0px 106px 0px;
     }
+    .angolo_destra_basso {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: $viola;
+        border-radius: 0px 0px 106px 0px;
+        transform: rotate(-180deg);
+    }
+    .container_statistiche{
+        height: 100%;
+        width: 90%;
+        .statistiche_left {
+            height: 100%;
+            width: 100%;
 
+        }
+
+        .statistiche-right {
+            height: 100%;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+            // background-position: center;
+            img {
+                height: 100%;
+                border-radius: 115px;
+            }
+
+        }
+    }
 }
+

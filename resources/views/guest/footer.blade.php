@@ -1,5 +1,6 @@
 <footer>
   <div class="container_footer d-flex ">
+        <div class="angolo_destra_alto"></div>
         <div class="left_footer">
            <div>
                 <h2>WhichDoc </h2>
