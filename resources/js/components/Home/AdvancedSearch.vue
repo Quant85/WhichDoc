@@ -11,76 +11,109 @@
             <!-- /Select specializzazioni -->
 
             <!-- Filtri -->
-            <div class="filtri_search d-flex">
-                <!-- Form filtro numero recensioni -->
-                <form  class="recensioni_search d-flex" action="">
-                    <span>
-                        <input type="radio" id="max" name="somma" @change='max'>
-                        <label for="max">+30voti</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="mid" name="somma" @change='mid'>
-                        <label for="mid">tra 10 e 30voti</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="min" name="somma" @change='min'>
-                        <label for="min">tra 0 e 10voti</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="all" name="somma" @change='all'>
-                        <label for="all">tutti</label>
-                    </span>
-                </form>
-                <!-- /Form filtro numero recensioni -->
+            <div class="filtri d-flex">
+                
+                <div class="filtri_recensioni">
+                    <!-- Form filtro numero recensioni -->
+                    <h4>Recensioni</h4>
+                    <form  class="recensioni_search d-flex" action="">
+                        <span>
+                            <input type="radio" id="max" name="somma" @change='max'>
+                            <label for="max">+30</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="mid" name="somma" @change='mid'>
+                            <label for="mid">10 < 30</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="min" name="somma" @change='min'>
+                            <label for="min">0 < 10</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="all" name="somma" @change='all'>
+                            <label for="all">ALL</label>
+                        </span>
+                    </form>
+                    <!-- /Form filtro numero recensioni -->
+                </div>
+                <!-- /Filtri -->
 
-
-                <!-- Form filtro media voto -->
-                <form class="voti_search d-flex" action="">
-                    <span>
-                        <input type="radio" id="zero" name="media" @change='zero'>
-                        <label for="zero">voto 0</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="uno" name="media" @change='uno'>
-                        <label for="uno">voto 1</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="due" name="media" @change='due'>
-                        <label for="due">voto 2</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="tre" name="media" @change='tre'>
-                        <label for="tre">voto 3</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="quattro" name="media" @change='quattro'>
-                        <label for="quattro">voto 4</label>
-                    </span>
-                    <span>
-                        <input type="radio" id="cinque" name="media" @change='cinque'>
-                        <label for="cinque">voto 5</label>
-                    </span>
-                </form>
-                <!-- /Form filtro media voto -->
-
+                <div class="filtri_voti">
+                    <!-- Form filtro media voto -->
+                    <h4>Voti</h4>
+                    <form class="voti_search d-flex" action="">
+                        <span>
+                            <input type="radio" id="zero" name="media" @change='zero'>
+                            <label for="zero">ZERO</label>
+                        </span>
+                        <span>
+                            <input type="radio" id="uno" name="media" @change='uno'>
+                            <label for="uno">
+                                <i class="fa fa-star" aria-hidden="true">
+                            </i></label>
+                        </span>
+                        <span>
+                            <input type="radio" id="due" name="media" @change='due'>
+                            <label for="due">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </label>
+                        </span>
+                        <span>
+                            <input type="radio" id="tre" name="media" @change='tre'>
+                            <label for="tre">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </label>
+                        </span>
+                        <span>
+                            <input type="radio" id="quattro" name="media" @change='quattro'>
+                            <label for="quattro">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </label>
+                        </span>
+                        <span>
+                            <input type="radio" id="cinque" name="media" @change='cinque'>
+                            <label for="cinque">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </label>
+                        </span>
+                    </form>
+                    <!-- /Form filtro media voto -->
+                </div>
             </div>
-            <!-- /Filtri -->
 
             <div class="container_card_search d-flex">
                 <!-- Card dottori -->
                 <div v-for="doctor in doctors" class="card_search d-flex" v-if="selected == doctor.specializzazioni && doctor.visible == true && doctor.visibleMV == true && doctor.profilo !== null">
                     <a :href="`/medico/profilo/` + doctor.id" class="d-flex">
-                        <div class="dati_dottore_search">
+                        <div class="card_top_search d-flex">
                             <h4 v-if="doctor.profilo.genere == 'maschio'">Dottore <br>{{doctor.nome}} {{doctor.cognome}}</h4>
                             <h4 v-else-if="doctor.profilo.genere == 'femmina'">Dottoressa <br>{{doctor.nome}} {{doctor.cognome}}</h4>
-                            <p v-for="speci in doctor.somma_specializzazioni">{{speci.descrizione}}</p>
-                            <p>{{doctor.profilo.città}}</p>
-                            <p>{{doctor.media_voto}}</p>
-                            <p>{{doctor.somma_recensione}}</p>
+                            <div class="immagine_dottore_search">
+                                <img v-if="doctor.profilo.foto !== null" :src="`storage/${doctor.profilo.foto}`" alt="" style="width: 100px;">
+                                <img v-else src="../../../img/default/dottori.jpg">
+                            </div>
                         </div>
-                        <div class="immagine_dottore_search">
-                            <img v-if="doctor.profilo.foto !== null" :src="`storage/${doctor.profilo.foto}`" alt="" style="width: 100px;">
-                            <img v-else src="../../../img/default/dottori.jpg">
+
+                        <div class="dati_dottore_search">
+                            <div>
+                                <ul>
+                                    <strong>Specializzazioni:</strong>
+                                    <li v-for="speci in doctor.somma_specializzazioni">{{speci.descrizione}}</li>
+                                </ul>
+                            </div>
+                            <p><strong>Città: </strong>{{doctor.profilo.città}}</p>
+                            <p><strong>Voto: </strong>{{doctor.media_voto}}</p>
+                            <p><strong>Recensioni: </strong> {{doctor.somma_recensione}}</p>
                         </div>
                     </a>
                 </div>
