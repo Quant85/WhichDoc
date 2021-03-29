@@ -10084,44 +10084,83 @@ body {
 #ciao .main_white nav .bottom .bottom_right .bottom_right_bottom {
   width: 100%;
 }
-#ciao .main_white .form_message {
-  width: 90%;
-  margin: auto;
+#ciao .main_white #form_message {
+  width: 50%;
   margin-top: 20px;
-  padding: 20px;
-  border: 1px solid black;
+  margin-left: 10%;
+  padding: 5px;
   border-radius: 5px;
-  box-shadow: 1px 1px 3px #000;
-  background: linear-gradient(270deg, white 0%, #4dc0b5 68%);
+  box-shadow: 1px 1px 3px #646766;
+  background-color: #6146C6;
 }
-#ciao .main_white .form_message h3 {
-  text-shadow: 1px 1px 1px white;
+#ciao .main_white #form_message h3 {
   font-weight: bold;
 }
-#ciao .main_white .form_message form .form_input_message input {
-  width: 50%;
+#ciao .main_white #form_message form .form_input_message input {
+  width: 60%;
+  height: 20px;
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border: none;
 }
-#ciao .main_white .form_message form .form_input_message input:focus {
+#ciao .main_white #form_message form .form_input_message input:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
-#ciao .main_white .form_message form textarea {
+#ciao .main_white #form_message form textarea {
+  padding: 20px;
+  border: 1px solid #dddddd;
+}
+#ciao .main_white #form_message form textarea:focus {
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+#ciao .main_white #form_message button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+#ciao .main_white #form_message button:focus {
+  border: 1px solid white;
+  box-shadow: 1px 1px 2px white;
+}
+#ciao .main_white #form_recensioni {
+  width: 40%;
+  margin-left: 50%;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #646766;
+  background-color: #CD81DB;
+}
+#ciao .main_white #form_recensioni h4 {
+  font-weight: bold;
+}
+#ciao .main_white #form_recensioni form .form_input_message input {
+  width: 50%;
+  height: 20px;
+  display: inline-block;
+  margin-bottom: 5px;
+  border: none;
+}
+#ciao .main_white #form_recensioni form .form_input_message input:focus {
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+#ciao .main_white #form_recensioni form textarea {
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #dddddd;
 }
-#ciao .main_white .form_message form textarea:focus {
+#ciao .main_white #form_recensioni form textarea:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
-#ciao .main_white .form_message button {
+#ciao .main_white #form_recensioni form button {
   background-color: black;
   color: white;
 }
-#ciao .main_white .form_message button:focus {
+#ciao .main_white #form_recensioni form button:focus {
   border: 1px solid white;
   box-shadow: 1px 1px 2px white;
 }
