@@ -1,7 +1,7 @@
 @mixin baseButton($bgColor1, $bgColor2, $bgColor3, $txtColor, $to, $bgPosition) {
     background-image: linear-gradient(to $to, $bgColor1 0%, $bgColor2 51%, $bgColor3 100%);
     margin: 10px;
-    padding: 15px 45px;
+    padding: 10px 40px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -35,8 +35,6 @@
 
 @mixin hovShadow($white, $bgColor) {
     box-shadow: 12px 13px 14px -7px $bgColor;
-    &:hover {
-        box-shadow: 2px 2px 14px -7px $white;
-    }    
+    &:hover {box-shadow: 2px 2px 14px -7px $white;}    
     
 }
