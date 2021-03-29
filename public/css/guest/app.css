@@ -10018,7 +10018,7 @@ h3 {
 .btn-grad {
   background-image: linear-gradient(to right, #68ffd4 0%, #7176d1 51%, #4E54D7 100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px 40px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -10039,7 +10039,7 @@ h3 {
 .btn-grad-secondary {
   background-image: linear-gradient(to right, #4E54D7 0%, #7176d1 51%, #68ffd4 100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px 40px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -10060,7 +10060,7 @@ h3 {
 .btn-grad-dark {
   background-image: linear-gradient(to right, #7176d1 0%, #4E54D7 51%, #6146C6 100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px 40px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -10081,7 +10081,7 @@ h3 {
 .btn-grad-secondary-dark {
   background-image: linear-gradient(to right, #7176d1 0%, #4E54D7 51%, #6146C6 100%);
   margin: 10px;
-  padding: 15px 45px;
+  padding: 10px 40px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -10099,126 +10099,46 @@ h3 {
   text-decoration: none;
 }
 
-.search-box {
+header {
   position: relative;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.search-box input {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 50px;
-  background: #fff;
-  outline: none;
-  padding: 0 60px 0 20px;
-  font-size: 18px;
-  opacity: 0;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.search-box.active {
-  width: 350px;
-}
-
-.search-box input.active {
-  opacity: 1;
-}
-
-.search-box input::-moz-placeholder {
-  color: #a6a6a6;
-}
-
-.search-box input:-ms-input-placeholder {
-  color: #a6a6a6;
-}
-
-.search-box input::placeholder {
-  color: #a6a6a6;
-}
-
-.search-box .search-icon {
+.search_comp {
   position: absolute;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60px;
-  width: 60px;
-  background: #fff;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 60px;
-  font-size: 22px;
-  color: #6146C6;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  top: 2.6%;
+  left: 50%;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.search_comp .btn-grad-secondary {
+  padding: 10px 40px !important;
 }
 
-.search-box .search-icon.active {
-  right: 5px;
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
-  font-size: 20px;
-  background: #6146C6;
-  color: #fff;
-  transform: translateY(-50%) rotate(360deg);
-}
-
-.search-box .cancel-icon {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 25px;
-  color: #4E54D7;
-  cursor: pointer;
-  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.search-box .cancel-icon.active {
-  right: -40px;
-  transform: translateY(-50%) rotate(360deg);
-}
-
-.search-box .search-data {
-  text-align: center;
-  padding-top: 7px;
-  color: #fff;
-  font-size: 18px;
-  word-wrap: break-word;
-}
-
-.search-box .search-data.active {
-  display: none;
-}
-
-nav {
+nav .container_nav {
   background-color: white;
-  display: grid;
+  width: 70%;
+  margin: auto;
   padding: 25px 0;
 }
-nav img {
+nav .container_nav img {
   width: 60px;
 }
-nav .login {
+nav .container_nav .login {
   align-items: center;
   display: flex;
   justify-content: center;
 }
-nav .login .top-right {
+nav .container_nav .login .top-right {
   width: 100%;
 }
-nav .login .top-right .loggedin {
+nav .container_nav .login .top-right .loggedin {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-nav .login .top-right .loggedin .notification {
+nav .container_nav .login .top-right .loggedin .notification {
   padding-right: 25px;
 }
 
@@ -10734,256 +10654,25 @@ footer .container_footer .right_footer div p {
   left: 0;
 }
 
-#search {
-  background-color: #6146C6;
-  width: 100%;
-}
-#search .selezione_search {
-  justify-content: center;
-  border: 2px solid black;
-  background-color: white;
-}
-#search .filtri_search {
-  margin: 20px 0;
-}
-#search .filtri_search .recensioni_search {
-  background-color: white;
-  align-items: center;
-  justify-content: space-around;
-  width: 50%;
-  border: 2px solid black;
-}
-#search .filtri_search .recensioni_search span {
-  border-radius: 5px;
-}
-#search .filtri_search .voti_search {
-  background-color: white;
-  align-items: center;
-  justify-content: space-around;
-  width: 50%;
-  border: 2px solid black;
-}
-#search .filtri_search .voti_search span {
-  border-radius: 5px;
-}
-#search .container_card_search {
-  width: 100%;
-  flex-direction: row;
-  width: 100%;
-}
-#search .container_card_search .card_search {
-  width: 30%;
-  margin: 0 2.5%;
-  margin-bottom: 20px;
-  background-color: white;
-  box-shadow: 1px 1px 3px #393939;
-  border-radius: 10px;
-}
-#search .container_card_search .card_search a {
-  width: 100%;
-  color: black;
-}
-#search .container_card_search .card_search a:hover {
-  text-decoration: none;
-}
-#search .container_card_search .card_search a .dati_dottore_search {
-  width: 50%;
-}
-#search .container_card_search .card_search a .immagine_dottore_search {
-  width: 50%;
-  position: relative;
-}
-#search .container_card_search .card_search a .immagine_dottore_search img {
-  width: 100%;
-  position: absolute;
-  right: 0;
-  border-radius: 10px;
-}
-
-#profilo_medico {
-  background-color: white;
-}
-#profilo_medico .jumbo_medico_profilo {
-  height: 200px;
-  width: 100%;
-  background: #020024;
-  background: linear-gradient(180deg, #020024 0%, #6146C6 60%, #957af8 100%);
-}
-#profilo_medico .jumbo_medico_profilo a .fa-arrow-circle-left {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
-}
-#profilo_medico .jumbo_medico_profilo a .fa-home {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo {
-  width: 90%;
-  margin: auto;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo {
-  width: 50%;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo img {
-  width: 50%;
-  position: relative;
-  bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #646766;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo {
-  padding: 10px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo h3 {
-  text-transform: capitalize;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo .specializzazioni_medico_profilo {
-  margin-bottom: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo {
-  width: 100%;
-  margin: 20px 0;
-  background-color: #53e2ba;
-  box-shadow: 3px 3px 3px #646766;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-header .card-title {
-  font-weight: bold;
-  height: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body {
-  min-height: 50px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body .list-unstyled .badge {
-  background-color: #53e2ba;
-}
-#profilo_medico .main_medico_profilo .middle_medico_profilo {
-  height: 300px;
-  width: 100%;
-  margin-top: 50px;
-  margin: auto;
-}
-#profilo_medico .main_medico_profilo .middle_medico_profilo .bio_medico_profilo {
-  width: 90%;
-  height: 90%;
-  margin: auto;
-  padding: 10px;
-  border: 3px solid black;
-  border-radius: 10px;
-  color: black;
-  box-shadow: 3px 3px 3px #646766;
-}
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo {
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
-}
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo {
-  border: 1px solid #4ed3ad;
-  background-color: #53e2ba;
-  border-radius: 10px;
-  padding: 5px;
-  height: 90%;
-  width: 25%;
-  box-shadow: 3px 3px 3px #646766;
-}
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo strong {
-  text-transform: capitalize;
-}
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo .corpo_recensione {
-  margin-top: 15px;
-}
-#profilo_medico .main_medico_profilo .form_medico_profilo {
-  background: linear-gradient(270deg, #020024 0%, #6146C6 50%, #6146C6 100%);
-  width: 100%;
-  margin-top: 30px;
-  height: 400px;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#form_message {
-  width: 35%;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: #6146C6;
-}
-#form_message h4 {
-  font-weight: bold;
-}
-#form_message form .form_input_message input {
-  width: 60%;
-  height: 20px;
-  display: inline-block;
-  margin-bottom: 5px;
-  border: none;
-}
-#form_message form .form_input_message input:focus {
-  border: 1px solid black;
-  box-shadow: 1px 1px 2px black;
-}
-#form_message form textarea {
-  padding: 20px;
-  border: 1px solid #dddddd;
-}
-#form_message form textarea:focus {
-  border: 1px solid black;
-  box-shadow: 1px 1px 2px black;
-}
-#form_message button {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-#form_message button:focus {
-  border: 1px solid white;
-  box-shadow: 1px 1px 2px white;
-}
-
-#form_recensioni {
-  width: 35%;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  background: linear-gradient(270deg, #020024 0%, #573fae 70%, #553cae 100%);
-}
-#form_recensioni h4 {
-  font-weight: bold;
-}
-#form_recensioni form .form_input_message input {
-  width: 50%;
-  height: 20px;
-  display: inline-block;
-  margin-bottom: 5px;
-  border: none;
-}
-#form_recensioni form .form_input_message input:focus {
-  border: 1px solid black;
-  box-shadow: 1px 1px 2px black;
-}
-#form_recensioni form textarea {
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #dddddd;
-}
-#form_recensioni form textarea:focus {
-  border: 1px solid black;
-  box-shadow: 1px 1px 2px black;
-}
-#form_recensioni form button {
-  background-color: black;
-  color: white;
-}
-#form_recensioni form button:focus {
-  border: 1px solid white;
-  box-shadow: 1px 1px 2px white;
-}
-
+<
 @media (max-width: 992px) {
   .hamburger {
     visibility: visible;
+  }
+
+  .hamburger .navbar-brand .logo {
+    margin: 10px;
+    width: 100px;
+  }
+
+  .search_comp {
+    position: absolute;
+    top: 5.9%;
+    left: 32%;
+    width: 50%;
+  }
+  .search_comp .btn-grad-secondary {
+    padding: 7px 30px !important;
   }
 
   .nav_principale {
@@ -10997,6 +10686,19 @@ footer .container_footer .right_footer div p {
 
   .card_specializzazione {
     width: 150px;
+  }
+
+  .search_comp {
+    position: absolute;
+    top: 2.6%;
+    left: 23%;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+  .search_comp .btn-grad-secondary {
+    padding: 10px 40px !important;
   }
 }
 @media (max-width: 768px) {
@@ -11055,6 +10757,21 @@ footer .container_footer .right_footer div p {
   }
 }
 @media (min-width: 375px) and (max-width: 575px) {
+  .search_comp {
+    position: absolute;
+    top: 19%;
+    left: 3%;
+    width: 35%;
+    margin: auto;
+    display: block;
+    z-index: 1;
+  }
+  .search_comp .btn-grad-secondary {
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px 40px !important;
+  }
+
   .jumbotron {
     overflow: hidden;
   }

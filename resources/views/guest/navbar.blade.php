@@ -1,15 +1,12 @@
-<nav class="d-flex container-fluid nav_principale">
-    <div class="container-lg ">
-        <div class="row">
-            <div class="logo col-md-2">
-              <a href="{{ url('/') }}">
-                <img src="{{asset('img/logo.jpeg')}}" alt="">
-              </a>
+<nav class="d-flex nav_principale">
+    <div class="container_nav d-flex justify-content-between">
+            <div class="logo">
+                <a href="{{ url('/') }}">
+                    <img src="{{asset('img/logo.jpeg')}}" alt="">
+                </a>
             </div>
-            <div class="search_bar col-md-5">
-              <search-component></search-component>
-            </div>
-            <div class="login col-md-5">
+
+            <div class="login">
                 @if (Route::has('login'))
                     <div class="top-right links d-flex justify-content-around">
                         @auth
@@ -27,7 +24,6 @@
                     </div>
                 @endif
             </div>
-        </div>
     </div>
 </nav>
 
@@ -36,7 +32,7 @@
   <nav class="navbar navbar-light amber lighten-4 mb-4">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#"><img src="{{asset('img/logo.jpeg')}}" alt=""></a>
+    <a class="navbar-brand" href="#"><img class="logo" src="{{asset('img/logo.jpeg')}}" alt=""></a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"

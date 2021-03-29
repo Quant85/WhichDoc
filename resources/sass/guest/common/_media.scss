@@ -1,42 +1,61 @@
+@media (max-width:1200px){
+       nav{
+           .container_nav {
+               width: 100%;
+           }
+       }
+    .search_comp {
+            position: absolute;
+            top: 2.6%;
+            left: 25%;
+            width: 30%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+
+            .btn-grad-secondary {
+                padding: 10px 40px !important;
+            }
+        }
+}
 @media (max-width:992px) {
     .hamburger{visibility: visible;}
+    .hamburger {
+        .navbar-brand {
+            .logo {margin: 10px;
+                width: 100px;
+            }
+        }
+    }
+    .search_comp {
+        position: absolute;
+        top: 5.9%;
+        left: 32%;
+        width: 50%;
+        .btn-grad-secondary {
+            padding: 7px 30px !important;
+        }
+    }
     .nav_principale{display: none!important;}
 }
 
 @media (min-width:993px) {
     .hamburger {display: none !important;}
     .card_specializzazione {width: 150px;}
-    // footer {
-    //     .container_footer {
-    //         // display: flex !important;
-    //         // flex-direction: column;
-    //         .left_footer {
-    //             // width: 100%;
-    //         }
-    //         .center_footer {
-    //             // width: 100%;
-                
-    //         }
-    //         .right_footer {
-    //             // width: 100%;
-    //         }
-    //     }
-    // }
-
-
+    .search_comp {
+        position: absolute;
+        top: 2.6%;
+        left: 23%;
+        width: 30%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        
+        .btn-grad-secondary {
+            padding: 10px 40px !important;
+        }
+    }
 }
-// @media (min-width: 768px){
-//      footer {
-//          .container_footer {
-//              .left_footer {}
-
-//              .center_footer {
-//                 .iphone_top {}
-//                 }
-//              .right_footer {}
-//          }
-//      }
-// }
 @media(max-width: 768px) {
     .card_sponsorizzato {
         margin-bottom: 10px;
@@ -47,29 +66,28 @@
         padding: 30px 0;
         .card_specializzazione {
             width: 100px;
-            // height: 100px;
         }
     }
     .card_sponsorizzato {flex-direction: column!important;}
-
-        .angolo_destra_alto {
-            width: 75px;
-            height: 75px;
-        }
-        .angolo_sinistra_alto {
-            width: 75px;
-            height: 75px;
-        }
-        .angolo_destra_basso {
-            width: 75px;
-            height: 75px;
-        }
-        .angolo_sinistra_basso {
-            width: 75px;
-            height: 75px;
-        }
-
-
+    
+    .angolo_destra_alto {
+        width: 75px;
+        height: 75px;
+    }
+    .angolo_sinistra_alto {
+        width: 75px;
+        height: 75px;
+    }
+    .angolo_destra_basso {
+        width: 75px;
+        height: 75px;
+    }
+    .angolo_sinistra_basso {
+        width: 75px;
+        height: 75px;
+    }
+    
+    
     footer{
         .container_footer{
             display: flex !important;
@@ -85,6 +103,20 @@
     }
 }
 @media (min-width: 375px) and (max-width: 575px) {
+    .search_comp {
+        position: absolute;
+        top: 19%;
+        left: 3%;
+        width: 35%;
+        margin: auto;
+        display: block;
+        z-index: 1;
+        .btn-grad-secondary {
+            margin: 0;
+            margin-top: 10px;
+            padding: 10px 40px !important;
+        }
+    }
     .jumbotron {
         overflow: hidden;
         img {
@@ -94,7 +126,7 @@
     }
     .card_ricerca_rapida {
         padding: 30px 0;
-
+        
         .card_specializzazione {
             width: 75px;
             //   height: 75px;
@@ -173,7 +205,7 @@
                 border-radius: 0 0 17px 17px;
             }
         }
-
+        
     }
     footer {
         .container_footer {

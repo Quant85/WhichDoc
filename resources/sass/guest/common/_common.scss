@@ -29,3 +29,19 @@ cursor: pointer;
 .btn-grad-secondary-dark {
     @include baseButton($blu_viola_chiaro, $blu_viola, $viola, $white, right, right);
 }
+
+header{
+    position: relative;
+}
+.search_comp{
+    position: absolute;
+    top: 2.6%;
+    left: 50%;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    .btn-grad-secondary{
+        padding: 10px 40px!important;
+    }
+}

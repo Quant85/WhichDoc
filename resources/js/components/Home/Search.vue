@@ -1,41 +1,10 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-                    <!-- <form @submit.prevent="searchResult" >
-                        <div class="field has-addons searchbox">
-                            <div class="control">
-                                <input
-                                    class="input"
-                                    type="text"
-                                    id="search"
-                                    name="q"
-                                    placeholder="Search..."
-                                    @keyup.enter="searchResult"
-                                    v-model="searchData"
-                                />
-                            </div>
-
-                            <div class="control">
-                                <button class="button is-primary">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form> -->
-                    <div class="form-group">
-                      <label for=""></label>
-                      <select class="form-control" name="" id="" v-model="name">
-                        <option v-for="spec in special">{{spec}}</option>
-                      </select>
-
-                      <a type="submit" class="btn btn-primary" href="/search">Cliccami</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="form-group search_comp">
+        <label for=""></label>
+        <select class="form-control" name="" id="" v-model="name">
+        <option v-for="spec in special">{{spec}}</option>
+        </select>
+        <a type="submit" class="btn btn-grad-secondary" href="/search">Cliccami</a>
     </div>
 </template>
 
