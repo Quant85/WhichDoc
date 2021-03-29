@@ -10734,6 +10734,72 @@ footer .container_footer .right_footer div p {
   left: 0;
 }
 
+#search {
+  background-color: #6146C6;
+  width: 100%;
+}
+#search .selezione_search {
+  justify-content: center;
+  border: 2px solid black;
+  background-color: white;
+}
+#search .filtri_search {
+  margin: 20px 0;
+}
+#search .filtri_search .recensioni_search {
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  border: 2px solid black;
+}
+#search .filtri_search .recensioni_search span {
+  border-radius: 5px;
+}
+#search .filtri_search .voti_search {
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  border: 2px solid black;
+}
+#search .filtri_search .voti_search span {
+  border-radius: 5px;
+}
+#search .container_card_search {
+  width: 100%;
+  flex-direction: row;
+  width: 100%;
+}
+#search .container_card_search .card_search {
+  width: 30%;
+  margin: 0 2.5%;
+  margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 3px #393939;
+  border-radius: 10px;
+}
+#search .container_card_search .card_search a {
+  width: 100%;
+  color: black;
+}
+#search .container_card_search .card_search a:hover {
+  text-decoration: none;
+}
+#search .container_card_search .card_search a .dati_dottore_search {
+  width: 50%;
+}
+#search .container_card_search .card_search a .immagine_dottore_search {
+  width: 50%;
+  position: relative;
+}
+#search .container_card_search .card_search a .immagine_dottore_search img {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  border-radius: 10px;
+}
+
 #profilo_medico {
   background-color: white;
 }
