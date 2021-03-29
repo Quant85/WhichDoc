@@ -1,7 +1,7 @@
 <div class="sponsorizzati">
     <div class="container_sponsorizzati d-flex flex-column">
         <h2>I nostri medici</h2>
-        <div class="card_container d-flex justify-content-between owl-carousel owl-theme flex-column">
+        <div class="card_container card_container_sponsorizzati d-flex justify-content-between owl-carousel owl-theme flex-column">
             
             {{-- Card Medico sponsiorizzato --}}
             @foreach($medici as $medico)
@@ -22,3 +22,5 @@
 
     </div>
 </div>
+
+

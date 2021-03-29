@@ -1,163 +1,78 @@
-{{-- <div>
-  <div id="app">
-    <carousel-component>
-
-          <div id="container">
-            <div id="example"></div>
-          </div>
-  </div>
-
-  <script>
-      const buildSlideMarkup = (count) => {
-          let slideMarkup = '';
-      for (var i = 1; i <= count; i++) {
-          slideMarkup += '<slide><span class="label">' + i + '</span></slide>'
-      }
-      return slideMarkup;
-      };
-
-      new Vue({
-          el: '#example',
-      components: {
-          'carousel': VueCarousel.Carousel,
-          'slide': VueCarousel.Slide
-      },
-      template: '<div><carousel :navigationEnabled="true">' + buildSlideMarkup(10) + '</carousel></div>'
-      });
-  </script>
-
-  <style>
-      #container {
-    padding: 0 60px;
-  }
-
-  .VueCarousel-slide {
-    position: relative;
-    background: #42b983;
-    color: #fff;
-    font-family: Arial;
-    font-size: 24px;
-    text-align: center;
-    min-height: 100px;
-  }
-
-  .label {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  </style>
-</div> --}}
 
 <div class="card_ricerca_rapida ">
-    <div class="container_card d-flex justify-content-between">
+    <div class="container_card d-flex justify-content-between owl-carousel owl-theme">
         {{-- @foreach ($collection as $item) --}}
         <div class="card_specializzazione card">
             <div class="d-flex justify-content-center flex-column">
-                <img src="{{ asset('/img/logo.jpeg')}}" alt="">
-                <small>Specializzazione</small>
+                <img src="{{ asset('/img/specializzazioni/Allergologia.jpg')}}" alt="">
+                <small>Allergologia</small>
             </div>
         </div>
         {{-- @endforeach --}}
         
         {{-- Eliminare --}}
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
-            <div class="card_specializzazione card"><div class="d-flex justify-content-center flex-column"><img src="{{ asset('/img/logo.jpeg')}}" alt=""><small>Specializzazione</small></div></div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Cardiologia.jpg')}}" alt="">
+                    <small>Cardiologia</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Dermatologia.jpg')}}" alt="">
+                    <small>Dermatologia</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                    <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Diabetologia.jpg')}}" alt="">
+                    <small>Diabetologia</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Geriatria.jpg')}}" alt="">
+                    <small>Geriatria</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/MedicinaDelloSport.jpg')}}" alt="">
+                    <small>Medicina dello sport</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/MedicinaInterna.jpg')}}" alt="">
+                    <small>Medicina interna</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Nutrizionistica.jpg')}}" alt="">
+                    <small>Nutrizionistica</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Pediatria.jpg')}}" alt="">
+                    <small>Pediatria</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Pneumologia.jpg')}}" alt="">
+                    <small>Pneumologia</small>
+                </div>
+            </div>
+            <div class="card_specializzazione card">
+                <div class="d-flex justify-content-center flex-column">
+                    <img src="{{ asset('/img/specializzazioni/Psicologia.jpg')}}" alt="">
+                    <small>Psicologia</small>
+                </div>
+            </div>
         {{-- Eliminare --}}
 
     </div>
 </div>
 
-
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.min.css"/>
-<script>
-  jQuery(document).ready(function($){
-    $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:10,
-      nav:false,
-//    autoplay:true,
-//    autoplayHoverPause:true,
-//    autoplayTimeout:3000,
-      responsive:{
-        0:{
-          items:1
-        },
-        575:{
-          items:2
-        },
-        768:{items:2},
-        769:{items:1},
-        900:{items:2},
-        1100:{items:3},
-        1400:{items:4},
-        2000:{items:5}
-      }
-    })
-  })
-  </script>
-
-
-{{-- DA TESTARE 
-autoplay
-    Type: Boolean
-    Default: false
-    desc: Autoplay.
-
-autoplayTimeout
-    Type: Number
-    Default: 5000
-    Desc: Autoplay interval timeout.
-
-autoplayHoverPause
-    Type: Boolean
-    Default: false
-    Desc: Pause on mouse hover.
-
-smartSpeed
-    Type: Number
-    Default: 250
-    Desc: Speed Calculate. More info to come..
-
-fluidSpeed
-    Type: Boolean
-    Default: Number
-    Desc: Speed Calculate. More info to come..
-
-autoplaySpeed
-    Type: Number/Boolean
-    Default: false
-    Desc: autoplay speed.
-
-navSpeed
-    Type: Number/Boolean
-    Default: false
-    Desc: Navigation speed.
-
-dotsSpeed
-    Type: Boolean
-    Default: Number/Boolean
-    Desc: Pagination speed.
-
-dragEndSpeed
-    Type: Number/Boolean
-    Default: false
-    Desc: Drag end speed. 
-
-animateOut
-    Type: String/Boolean
-    Default: false
-    Desc: Class for CSS3 animation out.
-
-animateIn
-    Type: String/Boolean
-    Default: false
-    Desc: Class for CSS3 animation in.
---}}
