@@ -2100,6 +2100,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39229,175 +39271,229 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { attrs: { id: "search" } }, [
+      _c("div", { staticClass: "selezione_search d-flex" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selected,
+                expression: "selected"
+              }
+            ],
+            attrs: { id: "select_search" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selected = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          _vm._l(_vm.special, function(spec) {
+            return _c("option", [_vm._v(_vm._s(spec))])
+          }),
+          0
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "filtri_search d-flex" }, [
+        _c(
+          "form",
+          { staticClass: "recensioni_search d-flex", attrs: { action: "" } },
+          [
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "max", name: "somma" },
+                on: { change: _vm.max }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "max" } }, [_vm._v("+30voti")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "mid", name: "somma" },
+                on: { change: _vm.mid }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "mid" } }, [
+                _vm._v("tra 10 e 30voti")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "min", name: "somma" },
+                on: { change: _vm.min }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "min" } }, [_vm._v("tra 0 e 10voti")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "all", name: "somma" },
+                on: { change: _vm.all }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "all" } }, [_vm._v("tutti")])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "form",
+          { staticClass: "voti_search d-flex", attrs: { action: "" } },
+          [
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "zero", name: "media" },
+                on: { change: _vm.zero }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "zero" } }, [_vm._v("voto 0")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "uno", name: "media" },
+                on: { change: _vm.uno }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "uno" } }, [_vm._v("voto 1")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "due", name: "media" },
+                on: { change: _vm.due }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "due" } }, [_vm._v("voto 2")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "tre", name: "media" },
+                on: { change: _vm.tre }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "tre" } }, [_vm._v("voto 3")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "quattro", name: "media" },
+                on: { change: _vm.quattro }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "quattro" } }, [_vm._v("voto 4")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "cinque", name: "media" },
+                on: { change: _vm.cinque }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "cinque" } }, [_vm._v("voto 5")])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
       _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.selected,
-              expression: "selected"
-            }
-          ],
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.selected = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        _vm._l(_vm.special, function(spec) {
-          return _c("option", [_vm._v(_vm._s(spec))])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c("form", { attrs: { action: "" } }, [
-        _c("input", {
-          attrs: { type: "radio", id: "max", name: "somma" },
-          on: { change: _vm.max }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "max" } }, [_vm._v("+30voti")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "mid", name: "somma" },
-          on: { change: _vm.mid }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "mid" } }, [_vm._v("tra 10 e 30voti")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "min", name: "somma" },
-          on: { change: _vm.min }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "min" } }, [_vm._v("tra 0 e 10voti")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "all", name: "somma" },
-          on: { change: _vm.all }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "all" } }, [_vm._v("tutti")])
-      ]),
-      _vm._v(" "),
-      _c("form", { attrs: { action: "" } }, [
-        _c("input", {
-          attrs: { type: "radio", id: "zero", name: "media" },
-          on: { change: _vm.zero }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "zero" } }, [_vm._v("media voto 0")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "uno", name: "media" },
-          on: { change: _vm.uno }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "uno" } }, [_vm._v("media voto 1")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "due", name: "media" },
-          on: { change: _vm.due }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "due" } }, [_vm._v("media voto 2")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "tre", name: "media" },
-          on: { change: _vm.tre }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "tre" } }, [_vm._v("media voto 3")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "quattro", name: "media" },
-          on: { change: _vm.quattro }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "quattro" } }, [_vm._v("media voto 4")]),
-        _vm._v(" "),
-        _c("input", {
-          attrs: { type: "radio", id: "cinque", name: "media" },
-          on: { change: _vm.cinque }
-        }),
-        _vm._v(" "),
-        _c("label", { attrs: { for: "cinque" } }, [_vm._v("media voto 5")])
-      ]),
-      _vm._v(" "),
-      _vm._l(_vm.doctors, function(doctor) {
-        return _c("div", [
-          _c("a", { attrs: { href: "/medico/profilo/" + doctor.id } }, [
-            _vm.selected == doctor.specializzazioni &&
+        "div",
+        { staticClass: "container_card_search d-flex" },
+        _vm._l(_vm.doctors, function(doctor) {
+          return _vm.selected == doctor.specializzazioni &&
             doctor.visible == true &&
             doctor.visibleMV == true &&
             doctor.profilo !== null
-              ? _c(
-                  "div",
-                  { staticClass: "card" },
+            ? _c("div", { staticClass: "card_search d-flex" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "d-flex",
+                    attrs: { href: "/medico/profilo/" + doctor.id }
+                  },
                   [
-                    _c("div", { staticClass: "immagine_dottore_ricerca" }, [
-                      _c("img", {
-                        staticStyle: { width: "100px" },
-                        attrs: {
-                          src: "storage/" + doctor.profilo.foto,
-                          alt: ""
-                        }
-                      })
-                    ]),
+                    _c(
+                      "div",
+                      { staticClass: "dati_dottore_search" },
+                      [
+                        doctor.profilo.genere == "maschio"
+                          ? _c("h4", [
+                              _vm._v("Dottore "),
+                              _c("br"),
+                              _vm._v(
+                                _vm._s(doctor.nome) +
+                                  " " +
+                                  _vm._s(doctor.cognome)
+                              )
+                            ])
+                          : doctor.profilo.genere == "femmina"
+                          ? _c("h4", [
+                              _vm._v("Dottoressa "),
+                              _c("br"),
+                              _vm._v(
+                                _vm._s(doctor.nome) +
+                                  " " +
+                                  _vm._s(doctor.cognome)
+                              )
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm._l(doctor.somma_specializzazioni, function(speci) {
+                          return _c("p", [_vm._v(_vm._s(speci.descrizione))])
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(_vm._s(doctor.profilo.città))]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(_vm._s(doctor.media_voto))]),
+                        _vm._v(" "),
+                        _c("p", [_vm._v(_vm._s(doctor.somma_recensione))])
+                      ],
+                      2
+                    ),
                     _vm._v(" "),
-                    doctor.profilo.genere == "maschio"
-                      ? _c("h4", [
-                          _vm._v("Dottore "),
-                          _c("br"),
-                          _vm._v(
-                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
-                          )
-                        ])
-                      : doctor.profilo.genere == "femmina"
-                      ? _c("h4", [
-                          _vm._v("Dottoressa "),
-                          _c("br"),
-                          _vm._v(
-                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm._l(doctor.somma_specializzazioni, function(speci) {
-                      return _c("p", [_vm._v(_vm._s(speci.descrizione))])
-                    }),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(doctor.profilo.città))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(doctor.media_voto))]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(doctor.somma_recensione))])
-                  ],
-                  2
+                    _c("div", { staticClass: "immagine_dottore_search" }, [
+                      doctor.profilo.foto !== null
+                        ? _c("img", {
+                            staticStyle: { width: "100px" },
+                            attrs: {
+                              src: "storage/" + doctor.profilo.foto,
+                              alt: ""
+                            }
+                          })
+                        : _c("img", {
+                            attrs: {
+                              src: __webpack_require__(/*! ../../../img/default/dottori.jpg */ "./resources/img/default/dottori.jpg")
+                            }
+                          })
+                    ])
+                  ]
                 )
-              : _vm._e()
-          ])
-        ])
-      })
-    ],
-    2
-  )
+              ])
+            : _vm._e()
+        }),
+        0
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -62939,6 +63035,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/img/default/dottori.jpg":
+/*!*******************************************!*\
+  !*** ./resources/img/default/dottori.jpg ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/dottori.jpg?31f4bfacfaced0397342fb22784b74d3";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -63744,9 +63851,9 @@ Vue.component('advanced-page-component', __webpack_require__(/*! ./components/Ho
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\NewWichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\NewWichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\erion\Desktop\Boolean\Classe23\NewWichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })

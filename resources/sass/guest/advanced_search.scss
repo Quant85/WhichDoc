@@ -1,0 +1,71 @@
+#search{
+    background-color: #6146C6;
+    width: 100%;
+    .selezione_search{
+        justify-content: center;
+        border: 2px solid black;
+        background-color: white;
+    }
+
+    .filtri_search{
+        margin: 20px 0;
+        .recensioni_search{
+            background-color: white;
+            align-items: center;
+            justify-content: space-around;
+            width: 50%;
+            border: 2px solid black;
+            span{
+                border-radius: 5px;
+            }
+        }
+        .voti_search{
+            background-color: white;
+            align-items: center;
+            justify-content: space-around;
+            width: 50%;
+            border: 2px solid black;
+            span{
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .container_card_search{
+        width: 100%;
+        flex-direction: row;
+        width: 100%;
+        .card_search{
+            width: 30%;
+            margin: 0 2.5%;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 1px 1px 3px rgb(57, 57, 57);
+            border-radius: 10px;
+            a{
+                width: 100%;
+                color: black;
+                &:hover{
+                    text-decoration: none;
+                }
+                .dati_dottore_search{
+                    width: 50%;
+                }
+                .immagine_dottore_search{
+                    width: 50%;
+                    position: relative;
+                    img{
+                        width: 100%;
+
+                        position: absolute;
+                        right: 0;
+                        border-radius: 10px;
+                        
+
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -48,7 +48,7 @@ class DoctorResource extends JsonResource
             'prestazioni' => PerformanceResource::collection($this->prestaziones),
             'specializzazioni' => $specializzazione,
             'recensioni' => $this->ratings,
-            'media_voto' => $media_voti,
+            'media_voto' => round($media_voti,1),
             'somma_recensione' => $somma_recensioni,
         ];
     }
