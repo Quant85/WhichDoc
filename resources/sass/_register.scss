@@ -1,0 +1,49 @@
+#register{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row{
+        align-items: center;
+
+
+            .card {
+                -webkit-box-shadow: 4px 3px 5px 0px rgba(61, 11, 123, 0.86);
+                -moz-box-shadow: 4px 3px 5px 0px rgba(61, 11, 123, 0.86);
+                box-shadow: 4px 3px 5px 0px rgba(61, 11, 123, 0.86);
+                background: white;
+                border-radius: 10px;
+                min-width: 800px;
+                color: #b1b0e4;
+                .card-body{
+                    form{
+                        .form-group {
+                            button {
+                                background: unset;
+                                color: #cecdf0;
+                        
+                                &:hover {
+                                    background: #a06fff;
+                                }
+                        
+                                /* 9. hover-slide-right */
+                        
+                            }
+                        
+                            a {
+                                color: #cecdf0;
+                        
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+    
+
+    }
+}
+
