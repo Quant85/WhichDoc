@@ -37,6 +37,24 @@
         }
     }
     .nav_principale{display: none!important;}
+    .statistiche{
+            .statistiche-right {
+                .angolo_sinistra_alto {
+                    z-index: 1;
+                }
+
+                filter: blur(4px);
+
+                // background-repeat: no-repeat;
+                // background-size: cover;
+                // background-position: center;
+                // img {
+                //     width: 100%;
+                //     border-radius: 115px;
+                // }
+
+            }
+    }
 }
 
 @media (min-width:993px) {
@@ -53,6 +71,36 @@
         
         .btn-grad-secondary {
             padding: 10px 40px !important;
+        }
+    }
+        .container_statistiche{
+        width: 90%;
+        margin: auto;
+
+        .statistiche_left {
+            position: absolute;
+            top: 0;
+            left: -19%;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            .lays{
+                padding: 30px;
+                border-radius: 100px;
+            }
+        }
+        
+        .statistiche-right {
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            filter: blur(-4px);
+            // img {
+            //     height: 100%;
+            //     border-radius: 115px;
+            // }
+
         }
     }
 }
@@ -225,3 +273,28 @@
     }
 }
 
+.container_statistiche{
+        width: 90%;
+        margin: auto;
+        .statistiche_left {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+}
+
+@media (max-width: 768px){
+    .statistiche-right {
+        height: 100%;
+        width: 100%;
+                filter: blur(4px);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+        img {
+            width: 100%;
+            border-radius: 115px;
+        }
+
+    }
+}

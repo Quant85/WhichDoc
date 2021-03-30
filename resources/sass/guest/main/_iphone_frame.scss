@@ -37,7 +37,7 @@
     .container_frame{
         position: relative;
         height: 550px;
-        width: 90%;
+        width: 70%;
         margin: auto;
         .iphone_label {
             @include bgGradient62($lavanda, $lavanda, $viola);
