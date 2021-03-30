@@ -1,67 +1,164 @@
 #search{
-    background-color: #6146C6;
+    background-color: #423376;
     width: 100%;
+    border-radius: 10px;
     .selezione_search{
         justify-content: center;
-        border: 2px solid black;
-        background-color: white;
+        #select_search{
+            padding: 1rem  1rem ;
+            background-color: #4a4873;
+            font-size: 1.2rem;
+            text-align: center;
+            color: #b1b0e4;
+            border-radius: .5rem;
+            cursor: pointer;
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            &:hover,
+            &:focus{
+                background-size: 2rem;
+                outline: none;
+            }
+            option{
+                &:hover{
+                    background-color: #b1b0e4!important;
+                    color: white;
+                }
+            }
+        } 
     }
 
-    .filtri_search{
+    .filtri{
         margin: 20px 0;
-        .recensioni_search{
-            background-color: white;
-            align-items: center;
-            justify-content: space-around;
+        background-color: #6146C6;
+        .filtri_recensioni{
             width: 50%;
-            border: 2px solid black;
-            span{
-                border-radius: 5px;
+            h4{
+                text-align: center;
+                color: #b1b0e4;
+            }
+            .recensioni_search{
+                width: 100%;
+                margin-bottom: 30px;
+                justify-content: space-evenly;
+                align-items: center;
+                // border-right: 1px solid #b1b0e4;
+                span{
+                    font-size: 12px;
+                    text-align: center;
+                    min-width: 75px;
+                    background: unset;
+                    background-color: unset;
+                    border-radius: 20px;
+                    border: 1px solid #b1b0e4;
+                    color: #b1b0e4;
+                    &:hover{
+                        background-color: #b1b0e4;
+                        color: white;
+                    }
+                    label{
+                        cursor: pointer;
+                    }
+                    input{
+                        display: none;
+                    }
+                }
             }
         }
-        .voti_search{
-            background-color: white;
-            align-items: center;
-            justify-content: space-around;
+        .filtri_voti{
             width: 50%;
-            border: 2px solid black;
-            span{
-                border-radius: 5px;
+            h4{
+                text-align: center;
+                color: #b1b0e4;
             }
+            .voti_search{
+                width: 100%;
+                margin-bottom: 30px;
+                align-items: center;
+                justify-content: space-evenly;
+                span{
+                    font-size: 12px;
+                    min-width: 75px;
+                    text-align: center;
+                    background: unset;
+                    background-color: unset;
+                    border-radius: 20px;
+                    border: 1px solid #b1b0e4;
+                    color: #b1b0e4;
+
+                    &:hover{
+                        background-color: #b1b0e4;
+                        color: white;
+
+                    }
+                    label{
+                        cursor: pointer;
+                    }
+                    input{
+                        display: none;
+                    }
+                }
+        }
         }
     }
-
     .container_card_search{
         width: 100%;
         flex-direction: row;
-        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         .card_search{
             width: 30%;
-            margin: 0 2.5%;
             margin-bottom: 20px;
             background-color: white;
-            box-shadow: 1px 1px 3px rgb(57, 57, 57);
+            -webkit-box-shadow: 5px 2px 7px 0px rgba(74, 72, 115, 0.75);
+            -moz-box-shadow:    5px 2px 7px 0px rgba(74, 72, 115, 0.75);
+            box-shadow:         5px 2px 7px 0px rgba(74, 72, 115, 0.75);
             border-radius: 10px;
+            background-color: rgb(74, 72, 115);
             a{
                 width: 100%;
-                color: black;
+                color: white;
+                flex-direction: column;
                 &:hover{
                     text-decoration: none;
                 }
-                .dati_dottore_search{
-                    width: 50%;
-                }
-                .immagine_dottore_search{
-                    width: 50%;
-                    position: relative;
-                    img{
-                        width: 100%;
-
-                        position: absolute;
-                        right: 0;
-                        border-radius: 10px;
+                .card_top_search{
+                    width: 100%;
+                    background-color: #b1b0e4;
+                    border-radius: 10px;
+                    h4{
+                        width: 50%;
+                        padding: 3px;
+                    }
+                    .immagine_dottore_search{
+                        width: 50%;
+                        height: 100px;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 10px;  
                         
-
+                        img{
+                            width: 100%!important;
+                            position: absolute;
+                            right: 0;
+                            border-radius: 10px;  
+                        }
+                    }
+                }
+                .dati_dottore_search{
+                    font-size: 14px;
+                    padding: 3px;
+                    div{
+                        ul{
+                            list-style: none;
+                        }
+                    }
+                    p{
+                        strong{
+                            padding-right: 1px;
+                        }
                     }
                 }
             }

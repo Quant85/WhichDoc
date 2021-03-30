@@ -10655,69 +10655,157 @@ footer .container_footer .right_footer div p {
 }
 
 #search {
-  background-color: #6146C6;
+  background-color: #423376;
   width: 100%;
+  border-radius: 10px;
 }
 #search .selezione_search {
   justify-content: center;
-  border: 2px solid black;
-  background-color: white;
 }
-#search .filtri_search {
+#search .selezione_search #select_search {
+  padding: 1rem 1rem;
+  background-color: #4a4873;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #b1b0e4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+#search .selezione_search #select_search:hover, #search .selezione_search #select_search:focus {
+  background-size: 2rem;
+  outline: none;
+}
+#search .selezione_search #select_search option:hover {
+  background-color: #b1b0e4 !important;
+  color: white;
+}
+#search .filtri {
   margin: 20px 0;
+  background-color: #6146C6;
 }
-#search .filtri_search .recensioni_search {
-  background-color: white;
-  align-items: center;
-  justify-content: space-around;
+#search .filtri .filtri_recensioni {
   width: 50%;
-  border: 2px solid black;
 }
-#search .filtri_search .recensioni_search span {
-  border-radius: 5px;
+#search .filtri .filtri_recensioni h4 {
+  text-align: center;
+  color: #b1b0e4;
 }
-#search .filtri_search .voti_search {
-  background-color: white;
+#search .filtri .filtri_recensioni .recensioni_search {
+  width: 100%;
+  margin-bottom: 30px;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-around;
-  width: 50%;
-  border: 2px solid black;
 }
-#search .filtri_search .voti_search span {
-  border-radius: 5px;
+#search .filtri .filtri_recensioni .recensioni_search span {
+  font-size: 12px;
+  text-align: center;
+  min-width: 75px;
+  background: unset;
+  background-color: unset;
+  border-radius: 20px;
+  border: 1px solid #b1b0e4;
+  color: #b1b0e4;
+}
+#search .filtri .filtri_recensioni .recensioni_search span:hover {
+  background-color: #b1b0e4;
+  color: white;
+}
+#search .filtri .filtri_recensioni .recensioni_search span label {
+  cursor: pointer;
+}
+#search .filtri .filtri_recensioni .recensioni_search span input {
+  display: none;
+}
+#search .filtri .filtri_voti {
+  width: 50%;
+}
+#search .filtri .filtri_voti h4 {
+  text-align: center;
+  color: #b1b0e4;
+}
+#search .filtri .filtri_voti .voti_search {
+  width: 100%;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#search .filtri .filtri_voti .voti_search span {
+  font-size: 12px;
+  min-width: 75px;
+  text-align: center;
+  background: unset;
+  background-color: unset;
+  border-radius: 20px;
+  border: 1px solid #b1b0e4;
+  color: #b1b0e4;
+}
+#search .filtri .filtri_voti .voti_search span:hover {
+  background-color: #b1b0e4;
+  color: white;
+}
+#search .filtri .filtri_voti .voti_search span label {
+  cursor: pointer;
+}
+#search .filtri .filtri_voti .voti_search span input {
+  display: none;
 }
 #search .container_card_search {
   width: 100%;
   flex-direction: row;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 #search .container_card_search .card_search {
   width: 30%;
-  margin: 0 2.5%;
   margin-bottom: 20px;
   background-color: white;
-  box-shadow: 1px 1px 3px #393939;
+  box-shadow: 5px 2px 7px 0px rgba(74, 72, 115, 0.75);
   border-radius: 10px;
+  background-color: #4a4873;
 }
 #search .container_card_search .card_search a {
   width: 100%;
-  color: black;
+  color: white;
+  flex-direction: column;
 }
 #search .container_card_search .card_search a:hover {
   text-decoration: none;
 }
-#search .container_card_search .card_search a .dati_dottore_search {
-  width: 50%;
-}
-#search .container_card_search .card_search a .immagine_dottore_search {
-  width: 50%;
-  position: relative;
-}
-#search .container_card_search .card_search a .immagine_dottore_search img {
+#search .container_card_search .card_search a .card_top_search {
   width: 100%;
+  background-color: #b1b0e4;
+  border-radius: 10px;
+}
+#search .container_card_search .card_search a .card_top_search h4 {
+  width: 50%;
+  padding: 3px;
+}
+#search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+  width: 50%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#search .container_card_search .card_search a .card_top_search .immagine_dottore_search img {
+  width: 100% !important;
   position: absolute;
   right: 0;
   border-radius: 10px;
+}
+#search .container_card_search .card_search a .dati_dottore_search {
+  font-size: 14px;
+  padding: 3px;
+}
+#search .container_card_search .card_search a .dati_dottore_search div ul {
+  list-style: none;
+}
+#search .container_card_search .card_search a .dati_dottore_search p strong {
+  padding-right: 1px;
 }
 
 #profilo_medico {
