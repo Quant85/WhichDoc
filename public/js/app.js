@@ -2175,6 +2175,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39304,7 +39310,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "container-fluid" }, [
     _c("div", { attrs: { id: "search" } }, [
       _c("div", { staticClass: "selezione_search d-flex" }, [
         _c(
@@ -39506,7 +39512,7 @@ var render = function() {
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "dati_dottore_search" }, [
+                    _c("div", { staticClass: "dati_dottore_search d-flex" }, [
                       _c("div", [
                         _c(
                           "ul",
@@ -39530,10 +39536,57 @@ var render = function() {
                         _vm._v(_vm._s(doctor.profilo.città))
                       ]),
                       _vm._v(" "),
-                      _c("p", [
-                        _c("strong", [_vm._v("Voto: ")]),
-                        _vm._v(_vm._s(doctor.media_voto))
-                      ]),
+                      doctor.media_voto < 0.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _vm._v("0")
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      doctor.media_voto >= 0.5 && doctor.media_voto < 1.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _c("i", { staticClass: "fas fa-star" })
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      doctor.media_voto >= 1.5 && doctor.media_voto < 2.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" })
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      doctor.media_voto >= 2.5 && doctor.media_voto < 3.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" })
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      doctor.media_voto >= 3.5 && doctor.media_voto < 4.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" })
+                          ])
+                        : _vm._e(),
+                      _vm._v(" "),
+                      doctor.media_voto > 4.5
+                        ? _c("p", [
+                            _c("strong", [_vm._v("Voto: ")]),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" }),
+                            _c("i", { staticClass: "fas fa-star" })
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("p", [
                         _c("strong", [_vm._v("Recensioni: ")]),
