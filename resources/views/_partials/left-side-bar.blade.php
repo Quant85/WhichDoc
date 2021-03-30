@@ -1,8 +1,15 @@
 <div class="left_side d-flex justify-content-between flex-column">
     <div class="sidebar_top">
+        <div class="dashboard_redirect">
+            @auth
+                <a href="{{ url('/medico/home') }}"><i class="fas fa-home" style="font-size: 1.8rem;"></i></a>
+            @else
+                <a href="{{ url('/search') }}"><i class="fas fa-arrow-circle-left" style="font-size: 1.5rem;"></i></a>
+            @endauth
+        </div>
         <div class="logo">
             <!-- logo -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{route('medico.showProfile',[Auth::user()->id])}}"">
                 <div class="immagine">
                     <img src="{{optional(Auth::user()->profile)->foto ? asset( 'storage/'.Auth::user()->profile->foto) : asset('img/default/dottori.jpg')}}" alt="">
                 </div>
