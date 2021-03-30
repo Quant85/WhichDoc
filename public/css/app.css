@@ -10002,6 +10002,37 @@ h3 {
     border-color: #dee2e6;
   }
 }
+#register {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#register .row {
+  align-items: center;
+}
+#register .row .card {
+  box-shadow: 4px 3px 5px 0px rgba(61, 11, 123, 0.86);
+  background: white;
+  border-radius: 10px;
+  min-width: 800px;
+  color: #b1b0e4;
+}
+#register .row .card .card-body form .form-group button {
+  background: unset;
+  color: #cecdf0;
+  /* 9. hover-slide-right */
+}
+#register .row .card .card-body form .form-group button:hover {
+  background: #a06fff;
+}
+#register .row .card .card-body form .form-group a {
+  color: #cecdf0;
+}
+#register .row .card .card-body form .form-group a:hover {
+  color: white;
+}
+
 .card-container {
   height: 100vh;
   display: flex;
