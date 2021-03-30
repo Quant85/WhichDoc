@@ -4,6 +4,13 @@
                 <a href="{{ url('/') }}">
                     <img src="{{asset('img/logo.png')}}" alt="">
                 </a>
+                <div class="jumbo_medico_profilo">
+                  @auth
+                    <a href="{{ url('/medico/home') }}"><i class="fas fa-home"></i></a>
+                  @else
+                    <a href="{{ url('/search') }}"><i class="fas fa-arrow-circle-left"></i></a>
+                  @endauth
+                </div>
             </div>
 
             <div class="login">

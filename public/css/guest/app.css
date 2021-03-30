@@ -10821,107 +10821,107 @@ footer .container_footer .right_footer div p {
   padding-right: 1px;
 }
 
-#profilo_medico {
-  background-color: white;
+#profilo_medico .dati_medico {
+  background: linear-gradient(0deg, rgba(131, 58, 180, 0) 354px, #673ab7 50%);
 }
-#profilo_medico .jumbo_medico_profilo {
-  height: 200px;
-  width: 100%;
-  background: #020024;
-  background: linear-gradient(180deg, #020024 0%, #6146C6 60%, #957af8 100%);
+#profilo_medico .dati_medico .a_container {
+  max-width: 90%;
+  margin: auto;
+  padding-top: 40px;
 }
-#profilo_medico .jumbo_medico_profilo a .fa-arrow-circle-left {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
+#profilo_medico .dati_medico .a_container .img_medico_profilo {
+  min-width: 30%;
 }
-#profilo_medico .jumbo_medico_profilo a .fa-home {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
+#profilo_medico .dati_medico .a_container .img_medico_profilo img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 12px 13px 14px -7px #d3d3d38a;
+  margin: 45px;
+  margin-top: 20px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo {
+#profilo_medico .dati_medico .a_container .middle_medico_profilo {
+  max-width: 40%;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo {
+  min-width: 50% !important;
+  padding: 30px;
+  border-radius: 40px;
+  color: #4E54D7;
+  box-shadow: 12px 13px 14px -7px #d3d3d38a;
+  background: #ffffffab;
+  text-shadow: 0px 0px 17px black;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo .dati_specifici_medico_profilo ul {
+  list-style: none;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo .dati_specifici_medico_profilo ul li span {
+  padding-left: 1px;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo {
+  min-width: 30%;
+  padding: 40px 0;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo .special_container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo .badge {
+  padding: 10px;
+  font-size: large;
+  margin: 10px;
+}
+#profilo_medico .b_container {
   width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo {
-  width: 50%;
+#profilo_medico .b_container .sfondo {
+  background-color: lightgreen;
+  min-width: 30%;
+  padding: 25px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo img {
-  width: 50%;
-  position: relative;
-  bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #646766;
+#profilo_medico .b_container .form_m_r {
+  background-color: #9990ee;
+  min-width: 25%;
+  padding: 25px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo {
-  padding: 10px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo h3 {
-  text-transform: capitalize;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo .specializzazioni_medico_profilo {
-  margin-bottom: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo {
-  width: 100%;
-  margin: 20px 0;
-  background-color: #53e2ba;
-  box-shadow: 3px 3px 3px #646766;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-header .card-title {
-  font-weight: bold;
-  height: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body {
-  min-height: 50px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body .list-unstyled .badge {
-  background-color: #53e2ba;
-}
-#profilo_medico .main_medico_profilo .middle_medico_profilo {
-  height: 300px;
-  width: 100%;
-  margin-top: 50px;
+#profilo_medico .c_container {
+  max-width: 90%;
   margin: auto;
+  min-height: 250px;
 }
-#profilo_medico .main_medico_profilo .middle_medico_profilo .bio_medico_profilo {
+#profilo_medico .c_container .container_recensioni {
+  background-color: #90aeee;
+  min-width: 45%;
+  padding: 25px;
+}
+#profilo_medico .c_container .container_recensioni #pordue {
   width: 90%;
-  height: 90%;
   margin: auto;
-  padding: 10px;
-  border: 3px solid black;
-  border-radius: 10px;
-  color: black;
-  box-shadow: 3px 3px 3px #646766;
+  display: flex !important;
+  margin: 10px;
+  min-width: 30%;
+  max-width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo {
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
+#profilo_medico .c_container .container_recensioni #pordue .card {
+  width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo {
-  border: 1px solid #4ed3ad;
-  background-color: #53e2ba;
-  border-radius: 10px;
-  padding: 5px;
-  height: 90%;
-  width: 25%;
-  box-shadow: 3px 3px 3px #646766;
+#profilo_medico .c_container .container_recensioni #pordue .card .collapse.show {
+  min-width: 30%;
+  max-width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo strong {
-  text-transform: capitalize;
+#profilo_medico .red {
+  background-color: rebeccapurple;
+  height: 100px;
+  width: 100px;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo .corpo_recensione {
-  margin-top: 15px;
-}
-#profilo_medico .main_medico_profilo .form_medico_profilo {
-  background: linear-gradient(270deg, #020024 0%, #6146C6 50%, #6146C6 100%);
-  width: 100%;
-  margin-top: 30px;
-  height: 400px;
-  justify-content: space-around;
-  align-items: center;
+#profilo_medico .blue {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
 }
 
 #form_message {
