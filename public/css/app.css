@@ -10040,6 +10040,60 @@ h3 {
   color: white;
 }
 
+.sub_menu_profile {
+  width: 65%;
+  margin: auto;
+}
+.sub_menu_profile a, .sub_menu_profile button {
+  color: #b1b0e4;
+  font-weight: bold;
+  background-color: #6812b0;
+  border: unset;
+  padding: 0.85rem 0.6rem;
+  border-radius: 1.2rem;
+}
+.sub_menu_profile a:hover, .sub_menu_profile button:hover {
+  color: white;
+  background-color: #a06fff;
+}
+.sub_menu_profile a i, .sub_menu_profile button i {
+  padding-right: 1.8rem;
+}
+
+.select_specializzazione ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.select_specializzazione ::-webkit-scrollbar-button {
+  width: 47px;
+  height: 47px;
+}
+.select_specializzazione ::-webkit-scrollbar-thumb {
+  background: #8c0cd4;
+  border: 23px none #8c0cd4;
+  border-radius: 17px;
+}
+.select_specializzazione ::-webkit-scrollbar-thumb:hover {
+  background: #8c0cd4;
+}
+.select_specializzazione ::-webkit-scrollbar-thumb:active {
+  background: #8c0cd4;
+}
+.select_specializzazione ::-webkit-scrollbar-track {
+  background: #8c0cd4;
+  border: 26px none #8c0cd4;
+  border-radius: 30px;
+}
+.select_specializzazione ::-webkit-scrollbar-track:hover {
+  background: #8c0cd4;
+}
+.select_specializzazione ::-webkit-scrollbar-track:active {
+  background: #8c0cd4;
+}
+.select_specializzazione ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body {
   height: 100vh;
   /* background-image: linear-gradient(to right top, #9e2cdf, #a442e1, #aa54e3, #af64e5, #b573e6, #bb7ce8, #c186e9, #c78feb, #cf96ee, #d89df0, #dfa5f3, #e7acf6); */
@@ -10127,6 +10181,39 @@ body {
 }
 #main-container #ciao .main_white .left_side .sidebar_bottom a i {
   padding-right: 1.8rem;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-button {
+  width: 47px;
+  height: 47px;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-thumb {
+  background: #8c0cd4;
+  border: 23px none #8c0cd4;
+  border-radius: 17px;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-thumb:hover {
+  background: #8c0cd4;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-thumb:active {
+  background: #8c0cd4;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-track {
+  background: #8c0cd4;
+  border: 26px none #8c0cd4;
+  border-radius: 30px;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-track:hover {
+  background: #8c0cd4;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-track:active {
+  background: #8c0cd4;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom ::-webkit-scrollbar-corner {
+  background: transparent;
 }
 #main-container #ciao .main_white #navbarDropdown {
   text-transform: capitalize !important;
