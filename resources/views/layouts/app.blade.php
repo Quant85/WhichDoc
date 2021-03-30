@@ -127,6 +127,26 @@
                 }
                 })
             })
+
+            // Carousel recensioni_medico
+            jQuery(document).ready(function($){
+                $('.container_recensioni_medico_profilo').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                //autoplay:true,
+                //autoplayHoverPause:true,
+                //autoplayTimeout:3000,
+                responsive:{
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    769:{items:3},
+                    900:{items:4},
+                    1200:{items:5},
+                }
+                })
+            })
         </script>
     </body>
 </html>
