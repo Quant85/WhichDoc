@@ -25,7 +25,7 @@
                     {{ session()->get('success') }}  
                   </div>
                 @endif 
-                <h4 class="text-right">Profile Settings</h4>
+                <h2 class="text-left">Profile Settings</h2>
                 <div class="col-12 d-flex">                        
                   <div class="col-6">
                     <label for="nome" class="labels">Nome</label>

@@ -3,6 +3,7 @@ $height_navbar: 60px;
 
 body {
     height: 100vh;
+    min-height: 100vh;
     /* background-image: linear-gradient(to right top, #9e2cdf, #a442e1, #aa54e3, #af64e5, #b573e6, #bb7ce8, #c186e9, #c78feb, #cf96ee, #d89df0, #dfa5f3, #e7acf6); */
     background-image: linear-gradient(to right bottom, #f9f9fa, #f3f2f5, #edecf0, #e7e6eb, #e7e6eb, #e4e3eb, #e0e0eb, #dcddeb, #d8dcf0, #d2dcf5, #cbdcfa, #c2ddff);
 }
