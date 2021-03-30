@@ -1,168 +1,191 @@
-#search{
+.container-fluid{
     background-color: #423376;
-    width: 100%;
-    border-radius: 10px;
-    .selezione_search{
-        justify-content: center;
-        #select_search{
-            padding: 1rem  1rem ;
-            background-color: #4a4873;
-            font-size: 1.2rem;
-            text-align: center;
-            color: #b1b0e4;
-            border-radius: .5rem;
-            cursor: pointer;
-            border: none;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            &:hover,
-            &:focus{
-                background-size: 2rem;
-                outline: none;
-            }
-            option{
-                &:hover{
-                    background-color: #b1b0e4!important;
-                    color: white;
-                }
-            }
-        } 
-    }
-
-    .filtri{
-        margin: 20px 0;
+    #search{
         background-color: #6146C6;
-        .filtri_recensioni{
-            width: 50%;
-            h4{
+        margin: auto;
+        width: 80%;
+        .selezione_search{
+            justify-content: center;
+            #select_search{
+                padding: 1rem  1rem ;
+                background-color: #4a4873;
+                font-size: 1.2rem;
                 text-align: center;
-                color: #b1b0e4;
-            }
-            .recensioni_search{
-                width: 100%;
-                margin-bottom: 30px;
-                justify-content: space-evenly;
-                align-items: center;
-                // border-right: 1px solid #b1b0e4;
-                span{
-                    font-size: 12px;
-                    text-align: center;
-                    min-width: 75px;
-                    background: unset;
-                    background-color: unset;
-                    border-radius: 20px;
-                    border: 1px solid #b1b0e4;
-                    color: #b1b0e4;
-                    &:hover{
-                        background-color: #b1b0e4;
-                        color: white;
-                    }
-                    label{
-                        cursor: pointer;
-                    }
-                    input{
-                        display: none;
-                    }
-                }
-            }
-        }
-        .filtri_voti{
-            width: 50%;
-            h4{
-                text-align: center;
-                color: #b1b0e4;
-            }
-            .voti_search{
-                width: 100%;
-                margin-bottom: 30px;
-                align-items: center;
-                justify-content: space-evenly;
-                span{
-                    font-size: 12px;
-                    min-width: 75px;
-                    text-align: center;
-                    background: unset;
-                    background-color: unset;
-                    border-radius: 20px;
-                    border: 1px solid #b1b0e4;
-                    color: #b1b0e4;
-
-                    &:hover{
-                        background-color: #b1b0e4;
-                        color: white;
-
-                    }
-                    label{
-                        cursor: pointer;
-                    }
-                    input{
-                        display: none;
-                    }
-                }
-        }
-        }
-    }
-    .container_card_search{
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        .card_search{
-            width: 30%;
-            margin-bottom: 20px;
-            background-color: white;
-            -webkit-box-shadow: 5px 2px 7px 0px rgba(74, 72, 115, 0.75);
-            -moz-box-shadow:    5px 2px 7px 0px rgba(74, 72, 115, 0.75);
-            box-shadow:         5px 2px 7px 0px rgba(74, 72, 115, 0.75);
-            border-radius: 10px;
-            background-color: rgb(74, 72, 115);
-            a{
-                width: 100%;
                 color: white;
-                flex-direction: column;
-                &:hover{
-                    text-decoration: none;
+                border-radius: .5rem;
+                cursor: pointer;
+                border: none;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                &:hover,
+                &:focus{
+                    background-size: 2rem;
+                    outline: none;
                 }
-                .card_top_search{
+            } 
+        }
+    
+        .filtri{
+            margin: 20px 0;
+            background-color: #423376;
+            .filtri_recensioni{
+                width: 50%;
+                h4{
+                    text-align: center;
+                    color: #b1b0e4;
+                }
+                .recensioni_search{
                     width: 100%;
-                    background-color: #b1b0e4;
-                    border-radius: 10px;
-                    h4{
-                        width: 50%;
-                        padding: 3px;
-                    }
-                    .immagine_dottore_search{
-                        width: 50%;
-                        height: 100px;
-                        position: relative;
-                        overflow: hidden;
-                        border-radius: 10px;  
+                    margin-bottom: 30px;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    // border-right: 1px solid #b1b0e4;
+                    span{
+                        font-size: 14px;
+                        padding-top: 9px;
+                        text-align: center;
+                        min-width: 100px;
+                        background: unset;
+                        background-color: unset;
+                        border-radius: 20px;
+                        border: 1px solid #b1b0e4;
+                        color: #b1b0e4;
+                        transition: transform 0.5s;
                         
-                        img{
-                            width: 100%!important;
-                            position: absolute;
-                            right: 0;
-                            border-radius: 10px;  
+                        &:hover{
+                            background-color: #b1b0e4;
+                            color: white;
+                            transform: scale(1.2);
                         }
-                    }
-                }
-                .dati_dottore_search{
-                    font-size: 14px;
-                    padding: 3px;
-                    div{
-                        ul{
-                            list-style: none;
+                        label{
+                            cursor: pointer;
                         }
-                    }
-                    p{
-                        strong{
-                            padding-right: 1px;
+                        input{
+                            display: none;
                         }
                     }
                 }
             }
+            .filtri_voti{
+                width: 50%;
+                h4{
+                    text-align: center;
+                    color: #b1b0e4;
+                }
+                .voti_search{
+                    width: 100%;
+                    margin-bottom: 30px;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    span{
+                        font-size: 12px;
+                        padding-top: 9px;
+                        min-width: 100px;
+                        text-align: center;
+                        background: unset;
+                        background-color: unset;
+                        border-radius: 20px;
+                        border: 1px solid #b1b0e4;
+                        color: #b1b0e4;
+                        transition: transform 0.5s;
+                        
+                        &:first-child{
+                            font-size: 14px;
+                        }
+                        &:hover{
+                            transform: scale(1.2);
+                            background-color: #b1b0e4;
+                            color: white;
+                            
+    
+                        }
+                        label{
+                            cursor: pointer;
+                        }
+                        input{
+                            display: none;
+                        }
+                    }
+            }
+            }
         }
-
+        .container_card_search{
+            width: 100%;
+            min-height: 100vh;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .card_search{
+                width: 20%;
+                height: 450px;
+                margin: 2.5%;
+                margin-bottom: 20px;
+                background-color: white;
+                -webkit-box-shadow: 2px 2px 7px 0px black;
+                -moz-box-shadow:    2px 2px 7px 0px black;
+                box-shadow:         2px 2px 7px 0px black;
+                border-radius: 10px;
+                background-color: rgb(74, 72, 115);
+                transition: transform 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                a{
+                    width: 100%;
+                    color: white;
+                    flex-direction: column;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    .card_top_search{
+                        width: 100%;
+                        background-color: #b1b0e4;
+                        border-radius: 10px;
+                        h4{
+                            width: 50%;
+                            padding: 3px;
+                        }
+                        .immagine_dottore_search{
+                            width: 50%;
+                            height: 100px;
+                            position: relative;
+                            overflow: hidden;
+                            border-radius: 10px;  
+                            
+                            img{
+                                width: 100%!important;
+                                position: absolute;
+                                right: 0;
+                                border-radius: 10px;  
+                            }
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 350px;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        padding: 3px;
+                        font-size: 18px;
+                        div{
+                            ul{
+                                font-size: 22px;
+                                list-style: none;
+                                li{
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        p{
+                            strong{
+                                padding-right: 1px;
+                                font-size: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
     }
 }
