@@ -10240,6 +10240,11 @@ nav .container_nav .login .top-right .loggedin .notification {
   width: 100%;
   border-radius: 90px;
 }
+.card_ricerca_rapida .container_card .card_specializzazione .small {
+  font-size: 95%;
+  font-weight: 505;
+  padding-top: 0.1rem;
+}
 
 .sponsorizzati {
   width: 100%;
@@ -10295,6 +10300,10 @@ nav .container_nav .login .top-right .loggedin .notification {
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card_sponsorizzato:hover {
   transform: scale(1.1);
+}
+.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .fa-star {
+  font-size: 10px;
+  color: yellow;
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-dots {
   display: block;
