@@ -125,7 +125,7 @@
                   @enderror
   
                   <div class="DISABILITA">
-                    <h4 class="py-2">Disability Friendlyendly</h4>
+                    <h4 class="py-2">Disability Friendly</h4>
                     <label class="px-2" for="disabilità"><i class="fas fa-hand-holding-heart px-3" style="font-size: 1.8rem"></i> Attenzione alle disabilità: </label>
                     <input type="checkbox" name="disabilità" class="switch-input" value="1" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/> <br>
                   </div>
