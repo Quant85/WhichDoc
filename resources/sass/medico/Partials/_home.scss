@@ -2,33 +2,38 @@
 $height_navbar: 60px;
 
 body {
-    background-image: linear-gradient(to right top, #9e2cdf, #a442e1, #aa54e3, #af64e5, #b573e6, #bb7ce8, #c186e9, #c78feb, #cf96ee, #d89df0, #dfa5f3, #e7acf6);
+    height: 100vh;
+    /* background-image: linear-gradient(to right top, #9e2cdf, #a442e1, #aa54e3, #af64e5, #b573e6, #bb7ce8, #c186e9, #c78feb, #cf96ee, #d89df0, #dfa5f3, #e7acf6); */
+    background-image: linear-gradient(to right bottom, #f9f9fa, #f3f2f5, #edecf0, #e7e6eb, #e7e6eb, #e4e3eb, #e0e0eb, #dcddeb, #d8dcf0, #d2dcf5, #cbdcfa, #c2ddff);
 }
 
-#ciao {
-    margin-top: 100px;
-    margin-bottom: 100px;
-
-    .main_white {
-        border-radius: 20px;
-        -webkit-box-shadow: 4px 3px 8px 0px rgba(107, 0, 167, 0.86);
-        -moz-box-shadow: 4px 3px 8px 0px rgba(107, 0, 167, 0.86);
-        box-shadow: 4px 3px 8px 0px rgba(107, 0, 167, 0.86);
-        background-image: linear-gradient(to left, #6b00a7, #530891, #3d0b7b, #280a64, #16074e);
-
-        min-height: 90vh;
-        width: 90vw;
-        // min-height: 90%;
-        // border-radius: 5rem;
-        //File di left-side-bar layout
-        @import 'left-side-bar';
-        //File di central-bar layout
-        @import 'central-side-bar';
-        //File form message
-        @import 'form-message';
-        //File form recensioni
-        @import 'form-recensioni';
-        //File di show-content layouts
-        @import 'show-content';
+#main-container{
+    height: 100%;
+    #ciao {
+        height: 100%;
+        .main_white {
+            border-radius: 20px;
+            -webkit-box-shadow: 4px 3px 8px 0px rgba(0, 106, 167, 0.86);
+            -moz-box-shadow: 4px 3px 8px 0px rgba(0, 106, 167, 0.86);
+            box-shadow: 4px 3px 8px 0px rgba(0, 106, 167, 0.86);
+            /* background-image: linear-gradient(to left, #8d06d8, #8d07d7, #8c09d5, #8c0ad4, #8b0bd3, #7f0fc7, #7311bc, #7f0fc7, #6812b0, #6812b0, #2c0c74, #16074e); */
+            background-image: linear-gradient(to right top, #ebecff, #e3e8ff, #d9e4ff, #cee0ff, #c2ddff);
+            
+    
+            min-height: 90vh;
+            width: 90vw;
+            // min-height: 90%;
+            // border-radius: 5rem;
+            //File di left-side-bar layout
+            @import 'left-side-bar';
+            //File di central-bar layout
+            @import 'central-side-bar';
+            //File form message
+            @import 'form-message';
+            //File form recensioni
+            @import 'form-recensioni';
+            //File di show-content layouts
+            @import 'show-content';
+        }
     }
 }

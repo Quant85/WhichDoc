@@ -4,7 +4,7 @@
             <!-- logo -->
             <a class="navbar-brand" href="{{ url('/') }}">
                 <div class="immagine">
-                    <img src="{{asset('/img/doc19.jpeg')}}" alt="">
+                    <img src="{{optional(Auth::user()->profile)->foto ? asset( 'storage/'.Auth::user()->profile->foto) : asset('img/default/dottori.jpg')}}" alt="">
                 </div>
                 {{-- <img src="{{asset('img/WhichDoc-logo.png')}}" alt=""> --}}
             </a>
@@ -15,21 +15,22 @@
         <div class="sidebar_main ">
             <!-- lista link -->
             <ul class="list-unstyled">
-                <li><a type="button" class="btn btn-primary" href="{{ url('/medico/home') }}"><i
-                            class="fas fa-tachometer-alt fa-lg fa-fw"></i>Dashboard</a></li>
+                <li><a type="button" class="btn btn-primary" href="{{ url('/medico/home') }}"><i 
+                        class="fas fa-tachometer-alt" style="font-size: 1.5rem;"></i>Dashboard </a></li>
                 <li><a type="button" class="btn btn-primary" href="{{ route('medico.profilo.index') }}"><i
-                            class="fas fa-book-open fa-lg fa-fw"></i>Modifica Profilo</a></li>
-                <li><a type="button" class="btn btn-primary" href="{{ route('medico.messaggi.index') }}"><i
-                            class="fas fa-book-open fa-lg fa-fw"></i>Messaggi Ricevuti</a></li>
+                            class="fas fa-user-md" style="font-size: 1.5rem;"></i>Modifica Profilo</a></li>
+                <li><a type="button" class="btn btn-primary" href="{{ route('medico.messaggi.index') }}"><i 
+                            class="fas fa-comment-medical" style="font-size: 1.5rem;"></i>Messaggi Ricevuti</a></li>
             </ul>
             <hr class="divider">
             <ul class="list-unstyled">
                 <li><a type="button" class="btn btn-primary" href="{{ route('medico.recensioni.index') }}"><i
-                            class="fas fa-book-open fa-lg fa-fw"></i>Recensioni Ricevute</a></li>
-                <li><a type="button" class="btn btn-primary" href="{{ route('medico.statistiche') }}"><i
-                            class="fas fa-folder-open fa-lg fa-fw"></i>Statistiche</a></li>
-                <li><a type="button" class="btn btn-primary" href="#"><i
-                            class="fas fa-print fa-lg fa-fw"></i>Sponsorizzazioni</a></li>
+                            class="fas fa-pen-nib" style="font-size: 1.5rem;"></i>Recensioni Ricevute</a></li>
+                <li><a type="button" class="btn btn-primary" href="#"><i 
+                            class="fas fa-piggy-bank" style="font-size: 1.5rem;"></i>Sponsorizzazioni</a></li>
+                <li><a type="button" class="btn btn-primary" href="{{ route('medico.statistiche') }}"><i 
+                            class="fas fa-chart-line" style="font-size: 1.5rem;"></i>Statistiche</a></li>
+                
             </ul>
             <!-- /lista link -->
         </div>
