@@ -25,7 +25,11 @@
                     {{ session()->get('success') }}  
                   </div>
                 @endif 
-                <h2 class="text-left">Profile Settings</h2>
+                @if (optional(Auth::user()->profile)->id)
+                  <h2 class="text-left">Aggiorna il tuo profilo</h2>
+                @else
+                  <h2 class="text-left">Crea il tuo profilo</h2>
+                @endif
                 <div class="col-12 d-flex">                        
                   <div class="col-6">
                     <label for="nome" class="labels">Nome</label>
@@ -101,9 +105,9 @@
                   <div class="GENERE">
                     <h4>Genere</h4>
                     <div class="d-flex">
-                      <label for="genere" class="labels"><i class="fas fa-male"></i> Uomo</label>
+                      <label for="genere" class="labels"><i class="fas fa-male" style="font-size: 1.8rem"></i> Uomo</label>
                       <input type="radio" class="form-control" value="maschio" name="genere" {{optional($medico->profile)->genere === 'maschio' ? 'checked' : ''}}>
-                      <label for="genere" class="labels"><i class="fas fa-female"></i> Donna </label>
+                      <label for="genere" class="labels px-3"><i class="fas fa-female" style="font-size: 1.8rem"></i> Donna </label>
                       <input type="radio" id="donna" class="form-control" value="femmina" name="genere" {{optional($medico->profile)->genere === 'femmina' ? 'checked' : ''}}>
                     </div>
                   </div>
@@ -121,8 +125,9 @@
                   @enderror
   
                   <div class="DISABILITA">
-                    <label for="disabilità">Attenzione alle disabilità:</label>
-                    <input type="checkbox" name="disabilità" class="switch-input" value="1" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/>
+                    <h4 class="py-2">Disability Friendlyendly</h4>
+                    <label class="px-2" for="disabilità"><i class="fas fa-hand-holding-heart px-3" style="font-size: 1.8rem"></i> Attenzione alle disabilità: </label>
+                    <input type="checkbox" name="disabilità" class="switch-input" value="1" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/> <br>
                   </div>
                   @error('disabilità')
                     <div class="alert alert-danger">{{ $message }}</div>
