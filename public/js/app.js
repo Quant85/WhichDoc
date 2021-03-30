@@ -39759,7 +39759,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartMonth", width: "550", height: "300" }
+                  attrs: { id: "myChartMonth", width: "550", height: "250" }
                 })
               ]
             )
@@ -39802,7 +39802,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartYear", width: "550", height: "300" }
+                  attrs: { id: "myChartYear", width: "550", height: "250" }
                 })
               ]
             )
@@ -39848,7 +39848,7 @@ var render = function() {
                   attrs: {
                     id: "myChartMonthRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]
@@ -39892,7 +39892,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChart", width: "600", height: "400" }
+                  attrs: { id: "myChart", width: "550", height: "250" }
                 })
               ]
             )
@@ -39938,7 +39938,7 @@ var render = function() {
                   attrs: {
                     id: "myChartYearRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]
@@ -64013,9 +64013,9 @@ Vue.component('advanced-page-component', __webpack_require__(/*! ./components/Ho
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\marco\Desktop\ProgettoFinale\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
+__webpack_require__(/*! D:\USER\Programmazione\PROGETTO-FINALE\WhichDoc\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! D:\USER\Programmazione\PROGETTO-FINALE\WhichDoc\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\USER\Programmazione\PROGETTO-FINALE\WhichDoc\resources\sass\guest\app.scss */"./resources/sass/guest/app.scss");
 
 
 /***/ })
