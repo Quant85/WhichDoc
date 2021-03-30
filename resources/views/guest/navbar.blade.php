@@ -2,7 +2,7 @@
     <div class="container_nav d-flex justify-content-between">
             <div class="logo">
                 <a href="{{ url('/') }}">
-                    <img src="{{asset('img/logo.jpeg')}}" alt="">
+                    <img src="{{asset('img/logo.png')}}" alt="">
                 </a>
             </div>
 

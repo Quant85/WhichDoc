@@ -1,0 +1,7 @@
+#message {
+  overflow: none;
+  .container {
+    overflow-y: auto;
+    @import 'Partials/_webkit-admin-scroll';
+  }
+}
