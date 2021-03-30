@@ -1,9 +1,9 @@
-.container-fluid{
-    background-color: #423376;
+// .container-fluid{
+//     background-color: #423376;
     #search{
         background-color: #6146C6;
         margin: auto;
-        width: 80%;
+        width: 100%;
         .selezione_search{
             justify-content: center;
             #select_search{
@@ -111,16 +111,17 @@
             }
         }
         .container_card_search{
-            width: 100%;
+            width: 80%;
+            margin: auto;
             min-height: 100vh;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            padding-bottom: 20px;
             .card_search{
                 width: 20%;
                 height: 450px;
-                margin: 2.5%;
-                margin-bottom: 20px;
+                margin: 20px 2.5%;
                 background-color: white;
                 -webkit-box-shadow: 2px 2px 7px 0px black;
                 -moz-box-shadow:    2px 2px 7px 0px black;
@@ -188,4 +189,4 @@
     
         }
     }
-}
+// }

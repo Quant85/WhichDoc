@@ -1,3 +1,40 @@
+@media (min-width: 280px) and  (max-width:1450px){
+    /* Ricerca avanzata */
+    #search{
+        .filtri{
+            flex-direction: column;
+            .filtri_recensioni{
+                width: 100%;
+                border-bottom: 2px solid #b1b0e4;
+            }
+            .filtri_voti{
+                width: 100%;
+            }
+        }
+
+        .container_card_search{
+            width: 90%;
+            .card_search{
+                width: 22%;
+                height: 400px;
+                a{
+                    .card_top_search{
+                        h4{
+                            font-size: 22px;
+                        }
+                        .immagine_dottore_search{
+                            height: 80px;  
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 320px;
+                    }
+                }
+            }
+        }
+    }
+    /* /Ricerca avanzata */
+}
 @media (max-width:1200px){
        nav{
            .container_nav {
@@ -17,7 +54,18 @@
                 padding: 10px 40px !important;
             }
         }
+
+        /* Ricerca avanzata */
+        #search{
+            .container_card_search{
+                .card_search{
+                    width: 28%;
+                }
+            }
+        }
+        /* /Ricerca avanzata */
 }
+
 @media (max-width:992px) {
     .hamburger{visibility: visible;}
     .hamburger {
@@ -55,6 +103,45 @@
 
             }
     }
+
+    /* Ricerca avanzata */
+    #search{
+        .container_card_search{
+            width: 95%;
+            .card_search{
+                width: 28%;
+                height: 370px;
+                a{
+                    .card_top_search{
+                        h4{
+                            font-size: 18px;
+                        }
+                        .immagine_dottore_search{
+                            height: 70px;  
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 300px;
+                        div{
+                            ul{
+                                font-size: 18px;
+                                li{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        p{
+                            font-size: 18px;
+                            strong{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* /Ricerca avanzata */
 }
 
 @media (min-width:993px) {
@@ -104,10 +191,63 @@
         }
     }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .card_sponsorizzato {
         margin-bottom: 10px;
     }
+        /* Ricerca avanzata */
+        #search{
+            .filtri{
+                flex-direction: column;
+                .filtri_recensioni{
+                    .recensioni_search{
+                        span{
+                            &:hover{
+                                transform: none;   
+        
+                            }
+                        }
+                    }
+                }
+                .filtri_voti{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    .voti_search{
+                        width: 100%;
+                        flex-wrap: wrap;
+                        span{
+                            margin: 5px 0;
+                            &:hover{
+                                transform: none;   
+        
+                            }
+                        }
+                }
+                }
+            }
+            .container_card_search{
+                width: 95%;
+                .card_search{
+                    width: 40%;
+                    height: 370px;
+                    a{
+                        .card_top_search{
+                            h4{
+                                font-size: 18px;
+                            }
+                            .immagine_dottore_search{
+                                height: 70px;  
+                            }
+                        }
+                        .dati_dottore_search{
+                            height: 300px;
+   
+                        }
+                    }
+                }
+            }
+        }
+        /* /Ricerca avanzata */
 }
 @media (min-width: 575px) and (max-width: 768px) {
     .card_ricerca_rapida {
@@ -271,6 +411,43 @@
             .right_footer {width: 100%;}
         }
     }
+
+    /* Ricerca avanzata */
+    #search{
+        .filtri{
+            .filtri_recensioni{
+                .recensioni_search{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    span{
+                        margin: 5px 0; 
+                    }
+                }
+            }
+        }
+        .container_card_search{
+            width: 80%;
+            .card_search{
+                width: 70%;
+                height: 400px;
+                a{
+                    .card_top_search{
+                        h4{
+                            font-size: 18px;
+                        }
+                        .immagine_dottore_search{
+                            height: 80px;  
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 320px;
+
+                    }
+                }
+            }
+        }
+    }
+    /* /Ricerca avanzata */
 }
 
 .container_statistiche{
@@ -281,6 +458,95 @@
             width: 100%;
             position: absolute;
         }
+}
+
+@media (min-width: 375px) and (max-width: 475px) {
+    /* Ricerca avanzata */
+    #search{
+        .container_card_search{
+            width: 80%;
+            .card_search{
+                width: 70%;
+                height: 370px;
+                a{
+                    .card_top_search{
+                        h4{
+                            font-size: 18px;
+                        }
+                        .immagine_dottore_search{
+                            height: 70px;  
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 300px;
+              
+                    }
+                }
+            }
+        }
+    }
+    /* /Ricerca avanzata */
+}
+
+@media (min-width: 280px) and (max-width: 375px) {
+    /* Ricerca avanzata */
+    #search{
+        .selezione_search{
+            #select_search{
+                    width: 100%;
+                }
+             
+        }
+        .filtri{
+            flex-direction: column;
+            .filtri_recensioni{
+                width: 100%;
+                flex-wrap: wrap;
+                .recensioni_search{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    span{
+                        margin: 5px 0; 
+                    }
+                }
+            }
+        }
+        .container_card_search{
+            width: 80%;
+            .card_search{
+                width: 70%;
+                height: 300px;
+                a{
+                    .card_top_search{
+                        h4{
+                            font-size: 12px;
+                        }
+                        .immagine_dottore_search{
+                            height: 50px;  
+                        }
+                    }
+                    .dati_dottore_search{
+                        height: 250px;
+                        div{
+                            ul{
+                                font-size: 12px;
+                                li{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        p{
+                            font-size: 12px;
+                            strong{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* /Ricerca avanzata */
 }
 
 @media (max-width: 768px){
@@ -298,3 +564,4 @@
 
     }
 }
+

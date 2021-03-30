@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
         <div id="search">
 
             <!-- Select specializzazioni -->
@@ -127,7 +127,7 @@
             </div>
             
         </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>
