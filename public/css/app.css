@@ -10125,43 +10125,78 @@ h3 {
   background: transparent;
 }
 
-#message {
+nav#message {
   overflow: none;
 }
-#message .container {
-  overflow-y: auto;
+nav#message h1 {
+  border-bottom: 2px solid #3a0030;
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 0px 3px #a42c8f;
 }
-#message .container ::-webkit-scrollbar {
+nav#message .container {
+  overflow-y: auto;
+  margin-bottom: 4.5rem;
+}
+nav#message .container .messages_wrap {
+  border: 2px solid #6812b0;
+  border-radius: 0.5rem 0.5rem 1.8rem 1.8rem;
+}
+nav#message .container .messages_wrap .table th, nav#message .container .messages_wrap .table td {
+  vertical-align: inherit;
+}
+nav#message .container .messages_wrap .table .thead-dark tr th {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  border-color: #3a0030;
+}
+nav#message .container .messages_wrap .table tbody .btn-info {
+  color: #212529;
+  background-color: transparent;
+  box-shadow: 9px 9px 8px #addde2 inset, -22px -22px 20px #d7ffff inset;
+  border-color: #7b0fc4;
+}
+nav#message .container .messages_wrap .table tbody :hover {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  box-shadow: 9px 9px 8px #7b0fc4 inset, -22px -22px 20px #7b0fc4 inset;
+  border-color: #3a0030;
+}
+nav#message .container .messages_wrap .table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: transparent;
+}
+nav#message .container ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
-#message .container ::-webkit-scrollbar-button {
+nav#message .container ::-webkit-scrollbar-button {
   width: 47px;
   height: 47px;
 }
-#message .container ::-webkit-scrollbar-thumb {
+nav#message .container ::-webkit-scrollbar-thumb {
   background: #8c0cd4;
   border: 23px none #8c0cd4;
   border-radius: 17px;
 }
-#message .container ::-webkit-scrollbar-thumb:hover {
+nav#message .container ::-webkit-scrollbar-thumb:hover {
   background: #8c0cd4;
 }
-#message .container ::-webkit-scrollbar-thumb:active {
+nav#message .container ::-webkit-scrollbar-thumb:active {
   background: #8c0cd4;
 }
-#message .container ::-webkit-scrollbar-track {
+nav#message .container ::-webkit-scrollbar-track {
   background: #8c0cd4;
   border: 26px none #8c0cd4;
   border-radius: 30px;
 }
-#message .container ::-webkit-scrollbar-track:hover {
+nav#message .container ::-webkit-scrollbar-track:hover {
   background: #8c0cd4;
 }
-#message .container ::-webkit-scrollbar-track:active {
+nav#message .container ::-webkit-scrollbar-track:active {
   background: #8c0cd4;
 }
-#message .container ::-webkit-scrollbar-corner {
+nav#message .container ::-webkit-scrollbar-corner {
   background: transparent;
 }
 
