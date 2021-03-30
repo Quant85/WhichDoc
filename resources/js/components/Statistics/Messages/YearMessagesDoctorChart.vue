@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="card">
                 <div class="container" v-if="yearMessages" style="background: rgba(186, 255, 226, 0.34);">
-                    <canvas id="myChartYear" width="550" height="300"></canvas>
+                    <canvas id="myChartYear" width="550" height="250"></canvas>
                 </div>
             </div>
         </div>

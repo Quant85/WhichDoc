@@ -39766,7 +39766,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartMonth", width: "550", height: "300" }
+                  attrs: { id: "myChartMonth", width: "550", height: "250" }
                 })
               ]
             )
@@ -39809,7 +39809,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartYear", width: "550", height: "300" }
+                  attrs: { id: "myChartYear", width: "550", height: "250" }
                 })
               ]
             )
@@ -39855,7 +39855,7 @@ var render = function() {
                   attrs: {
                     id: "myChartMonthRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]
@@ -39899,7 +39899,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChart", width: "600", height: "400" }
+                  attrs: { id: "myChart", width: "550", height: "250" }
                 })
               ]
             )
@@ -39945,7 +39945,7 @@ var render = function() {
                   attrs: {
                     id: "myChartYearRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]
