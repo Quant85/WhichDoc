@@ -14,7 +14,7 @@
         </div>
         
         <div class="bottom d-flex flex-row">
-          <div class="bottom_left d-flex justify-content-around flex-column">
+          <div class="bottom_left d-flex justify-content-around flex-column col-8">
             <form action="{{route('medico.profilo.update',$medico->id)}}" method="post" enctype="multipart/form-data">
               @method('PATCH') 
               @csrf
@@ -44,8 +44,8 @@
                   @enderror
                 </div>
 
-                <div class="col-12 d-flex">
-                  <div class="EMAIL col-4">
+                <div class="col-12 d-flex py-2">
+                  <div class="EMAIL col-5">
                     <label for="email" class="labels">Email</label>
                     <input type="text" name="email" class="form-control" value="{{old('email') ? old('email') : $medico->email}}" placeholder="email">
                   </div>
@@ -53,7 +53,7 @@
                   <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
 
-                  <div class="CELLULARE col-4">
+                  <div class="CELLULARE col-3">
                     <label for="cellulare"  class="labels">Contact Number</label>
                     <input type="text" name="cellulare" class="form-control" value="{{old('cellulare') ? old('cellulare') : optional($medico->profile)->cellulare}}" placeholder="number">
                   </div>
@@ -71,7 +71,7 @@
                 </div>
 
 
-                <div class="col-12 d-flex">
+                <div class="col-12 d-flex py-2">
                   <div class="CITTA col-6">
                     <label for="città" class="labels">Città</label>
                     <input type="text" name="città" class="form-control" value="{{old('città') ? old('città') : optional($medico->profile)->città}} " placeholder="address">
@@ -89,7 +89,7 @@
                   @enderror
                 </div>
 
-                <div class="form-group col-12 py-3">
+                <div class="form-group col-12 p-2">
                   <label for="bio">Bio-Curriculare</label>
                   <textarea id="bio" class="ckeditor form-control " name="bio" cols="50" rows="10">{{old('bio') ? old('bio') : optional($medico->profile)->bio}}</textarea>
                 </div>
@@ -128,15 +128,12 @@
                     <div class="alert alert-danger">{{ $message }}</div>
                   @enderror
                 </div>
-
-                <div class="col-md-12 d-flex justify-content-center align-items-center p-3">
-                  <button type="submit" class="btn btn-primary d-flex justify-content-center"><i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i></button>
-                </div>
+                
               </div>
               <!-- <div class="bottom_left_footer"></div> -->
             </div>
 
-              <div class="bottom_right d-flex flex-column">
+              <div class="bottom_right d-flex">
                 <div class="bottom_right_top">
 
                   <img src="{{optional($medico->profile)->foto ? asset( 'storage/'.$medico->profile->foto) : asset('img/default/dottori.jpg') }}" alt="foto profilo">
@@ -151,11 +148,11 @@
                   @enderror
 
 
-                  <div class="form-group row">
-                    <label for="specializzazione" class="col-md-4 col-form-label text-md-right">{{ __('Specializzazione') }}</label>
-                    <div class="col-md-6">
+                  <div class="form-group col-12 select_specializzazione">
+                    <label for="specializzazione" class=" col-form-label text-md-right">{{ __('Specializzazione') }}</label>
+                    <div class="col-md-12">
                       @if (count($specializzazioni)>0)
-                          <select class="form-control" name="specializzazione[]" id="specializzazine" multiple>
+                          <select class="form-control " name="specializzazione[]" id="specializzazine" multiple>
                           @foreach ($specializzazioni as $id => $specializzazione)
                             @if (old('specializzazione'))
                                 <option value="{{$specializzazione->id}}" {{in_array($specializzazione->id, old('specializzazione')) ? 'selected' : ' '}}>{{$specializzazione->descrizione}} </option>    
@@ -173,25 +170,26 @@
                       @enderror
                     </div>
                   </div>
-                </div>
-                <div class="sub_menu_profile col-4">
-                  <nav class="nav justify-content-center d-flex flex-column">
-                    <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.prestazione.index')}}" role="button">Riepilogo Prestazioni</a>    
-                    <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.showProfile',[$medico->id])}}" role="button">Vedi Profilo</a>
-                  </nav>
+                  <div class="sub_menu_profile">
+                    <nav class="nav justify-content-center d-flex flex-column">
+                    <button type="submit" class="btn btn-primary m-2 d-flex justify-content-center"><i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i></button>
+                      <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.prestazione.index')}}" role="button">Riepilogo Prestazioni</a>    
+                      <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.showProfile',[$medico->id])}}" role="button">Vedi Profilo</a>
+                    </nav>
+                  </div>
+                  <div class="bottom_right_bottom">
+                    @if ($errors->any())
+                      <div class="alert alert-danger">
+                        <ul>
+                          @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                          @endforeach
+                        </ul>
+                      </div>
+                    @endif
+                  </div>
                 </div>
                                 
-                <div class="bottom_right_bottom">
-                  @if ($errors->any())
-                    <div class="alert alert-danger">
-                      <ul>
-                        @foreach ($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                        @endforeach
-                      </ul>
-                    </div>
-                  @endif
-                </div>
               </div>
             </form>
           </div>

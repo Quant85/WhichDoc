@@ -42,3 +42,68 @@
 //     cursor: pointer;
 //     border: solid 1px #BA68C8
 // }
+.sub_menu_profile {
+  width: 65%;
+  margin: auto;
+  a , button{
+      color: #b1b0e4;
+      font-weight: bold;
+      background-color: #6812b0;
+      border: unset;
+      padding: 0.85rem 0.6rem;
+      border-radius: 1.2rem;
+
+      &:hover {
+          color: white;
+          background-color: #a06fff;
+      }
+
+      i {
+          padding-right: 1.8rem;
+      }
+  }
+}
+
+.select_specializzazione{
+  ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+  }
+
+  ::-webkit-scrollbar-button {
+      width: 47px;
+      height: 47px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #8c0cd4;
+      border: 23px none #8c0cd4;
+      border-radius: 17px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+      background: #8c0cd4;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+      background: #8c0cd4;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: #8c0cd4;
+      border: 26px none #8c0cd4;
+      border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+      background: #8c0cd4;
+  }
+
+  ::-webkit-scrollbar-track:active {
+      background: #8c0cd4;
+  }
+
+  ::-webkit-scrollbar-corner {
+      background: transparent;
+  }
+}
