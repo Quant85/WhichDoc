@@ -1,7 +1,7 @@
 <nav class="d-flex flex-column">
     <div id="app">
         <div id="welcome" class="welcome_doc">
-            <h1>Ben venuto nella tua Dashboard</h1>
+            <h1>Benvenuto nella tua Dashboard</h1>
             @if (optional(Auth::user()->profile)->genere)
                 <h2><i class="fas fa-user-md" style="font-size: 2.2rem;"></i>
                 @if (optional(Auth::user()->profile)->genere == 'femmina')
