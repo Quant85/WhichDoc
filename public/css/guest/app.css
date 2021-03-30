@@ -10481,6 +10481,7 @@ nav .container_nav .login .top-right .loggedin .notification {
   z-index: 1;
 }
 .statistiche .container_statistiche .statistiche_left .lays {
+  flex-flow: column;
   text-shadow: -1px 1px 13px #673ab7c7;
   color: #56008b;
   font-weight: 800;

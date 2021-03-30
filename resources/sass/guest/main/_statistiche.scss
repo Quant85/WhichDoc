@@ -32,6 +32,7 @@
             width: 100%;
             z-index: 1;
             .lays{
+                flex-flow: column;
                 text-shadow: -1px 1px 13px #673ab7c7;
                 color: #56008b;
                 font-weight: 800;
