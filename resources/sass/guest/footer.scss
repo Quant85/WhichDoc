@@ -1,8 +1,9 @@
-footer{background-color: $verde_acqua;
+footer {
+    background-color: $lavanda_sem;
     position: relative;
         .angolo_destra_alto {
             position: absolute;
-            top: 0;
+            top: -2px;
             right: 0;
             width: 100px;
             height: 100px;

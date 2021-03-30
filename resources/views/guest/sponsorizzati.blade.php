@@ -6,7 +6,7 @@
             {{-- Card Medico sponsiorizzato --}}
             @foreach($medici as $medico)
             <div class="card card_sponsorizzato flex-row" >
-                <div class="foto_medico"><img src="{{optional($medico->profile)->foto ? asset( 'storage/'.$medico->profile->foto) : asset('img/default/dottori.jpg') }}" alt="foto profilo"></div>
+                <div class="foto_medico"><img href="`/medico/profilo/` + doctor.id" src="{{optional($medico->profile)->foto ? asset( 'storage/'.$medico->profile->foto) : asset('img/default/dottori.jpg') }}" alt="foto profilo"></div>
                 <div class="dettagli">
                     <div>{{$medico->nome }}</div>
                     <div>{{$medico->cognome}}</div>
