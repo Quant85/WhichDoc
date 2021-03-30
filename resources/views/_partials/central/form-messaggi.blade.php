@@ -1,11 +1,11 @@
 <div id="form_message" class="bottom_right_bottom">
-    <h4>Contatta</h4>
+    <h5>Contatta</h5>
     <form action="{{route('message.store',$medico->id)}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form_input_message">                        
             <!-- nome -->
             <!-- <label for="nome_paziente"><strong>NOME</strong></label> -->
-            <input for="nome_paziente" id="nome_paziente" type="text" class="form-control" name="nome_paziente"  required autocomplete="nome_paziente" autofocus placeholder="Inserisci il tuo nome completo"
+            <input for="nome_paziente" id="nome_paziente" type="text" class="form-control" name="nome_paziente"  required autocomplete="nome_paziente" autofocus placeholder="Nome/Cognome"
             value="{{ old('nome_paziente')}}">
         </div>
         @error('nome_paziente')
@@ -15,7 +15,7 @@
         <div class="form_input_message">
             <!-- email -->
             <!-- <label for="email"><strong>EMAIL</strong></label> -->
-            <input for="email" id="email" type="email" class="form-control" name="email" autocomplete="email" autofocus placeholder="Inserisci la tua email"
+            <input for="email" id="email" type="email" class="form-control" name="email" autocomplete="email" autofocus placeholder="Email"
             value="{{ old('nome_paziente')}}" required>
         </div>
 
@@ -26,7 +26,7 @@
         <div class="form_input_message">
             <!-- numero cellulare -->
             <!-- <label for="cellulare"><strong>NUMERO DI TELEFONO</strong></label> -->
-            <input id="cellulare" type="text" class="form-control" name="cellulare" autocomplete="cellulare" autofocus placeholder="Inserisci un numero di telefono"
+            <input id="cellulare" type="text" class="form-control" name="cellulare" autocomplete="cellulare" autofocus placeholder="N.Tel."
             value="{{ old('cellulare')}}">
         </div>
 
