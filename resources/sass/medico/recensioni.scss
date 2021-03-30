@@ -1,0 +1,63 @@
+nav#recensioni {
+    overflow: none;
+
+    h1 {
+        border-bottom: 2px solid #3a0030;
+        border-radius: 0 0 0.8rem 0.8rem;
+        padding-bottom: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 0px 3px #a42c8f;
+    }
+
+    .container {
+        overflow-y: auto;
+        margin-bottom: 4.5rem;
+
+        .reating_wrap {
+            border: 2px solid #6812b0;
+            border-radius: 0.5rem 0.5rem 1.8rem 1.8rem;
+
+            .table {
+
+                th,
+                td {
+                    vertical-align: inherit;
+                }
+
+                .thead-dark {
+                    tr {
+                        th {
+                            color: #b1b0e4;
+                            background-color: #7b0fc4;
+                            border-color: #3a0030;
+                        }
+                    }
+                }
+
+                tbody {
+                    .btn-info {
+                        color: #212529;
+                        background-color: transparent;
+                        box-shadow: 9px 9px 8px #addde2 inset,
+                            -22px -22px 20px #d7ffff inset;
+                        border-color: #7b0fc4;
+                    }
+
+                    :hover {
+                        color: #b1b0e4;
+                        background-color: #7b0fc4;
+                        box-shadow: 9px 9px 8px #7b0fc4 inset,
+                            -22px -22px 20px #7b0fc4 inset;
+                        border-color: #3a0030;
+                    }
+                }
+            }
+
+            .table-striped tbody tr:nth-of-type(2n+1) {
+                background-color: transparent;
+            }
+        }
+
+        @import 'Partials/_webkit-admin-scroll';
+    }
+}

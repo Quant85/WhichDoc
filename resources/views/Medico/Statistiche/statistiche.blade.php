@@ -15,7 +15,7 @@
                 @else
                     <span>Dott.</span> 
                 @endif
-                {{Auth::user()->nome}} {{Auth::user()->cognome}}</h3>
+                {{Auth::user()->cognome}} {{Auth::user()->nome}} </h3>
             @endif
           </div>
           {{-- Statistiche --}}

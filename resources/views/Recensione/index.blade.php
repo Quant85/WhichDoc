@@ -5,77 +5,82 @@
         <!-- container bianco -->
         <div class="main_white card d-flex flex-row">
             @include('_partials.left-side-bar')        
-            <nav class="d-flex flex-column">
-                <div class="top d-flex flex-row">
-                    <div class="top_left"></div>
-                    <div class="top_right"></div>
-                </div>
-
+            <nav id="recensioni" class="d-flex flex-column">
                 <div class="bottom d-flex flex-row">
                     <div class="bottom_left d-flex justify-content-around flex-column">      
-                    <h1>Visualizzazione Recensioni</h1>
-                    <div class="container">
-                        <table class="table table-striped">
-                            <thead >
-                                <tr>
-                                    <th scope="col">Nome Paziente Recensore</th>
-                                    <th scope="col">Testo Recensione</th>
-                                    <th scope="col">Voto</th>
-                                    <th scope="col">Ricevuto</th>
-                                   
-                                </tr>
-                            </thead>
+                        <h1>Recensioni
+                            @if (optional(Auth::user()->profile)->genere)
+                                
+                                @if (optional(Auth::user()->profile)->genere == 'femmina')
+                                    <span>della Dott.ssa </span>
+                                @else
+                                    <span>del Dott.</span> 
+                                @endif
+                                {{Auth::user()->cognome}} {{Auth::user()->nome}}
+                            @endif
+                            <i class="fas fa-user-md" style="font-size: 2.2rem;"></i>
+                        </h1>
+                        <div class="container">
                             @foreach ($medico->ratings as $rating)
-                            <tbody>
-                                <tr>
-                                    <td>{{$rating->nome_utente}}</td>
-                                    <td>
-                                        <div class="form-group">
-                                            <label for=""></label>
-                                            <textarea class="form-control" name="" id="" rows="2" disabled>{{$rating->body}}</textarea>
-                                        </div>
-                                        
-                                    </td>
-                                    <td>{{$rating->voto}}</td>
-                                    
-                                    <td>{{\Carbon\Carbon::createFromTimeStamp(strtotime($rating->created_at))->diffForHumans()}}
-                                    </td>
-                            
-                                    {{-- Botton trigger Modal --}}
-                                    <td>
-                                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#show-{{ $rating->id }}"><i class="far fa-eye"></i></button>
-                                    </td>
-                                    
-                                    {{-- Start Add Modal -  --}}
-                                    <div class="modal fade" id="show-{{ $rating->id }}" tabindex="-1" role="dialog" aria-labelledby="rating-show-{{ $rating->id }}" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="#show-{{ $rating->id }} title"> Recensione di: {{$rating->nome_utente}}<i class="fas fa-broom"></i></h5>
-
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
+                            <div class="reating_wrap my-4">
+                                <table class="table table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Nome Paziente Recensore</th>
+                                            <th scope="col">Testo Recensione</th>
+                                            <th scope="col">Voto</th>
+                                            <th scope="col">Ricevuto</th>
+                                            <th colspan = 2>Azioni</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-capitalize">{{$rating->nome_utente}}</span></td>
+                                            <td>
+                                                <div class="body_text text-truncate"><p class="d-inline-block text-truncate" style="max-width: 150px; ver">
+                                                    {{$rating->body}}
+                                                    </p>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <p>{{$rating->body}}</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-door-closed"></i></button>
-                                        
+                                            </td>
+                                            <td>{{$rating->voto}}</td>
+                                            
+                                            <td>{{\Carbon\Carbon::createFromTimeStamp(strtotime($rating->created_at))->diffForHumans()}}
+                                            </td>
+                                    
+                                            {{-- Botton trigger Modal --}}
+                                            <td>
+                                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#show-{{ $rating->id }}"><i class="far fa-eye"></i></button>
+                                            </td>
+                                            
+                                            {{-- Start Add Modal -  --}}
+                                            <div class="modal fade" id="show-{{ $rating->id }}" tabindex="-1" role="dialog" aria-labelledby="rating-show-{{ $rating->id }}" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="#show-{{ $rating->id }} title"> Recensione di: {{$rating->nome_utente}}<i class="fas fa-broom"></i></h5>
+    
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p>{{$rating->body}}</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-door-closed"></i></button>
+                                                
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    {{-- End Add Model --}}
-                                </tr>
-                            </tbody>
+    
+                                            {{-- End Add Model --}}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             @endforeach
-                        
-                        </table>
-
-                    </div>
+                        </div>
                     </div>
                 </div>    
             </nav>      
