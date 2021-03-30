@@ -2,7 +2,7 @@
     <div class="container_nav d-flex justify-content-between">
             <div class="logo">
                 <a href="{{ url('/') }}">
-                    <img src="{{asset('img/logo.png')}}" alt="">
+                    <img src="{{asset('img/logo.PNG')}}" alt="">
                 </a>
                 <div class="jumbo_medico_profilo">
                   @auth

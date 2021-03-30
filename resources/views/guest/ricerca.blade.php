@@ -5,7 +5,7 @@
         <div class="card_specializzazione card">
             <div class="d-flex justify-content-center flex-column">
                 <img src="{{ asset('/img/specializzazioni/Allergologia.jpg')}}" alt="">
-                <small>Allergologia</small>
+                <small class="small">Allergologia</small>
             </div>
         </div>
         {{-- @endforeach --}}
@@ -14,61 +14,61 @@
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Cardiologia.jpg')}}" alt="">
-                    <small>Cardiologia</small>
+                    <small class="small">Cardiologia</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Dermatologia.jpg')}}" alt="">
-                    <small>Dermatologia</small>
+                    <small class="small">Dermatologia</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                     <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Diabetologia.jpg')}}" alt="">
-                    <small>Diabetologia</small>
+                    <small class="small">Diabetologia</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Geriatria.jpg')}}" alt="">
-                    <small>Geriatria</small>
+                    <small class="small">Geriatria</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/MedicinaDelloSport.jpg')}}" alt="">
-                    <small>Medicina dello sport</small>
+                    <small class="small">Medicina dello sport</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/MedicinaInterna.jpg')}}" alt="">
-                    <small>Medicina interna</small>
+                    <small class="small">Medicina interna</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Nutrizionistica.jpg')}}" alt="">
-                    <small>Nutrizionistica</small>
+                    <small class="small">Nutrizionistica</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Pediatria.jpg')}}" alt="">
-                    <small>Pediatria</small>
+                    <small class="small">Pediatria</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Pneumologia.jpg')}}" alt="">
-                    <small>Pneumologia</small>
+                    <small class="small">Pneumologia</small>
                 </div>
             </div>
             <div class="card_specializzazione card">
                 <div class="d-flex justify-content-center flex-column">
                     <img src="{{ asset('/img/specializzazioni/Psicologia.jpg')}}" alt="">
-                    <small>Psicologia</small>
+                    <small class="small">Psicologia</small>
                 </div>
             </div>
         {{-- Eliminare --}}

@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="card">
                 <div class="container" v-if="votes" style="background: rgba(186, 255, 226, 0.34);">
-                    <canvas id="myChart" width="600" height="400"></canvas>
+                    <canvas id="myChart" width="550" height="250"></canvas>
                 </div>
             </div>
         </div>

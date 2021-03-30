@@ -2175,6 +2175,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -39304,250 +39310,290 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { attrs: { id: "search" } }, [
-      _c("div", { staticClass: "selezione_search d-flex" }, [
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.selected,
-                expression: "selected"
-              }
-            ],
-            attrs: { id: "select_search" },
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.selected = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              }
-            }
-          },
-          _vm._l(_vm.special, function(spec) {
-            return _c("option", [_vm._v(_vm._s(spec))])
-          }),
-          0
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "filtri d-flex" }, [
-        _c("div", { staticClass: "filtri_recensioni" }, [
-          _c("h4", [_vm._v("Recensioni")]),
-          _vm._v(" "),
-          _c(
-            "form",
-            { staticClass: "recensioni_search d-flex", attrs: { action: "" } },
-            [
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "max", name: "somma" },
-                  on: { change: _vm.max }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "max" } }, [_vm._v("+30")])
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "mid", name: "somma" },
-                  on: { change: _vm.mid }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "mid" } }, [_vm._v("10 < 30")])
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "min", name: "somma" },
-                  on: { change: _vm.min }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "min" } }, [_vm._v("0 < 10")])
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "all", name: "somma" },
-                  on: { change: _vm.all }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "all" } }, [_vm._v("ALL")])
-              ])
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "filtri_voti" }, [
-          _c("h4", [_vm._v("Voti")]),
-          _vm._v(" "),
-          _c(
-            "form",
-            { staticClass: "voti_search d-flex", attrs: { action: "" } },
-            [
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "zero", name: "media" },
-                  on: { change: _vm.zero }
-                }),
-                _vm._v(" "),
-                _c("label", { attrs: { for: "zero" } }, [_vm._v("ZERO")])
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "uno", name: "media" },
-                  on: { change: _vm.uno }
-                }),
-                _vm._v(" "),
-                _vm._m(0)
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "due", name: "media" },
-                  on: { change: _vm.due }
-                }),
-                _vm._v(" "),
-                _vm._m(1)
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "tre", name: "media" },
-                  on: { change: _vm.tre }
-                }),
-                _vm._v(" "),
-                _vm._m(2)
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "quattro", name: "media" },
-                  on: { change: _vm.quattro }
-                }),
-                _vm._v(" "),
-                _vm._m(3)
-              ]),
-              _vm._v(" "),
-              _c("span", [
-                _c("input", {
-                  attrs: { type: "radio", id: "cinque", name: "media" },
-                  on: { change: _vm.cinque }
-                }),
-                _vm._v(" "),
-                _vm._m(4)
-              ])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
+  return _c("div", { attrs: { id: "search" } }, [
+    _c("div", { staticClass: "selezione_search d-flex" }, [
       _c(
-        "div",
-        { staticClass: "container_card_search d-flex" },
-        _vm._l(_vm.doctors, function(doctor) {
-          return _vm.selected == doctor.specializzazioni &&
-            doctor.visible == true &&
-            doctor.visibleMV == true &&
-            doctor.profilo !== null
-            ? _c("div", { staticClass: "card_search d-flex" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "d-flex",
-                    attrs: { href: "/medico/profilo/" + doctor.id }
-                  },
-                  [
-                    _c("div", { staticClass: "card_top_search d-flex" }, [
-                      doctor.profilo.genere == "maschio"
-                        ? _c("h4", [
-                            _vm._v("Dottore "),
-                            _c("br"),
-                            _vm._v(
-                              _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
-                            )
-                          ])
-                        : doctor.profilo.genere == "femmina"
-                        ? _c("h4", [
-                            _vm._v("Dottoressa "),
-                            _c("br"),
-                            _vm._v(
-                              _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "immagine_dottore_search" }, [
-                        doctor.profilo.foto !== null
-                          ? _c("img", {
-                              staticStyle: { width: "100px" },
-                              attrs: {
-                                src: "storage/" + doctor.profilo.foto,
-                                alt: ""
-                              }
-                            })
-                          : _c("img", {
-                              attrs: {
-                                src: __webpack_require__(/*! ../../../img/default/dottori.jpg */ "./resources/img/default/dottori.jpg")
-                              }
-                            })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "dati_dottore_search" }, [
-                      _c("div", [
-                        _c(
-                          "ul",
-                          [
-                            _c("strong", [_vm._v("Specializzazioni:")]),
-                            _vm._v(" "),
-                            _vm._l(doctor.somma_specializzazioni, function(
-                              speci
-                            ) {
-                              return _c("li", [
-                                _vm._v(_vm._s(speci.descrizione))
-                              ])
-                            })
-                          ],
-                          2
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("strong", [_vm._v("Città: ")]),
-                        _vm._v(_vm._s(doctor.profilo.città))
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("strong", [_vm._v("Voto: ")]),
-                        _vm._v(_vm._s(doctor.media_voto))
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _c("strong", [_vm._v("Recensioni: ")]),
-                        _vm._v(" " + _vm._s(doctor.somma_recensione))
-                      ])
-                    ])
-                  ]
-                )
-              ])
-            : _vm._e()
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selected,
+              expression: "selected"
+            }
+          ],
+          attrs: { id: "select_search" },
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.selected = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.special, function(spec) {
+          return _c("option", [_vm._v(_vm._s(spec))])
         }),
         0
       )
-    ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "filtri d-flex" }, [
+      _c("div", { staticClass: "filtri_recensioni" }, [
+        _c("h4", [_vm._v("Recensioni")]),
+        _vm._v(" "),
+        _c(
+          "form",
+          { staticClass: "recensioni_search d-flex", attrs: { action: "" } },
+          [
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "max", name: "somma" },
+                on: { change: _vm.max }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "max" } }, [_vm._v("+30")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "mid", name: "somma" },
+                on: { change: _vm.mid }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "mid" } }, [_vm._v("10 < 30")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "min", name: "somma" },
+                on: { change: _vm.min }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "min" } }, [_vm._v("0 < 10")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "all", name: "somma" },
+                on: { change: _vm.all }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "all" } }, [_vm._v("ALL")])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "filtri_voti" }, [
+        _c("h4", [_vm._v("Voti")]),
+        _vm._v(" "),
+        _c(
+          "form",
+          { staticClass: "voti_search d-flex", attrs: { action: "" } },
+          [
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "zero", name: "media" },
+                on: { change: _vm.zero }
+              }),
+              _vm._v(" "),
+              _c("label", { attrs: { for: "zero" } }, [_vm._v("ZERO")])
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "uno", name: "media" },
+                on: { change: _vm.uno }
+              }),
+              _vm._v(" "),
+              _vm._m(0)
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "due", name: "media" },
+                on: { change: _vm.due }
+              }),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "tre", name: "media" },
+                on: { change: _vm.tre }
+              }),
+              _vm._v(" "),
+              _vm._m(2)
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "quattro", name: "media" },
+                on: { change: _vm.quattro }
+              }),
+              _vm._v(" "),
+              _vm._m(3)
+            ]),
+            _vm._v(" "),
+            _c("span", [
+              _c("input", {
+                attrs: { type: "radio", id: "cinque", name: "media" },
+                on: { change: _vm.cinque }
+              }),
+              _vm._v(" "),
+              _vm._m(4)
+            ])
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "container_card_search d-flex" },
+      _vm._l(_vm.doctors, function(doctor) {
+        return _vm.selected == doctor.specializzazioni &&
+          doctor.visible == true &&
+          doctor.visibleMV == true &&
+          doctor.profilo !== null
+          ? _c("div", { staticClass: "card_search d-flex" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "d-flex",
+                  attrs: { href: "/medico/profilo/" + doctor.id }
+                },
+                [
+                  _c("div", { staticClass: "card_top_search d-flex" }, [
+                    doctor.profilo.genere == "maschio"
+                      ? _c("h4", [
+                          _vm._v("Dottore "),
+                          _c("br"),
+                          _vm._v(
+                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
+                          )
+                        ])
+                      : doctor.profilo.genere == "femmina"
+                      ? _c("h4", [
+                          _vm._v("Dottoressa "),
+                          _c("br"),
+                          _vm._v(
+                            _vm._s(doctor.nome) + " " + _vm._s(doctor.cognome)
+                          )
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "immagine_dottore_search" }, [
+                      doctor.profilo.foto !== null
+                        ? _c("img", {
+                            staticStyle: { width: "100px" },
+                            attrs: {
+                              src: "storage/" + doctor.profilo.foto,
+                              alt: ""
+                            }
+                          })
+                        : _c("img", {
+                            attrs: {
+                              src: __webpack_require__(/*! ../../../img/default/dottori.jpg */ "./resources/img/default/dottori.jpg")
+                            }
+                          })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dati_dottore_search d-flex" }, [
+                    _c("div", [
+                      _c(
+                        "ul",
+                        [
+                          _c("strong", [_vm._v("Specializzazioni:")]),
+                          _vm._v(" "),
+                          _vm._l(doctor.somma_specializzazioni, function(
+                            speci
+                          ) {
+                            return _c("li", [_vm._v(_vm._s(speci.descrizione))])
+                          })
+                        ],
+                        2
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("strong", [_vm._v("Città: ")]),
+                      _vm._v(_vm._s(doctor.profilo.città))
+                    ]),
+                    _vm._v(" "),
+                    doctor.media_voto < 0.5
+                      ? _c("p", [_c("strong", [_vm._v("Voto: ")]), _vm._v("0")])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    doctor.media_voto >= 0.5 && doctor.media_voto < 1.5
+                      ? _c("p", [
+                          _c("strong", [_vm._v("Voto: ")]),
+                          _c("i", { staticClass: "fas fa-star" })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    doctor.media_voto >= 1.5 && doctor.media_voto < 2.5
+                      ? _c("p", [
+                          _c("strong", [_vm._v("Voto: ")]),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    doctor.media_voto >= 2.5 && doctor.media_voto < 3.5
+                      ? _c("p", [
+                          _c("strong", [_vm._v("Voto: ")]),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    doctor.media_voto >= 3.5 && doctor.media_voto < 4.5
+                      ? _c("p", [
+                          _c("strong", [_vm._v("Voto: ")]),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    doctor.media_voto > 4.5
+                      ? _c("p", [
+                          _c("strong", [_vm._v("Voto: ")]),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" }),
+                          _c("i", { staticClass: "fas fa-star" })
+                        ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("strong", [_vm._v("Recensioni: ")]),
+                      _vm._v(" " + _vm._s(doctor.somma_recensione))
+                    ])
+                  ])
+                ]
+              )
+            ])
+          : _vm._e()
+      }),
+      0
+    )
   ])
 }
 var staticRenderFns = [
@@ -39713,7 +39759,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartMonth", width: "550", height: "300" }
+                  attrs: { id: "myChartMonth", width: "550", height: "250" }
                 })
               ]
             )
@@ -39756,7 +39802,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChartYear", width: "550", height: "300" }
+                  attrs: { id: "myChartYear", width: "550", height: "250" }
                 })
               ]
             )
@@ -39802,7 +39848,7 @@ var render = function() {
                   attrs: {
                     id: "myChartMonthRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]
@@ -39846,7 +39892,7 @@ var render = function() {
               },
               [
                 _c("canvas", {
-                  attrs: { id: "myChart", width: "600", height: "400" }
+                  attrs: { id: "myChart", width: "550", height: "250" }
                 })
               ]
             )
@@ -39892,7 +39938,7 @@ var render = function() {
                   attrs: {
                     id: "myChartYearRating",
                     width: "550",
-                    height: "300"
+                    height: "250"
                   }
                 })
               ]

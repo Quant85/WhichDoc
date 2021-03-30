@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <!-- <div class="container-fluid"> -->
         <div id="search">
 
             <!-- Select specializzazioni -->
@@ -104,7 +104,7 @@
                             </div>
                         </div>
 
-                        <div class="dati_dottore_search">
+                        <div class="dati_dottore_search d-flex">
                             <div>
                                 <ul>
                                     <strong>Specializzazioni:</strong>
@@ -112,7 +112,13 @@
                                 </ul>
                             </div>
                             <p><strong>Città: </strong>{{doctor.profilo.città}}</p>
-                            <p><strong>Voto: </strong>{{doctor.media_voto}}</p>
+                            <p v-if="doctor.media_voto  < 0.5"><strong>Voto: </strong>0</p>
+                            <p v-if="doctor.media_voto >= 0.5 && doctor.media_voto < 1.5"><strong>Voto: </strong><i class="fas fa-star"></i></p>
+                            <p v-if="doctor.media_voto >= 1.5 && doctor.media_voto < 2.5"><strong>Voto: </strong><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                            <p v-if="doctor.media_voto >= 2.5 && doctor.media_voto < 3.5"><strong>Voto: </strong><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                            <p v-if="doctor.media_voto >= 3.5 && doctor.media_voto < 4.5"><strong>Voto: </strong><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                            <p v-if="doctor.media_voto > 4.5"><strong>Voto: </strong><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+
                             <p><strong>Recensioni: </strong> {{doctor.somma_recensione}}</p>
                         </div>
                     </a>
@@ -121,7 +127,7 @@
             </div>
             
         </div>
-    </div>
+    <!-- </div> -->
 </template>
 
 <script>

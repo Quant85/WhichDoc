@@ -1,6 +1,6 @@
 <div class="sponsorizzati">
     <div class="container_sponsorizzati d-flex flex-column">
-        <h2>I nostri medici</h2>
+        <h2>Il meglio dei nostri Medici Sponsorizzati:</h2>
         <div class="card_container card_container_sponsorizzati d-flex justify-content-between owl-carousel owl-theme flex-column">
             
             {{-- Card Medico sponsiorizzato --}}
@@ -12,7 +12,7 @@
                     <div>{{$medico->cognome}}</div>
                     <div>{{$medico->specializzazione}}</div>
                     <div>{{optional($medico->profile)->città}}</div>
-                    <div>*****</div>
+                    <div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 </div>
             </div>
             @endforeach

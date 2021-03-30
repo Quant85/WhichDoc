@@ -7,8 +7,8 @@
     <div class="container_frame">
         {{-- Label accanto Iphone-Frame --}}
         <div class="iphone_label">
-            <span class="text-white">Consulta il tuo medico direttamente da cellulare!
-                <a href="" class="btn-grad-dark">REGISTRATI</a>
+            <span class="text-white">Sei un Medico e vuoi scoprire di più su WhichDoc?
+                <a href="{{ route('register') }}" class="btn-grad-dark">REGISTRATI</a>
             </span>
         </div>
         {{-- End Label accanto Iphone-Frame --}}
@@ -25,7 +25,7 @@
 
         {{-- Container middle Dentro Iphone --}}
         <div class="iphone_middle">
-            <div class="text-white ">Consulti medici online</div>
+            <div class="text-white ">Consulti Medici online</div>
             <a href="{{-- Sponsorizzazioni --}}" class="bnt btn-grad-secondary-dark btn_offerte ">Vedi le nostre offerte</a>
         </div>
         {{-- End Container middle Dentro Iphone --}}

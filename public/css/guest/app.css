@@ -10240,6 +10240,11 @@ nav .container_nav .login .top-right .loggedin .notification {
   width: 100%;
   border-radius: 90px;
 }
+.card_ricerca_rapida .container_card .card_specializzazione .small {
+  font-size: 95%;
+  font-weight: 505;
+  padding-top: 0.1rem;
+}
 
 .sponsorizzati {
   width: 100%;
@@ -10295,6 +10300,10 @@ nav .container_nav .login .top-right .loggedin .notification {
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .card_sponsorizzato:hover {
   transform: scale(1.1);
+}
+.sponsorizzati .container_sponsorizzati .card_container .owl-stage-outer .fa-star {
+  font-size: 10px;
+  color: yellow;
 }
 .sponsorizzati .container_sponsorizzati .card_container .owl-dots {
   display: block;
@@ -10668,9 +10677,9 @@ footer .container_footer .right_footer div p {
 }
 
 #search {
-  background-color: #423376;
+  background-color: #6146C6;
+  margin: auto;
   width: 100%;
-  border-radius: 10px;
 }
 #search .selezione_search {
   justify-content: center;
@@ -10680,7 +10689,7 @@ footer .container_footer .right_footer div p {
   background-color: #4a4873;
   font-size: 1.2rem;
   text-align: center;
-  color: #b1b0e4;
+  color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   border: none;
@@ -10692,13 +10701,9 @@ footer .container_footer .right_footer div p {
   background-size: 2rem;
   outline: none;
 }
-#search .selezione_search #select_search option:hover {
-  background-color: #b1b0e4 !important;
-  color: white;
-}
 #search .filtri {
   margin: 20px 0;
-  background-color: #6146C6;
+  background-color: #423376;
 }
 #search .filtri .filtri_recensioni {
   width: 50%;
@@ -10714,18 +10719,21 @@ footer .container_footer .right_footer div p {
   align-items: center;
 }
 #search .filtri .filtri_recensioni .recensioni_search span {
-  font-size: 12px;
+  font-size: 14px;
+  padding-top: 9px;
   text-align: center;
-  min-width: 75px;
+  min-width: 100px;
   background: unset;
   background-color: unset;
   border-radius: 20px;
   border: 1px solid #b1b0e4;
   color: #b1b0e4;
+  transition: transform 0.5s;
 }
 #search .filtri .filtri_recensioni .recensioni_search span:hover {
   background-color: #b1b0e4;
   color: white;
+  transform: scale(1.2);
 }
 #search .filtri .filtri_recensioni .recensioni_search span label {
   cursor: pointer;
@@ -10748,15 +10756,21 @@ footer .container_footer .right_footer div p {
 }
 #search .filtri .filtri_voti .voti_search span {
   font-size: 12px;
-  min-width: 75px;
+  padding-top: 9px;
+  min-width: 100px;
   text-align: center;
   background: unset;
   background-color: unset;
   border-radius: 20px;
   border: 1px solid #b1b0e4;
   color: #b1b0e4;
+  transition: transform 0.5s;
+}
+#search .filtri .filtri_voti .voti_search span:first-child {
+  font-size: 14px;
 }
 #search .filtri .filtri_voti .voti_search span:hover {
+  transform: scale(1.2);
   background-color: #b1b0e4;
   color: white;
 }
@@ -10767,18 +10781,26 @@ footer .container_footer .right_footer div p {
   display: none;
 }
 #search .container_card_search {
-  width: 100%;
+  width: 80%;
+  margin: auto;
+  min-height: 100vh;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
 #search .container_card_search .card_search {
-  width: 30%;
-  margin-bottom: 20px;
+  width: 20%;
+  height: 450px;
+  margin: 20px 2.5%;
   background-color: white;
-  box-shadow: 5px 2px 7px 0px rgba(74, 72, 115, 0.75);
+  box-shadow: 2px 2px 7px 0px black;
   border-radius: 10px;
   background-color: #4a4873;
+  transition: transform 0.5s;
+}
+#search .container_card_search .card_search:hover {
+  transform: scale(1.1);
 }
 #search .container_card_search .card_search a {
   width: 100%;
@@ -10811,14 +10833,22 @@ footer .container_footer .right_footer div p {
   border-radius: 10px;
 }
 #search .container_card_search .card_search a .dati_dottore_search {
-  font-size: 14px;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 3px;
+  font-size: 18px;
 }
 #search .container_card_search .card_search a .dati_dottore_search div ul {
+  font-size: 22px;
   list-style: none;
+}
+#search .container_card_search .card_search a .dati_dottore_search div ul li {
+  font-size: 18px;
 }
 #search .container_card_search .card_search a .dati_dottore_search p strong {
   padding-right: 1px;
+  font-size: 22px;
 }
 
 #profilo_medico .dati_medico {
@@ -11002,6 +11032,37 @@ footer .container_footer .right_footer div p {
   box-shadow: 1px 1px 2px white;
 }
 
+@media (min-width: 280px) and (max-width: 1450px) {
+  /* Ricerca avanzata */
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni {
+    width: 100%;
+    border-bottom: 2px solid #b1b0e4;
+  }
+  #search .filtri .filtri_voti {
+    width: 100%;
+  }
+  #search .container_card_search {
+    width: 90%;
+  }
+  #search .container_card_search .card_search {
+    width: 22%;
+    height: 400px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 22px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 80px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 320px;
+  }
+
+  /* /Ricerca avanzata */
+}
 @media (max-width: 1200px) {
   nav .container_nav {
     width: 100%;
@@ -11019,6 +11080,13 @@ footer .container_footer .right_footer div p {
   .search_comp .btn-grad-secondary {
     padding: 10px 40px !important;
   }
+
+  /* Ricerca avanzata */
+  #search .container_card_search .card_search {
+    width: 28%;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (max-width: 992px) {
   .hamburger {
@@ -11050,6 +11118,38 @@ footer .container_footer .right_footer div p {
   .statistiche .statistiche-right .angolo_sinistra_alto {
     z-index: 1;
   }
+
+  /* Ricerca avanzata */
+  #search .container_card_search {
+    width: 95%;
+  }
+  #search .container_card_search .card_search {
+    width: 28%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul li {
+    font-size: 15px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p strong {
+    font-size: 18px;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (min-width: 993px) {
   .hamburger {
@@ -11101,6 +11201,46 @@ footer .container_footer .right_footer div p {
   .card_sponsorizzato {
     margin-bottom: 10px;
   }
+
+  /* Ricerca avanzata */
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span:hover {
+    transform: none;
+  }
+  #search .filtri .filtri_voti {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_voti .voti_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_voti .voti_search span {
+    margin: 5px 0;
+  }
+  #search .filtri .filtri_voti .voti_search span:hover {
+    transform: none;
+  }
+  #search .container_card_search {
+    width: 95%;
+  }
+  #search .container_card_search .card_search {
+    width: 40%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (min-width: 575px) and (max-width: 768px) {
   .card_ricerca_rapida {
@@ -11287,6 +11427,33 @@ footer .container_footer .right_footer div p {
   footer .container_footer .right_footer {
     width: 100%;
   }
+
+  /* Ricerca avanzata */
+  #search .filtri .filtri_recensioni .recensioni_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span {
+    margin: 5px 0;
+  }
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 400px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 80px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 320px;
+  }
+
+  /* /Ricerca avanzata */
 }
 .container_statistiche {
   width: 90%;
@@ -11298,6 +11465,77 @@ footer .container_footer .right_footer div p {
   position: absolute;
 }
 
+@media (min-width: 375px) and (max-width: 475px) {
+  /* Ricerca avanzata */
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+
+  /* /Ricerca avanzata */
+}
+@media (min-width: 280px) and (max-width: 375px) {
+  /* Ricerca avanzata */
+  #search .selezione_search #select_search {
+    width: 100%;
+  }
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span {
+    margin: 5px 0;
+  }
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 300px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 50px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 250px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul li {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p strong {
+    font-size: 12px;
+  }
+
+  /* /Ricerca avanzata */
+}
 @media (max-width: 768px) {
   .statistiche-right {
     height: 100%;
