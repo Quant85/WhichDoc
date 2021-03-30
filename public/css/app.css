@@ -10057,15 +10057,15 @@ body {
   box-shadow: 4px 3px 8px 0px rgba(0, 106, 167, 0.86);
   /* background-image: linear-gradient(to left, #8d06d8, #8d07d7, #8c09d5, #8c0ad4, #8b0bd3, #7f0fc7, #7311bc, #7f0fc7, #6812b0, #6812b0, #2c0c74, #16074e); */
   background-image: linear-gradient(to right top, #ebecff, #e3e8ff, #d9e4ff, #cee0ff, #c2ddff);
-  min-height: 90vh;
+  max-height: 90vh;
   width: 90vw;
 }
 #main-container #ciao .main_white .left_side {
   background-image: linear-gradient(to bottom, #8d06d8, #8d07d7, #8c09d5, #8c0ad4, #8b0bd3, #7f0fc7, #7311bc, #7f0fc7, #6812b0, #6812b0, #6812b0, #6812b0);
   width: 20%;
   border-radius: 20px;
-  padding: 2rem 0;
-  border: 2px solid black;
+  padding: 1rem 0;
+  border: 2px solid #3a0030;
   box-shadow: 1px 0px 20px 0px rgba(132, 94, 194, 0.75);
 }
 #main-container #ciao .main_white .left_side .navbar-brand {
@@ -10075,8 +10075,13 @@ body {
   background: #cecdf0;
   margin: 2rem 2rem;
 }
-#main-container #ciao .main_white .left_side .sidebar_top {
-  padding-bottom: 18px;
+#main-container #ciao .main_white .left_side .sidebar_top .dashboard_redirect a {
+  color: #b1b0e4;
+  font-weight: bold;
+  background-color: unset;
+  border: unset;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
 }
 #main-container #ciao .main_white .left_side .sidebar_top .logo {
   display: flex;
@@ -10100,6 +10105,10 @@ body {
   height: 100%;
   justify-content: center;
   flex-direction: column;
+  overflow: auto;
+}
+#main-container #ciao .main_white .left_side .sidebar_bottom .sidebar_main {
+  overflow-y: auto;
 }
 #main-container #ciao .main_white .left_side .sidebar_bottom li {
   text-align: center;
@@ -10132,6 +10141,19 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+}
+#main-container #ciao .main_white nav .welcome_doc {
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 2px solid #b1b0e4;
+  border-radius: 2rem;
+  box-shadow: 3px 1px 39px 18px rgba(182, 201, 247, 0.94);
+  -webkit-box-shadow: 3px 1px 39px 18px rgba(182, 201, 247, 0.94);
+  -moz-box-shadow: 3px 1px 39px 18px rgba(182, 201, 247, 0.94);
 }
 #main-container #ciao .main_white nav .top {
   padding: 0 50px 0 35px;
@@ -10183,10 +10205,13 @@ body {
 #main-container #ciao .main_white nav .component-main-container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 #main-container #ciao .main_white nav .component-main-container .chart-component-container {
   padding: 2rem 0;
+  display: flex;
+  flex-flow: column wrap;
 }
 #main-container #ciao .main_white nav .component-main-container .chart-component-container h3 {
   text-align: center;

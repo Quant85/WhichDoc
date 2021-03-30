@@ -7,8 +7,8 @@
 
     width: 20%;
     border-radius: 20px;
-    padding: 2rem 0;
-    border: 2px solid black;
+    padding: 1rem 0;
+    border: 2px solid rgb(58, 0, 48);
     -webkit-box-shadow: 1px 0px 20px 0px rgba(132, 94, 194, 0.75);
     -moz-box-shadow: 1px 0px 20px 0px rgba(132, 94, 194, 0.75);
     box-shadow: 1px 0px 20px 0px rgba(132, 94, 194, 0.75);
@@ -19,7 +19,16 @@
     }
 
     .sidebar_top {
-        padding-bottom: 18px;
+        .dashboard_redirect{
+            a{
+                color: #b1b0e4;
+                font-weight: bold;
+                background-color: unset;
+                border: unset;
+                padding: 1.2rem;
+                border-radius: 1.2rem;
+            }
+        }
 
         .logo {
             display: flex;
@@ -49,7 +58,10 @@
         height: 100%;
         justify-content: center;
         flex-direction: column;
-
+        overflow: auto;
+        .sidebar_main {
+            overflow-y: auto;
+        }
         li {
             text-align: center;
         }

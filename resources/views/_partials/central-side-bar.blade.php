@@ -1,5 +1,17 @@
 <nav class="d-flex flex-column">
     <div id="app">
+        <div id="welcome" class="welcome_doc">
+            <h1>Ben venuto nella tua Dashboard</h1>
+            @if (optional(Auth::user()->profile)->genere)
+                <h2><i class="fas fa-user-md" style="font-size: 2.2rem;"></i>
+                @if (optional(Auth::user()->profile)->genere == 'femmina')
+                    <span>Dott.ssa </span>
+                @else
+                    <span>Dott.</span> 
+                @endif
+                {{Auth::user()->nome}} {{Auth::user()->cognome}}</h2>
+            @endif
+        </div>
         <div class=" component-main-container">
             <div class="chart-component-container">
                 <h3>Statistiche Recensioni Mensili</h3>
