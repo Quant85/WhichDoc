@@ -1,11 +1,13 @@
 nav{
     overflow-y: auto;
+    
     #app{
         display:flex;
         align-items:center;
         justify-content:center;
         flex-direction:column;
         height:100%;
+
     }
     width: 100%;
     justify-content: space-between;
@@ -107,5 +109,8 @@ nav{
                 color: #b1b0e4;
             }
         }
+        
     }
+    
 }
+@import '_webkit-admin-scroll';
