@@ -10247,7 +10247,7 @@ nav#message h1 {
   border-radius: 0 0 0.8rem 0.8rem;
   padding-bottom: 1.2rem;
   margin-bottom: 2rem;
-  text-shadow: 2px 0px 3px #a42c8f;
+  text-shadow: 1px 0px 1px #a42c8f;
 }
 nav#message .container {
   overflow-y: auto;
@@ -10381,6 +10381,170 @@ nav#message .container ::-webkit-scrollbar-corner {
   background: transparent;
 }
 
+nav#recensioni {
+  overflow: none;
+}
+nav#recensioni h1 {
+  border-bottom: 2px solid #3a0030;
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 0px 1px #a42c8f;
+}
+nav#recensioni .container {
+  overflow-y: auto;
+  margin-bottom: 4.5rem;
+}
+nav#recensioni .container .reating_wrap {
+  border: 2px solid #6812b0;
+  border-radius: 0.5rem 0.5rem 1.8rem 1.8rem;
+}
+nav#recensioni .container .reating_wrap .table th,
+nav#recensioni .container .reating_wrap .table td {
+  vertical-align: inherit;
+}
+nav#recensioni .container .reating_wrap .table .thead-dark tr th {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  border-color: #3a0030;
+}
+nav#recensioni .container .reating_wrap .table tbody .btn-info {
+  color: #212529;
+  background-color: transparent;
+  box-shadow: 9px 9px 8px #addde2 inset, -22px -22px 20px #d7ffff inset;
+  border-color: #7b0fc4;
+}
+nav#recensioni .container .reating_wrap .table tbody :hover {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  box-shadow: 9px 9px 8px #7b0fc4 inset, -22px -22px 20px #7b0fc4 inset;
+  border-color: #3a0030;
+}
+nav#recensioni .container .reating_wrap .table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: transparent;
+}
+nav#recensioni .container ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+nav#recensioni .container ::-webkit-scrollbar-button {
+  width: 47px;
+  height: 47px;
+}
+nav#recensioni .container ::-webkit-scrollbar-thumb {
+  background: #8c0cd4;
+  border: 23px none #8c0cd4;
+  border-radius: 17px;
+}
+nav#recensioni .container ::-webkit-scrollbar-thumb:hover {
+  background: #8c0cd4;
+}
+nav#recensioni .container ::-webkit-scrollbar-thumb:active {
+  background: #8c0cd4;
+}
+nav#recensioni .container ::-webkit-scrollbar-track {
+  background: #8c0cd4;
+  border: 26px none #8c0cd4;
+  border-radius: 30px;
+}
+nav#recensioni .container ::-webkit-scrollbar-track:hover {
+  background: #8c0cd4;
+}
+nav#recensioni .container ::-webkit-scrollbar-track:active {
+  background: #8c0cd4;
+}
+nav#recensioni .container ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+nav#prestazioni {
+  overflow: none;
+}
+nav#prestazioni h1 {
+  border-bottom: 2px solid #3a0030;
+  border-radius: 0 0 0.8rem 0.8rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 0px 1px #a42c8f;
+}
+nav#prestazioni .container {
+  overflow-y: auto;
+  margin-bottom: 4.5rem;
+}
+nav#prestazioni .container .tab_wrap {
+  border: 2px solid #6812b0;
+  border-radius: 0.5rem 0.5rem 1.8rem 1.8rem;
+}
+nav#prestazioni .container .tab_wrap .table th,
+nav#prestazioni .container .tab_wrap .table td {
+  vertical-align: inherit;
+}
+nav#prestazioni .container .tab_wrap .table .thead-dark tr th {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  border-color: #3a0030;
+}
+nav#prestazioni .container .tab_wrap .table tbody .btn-primary {
+  color: #212529;
+  background-color: transparent;
+  box-shadow: 9px 9px 8px #addde2 inset, -22px -22px 20px #d7ffff inset;
+  border-color: #7b0fc4;
+}
+nav#prestazioni .container .tab_wrap .table tbody .btn-primary :hover {
+  color: #b1b0e4;
+  background-color: #7b0fc4;
+  box-shadow: 9px 9px 8px #7b0fc4 inset, -22px -22px 20px #7b0fc4 inset;
+  border-color: #3a0030;
+}
+nav#prestazioni .container .tab_wrap .table-striped tbody tr:nth-of-type(2n+1) {
+  background-color: transparent;
+}
+nav#prestazioni .container ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+nav#prestazioni .container ::-webkit-scrollbar-button {
+  width: 47px;
+  height: 47px;
+}
+nav#prestazioni .container ::-webkit-scrollbar-thumb {
+  background: #8c0cd4;
+  border: 23px none #8c0cd4;
+  border-radius: 17px;
+}
+nav#prestazioni .container ::-webkit-scrollbar-thumb:hover {
+  background: #8c0cd4;
+}
+nav#prestazioni .container ::-webkit-scrollbar-thumb:active {
+  background: #8c0cd4;
+}
+nav#prestazioni .container ::-webkit-scrollbar-track {
+  background: #8c0cd4;
+  border: 26px none #8c0cd4;
+  border-radius: 30px;
+}
+nav#prestazioni .container ::-webkit-scrollbar-track:hover {
+  background: #8c0cd4;
+}
+nav#prestazioni .container ::-webkit-scrollbar-track:active {
+  background: #8c0cd4;
+}
+nav#prestazioni .container ::-webkit-scrollbar-corner {
+  background: transparent;
+}
+nav#prestazioni #nw_prestazione {
+  color: #b1b0e4;
+  font-weight: bold;
+  background-color: #6812b0;
+  border: unset;
+  padding: 0.85rem 0.6rem;
+  border-radius: 1.2rem;
+}
+nav#prestazioni #nw_prestazione:hover {
+  color: white;
+  background-color: #a06fff;
+}
+
 body {
   height: 100vh;
   min-height: 100vh;
@@ -10400,6 +10564,7 @@ body {
   /* background-image: linear-gradient(to left, #8d06d8, #8d07d7, #8c09d5, #8c0ad4, #8b0bd3, #7f0fc7, #7311bc, #7f0fc7, #6812b0, #6812b0, #2c0c74, #16074e); */
   background-image: linear-gradient(to right top, #ebecff, #e3e8ff, #d9e4ff, #cee0ff, #c2ddff);
   max-height: 90vh;
+  max-width: 1980px;
   width: 90vw;
 }
 #main-container #ciao .main_white .left_side {

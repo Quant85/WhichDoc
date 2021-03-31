@@ -9,7 +9,7 @@
                 @else
                     <span>Dott.</span> 
                 @endif
-                {{Auth::user()->nome}} {{Auth::user()->cognome}}</h2>
+                {{Auth::user()->cognome}} {{Auth::user()->nome}} </h2>
             @endif
         </div>
         <div class=" component-main-container">
