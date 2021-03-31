@@ -47,20 +47,21 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        //Hamburger
-        $(document).ready(function() {
-            $('.first-button').on('click', function() {
+        <script>
+            //Hamburger
+                $(document).ready(function () {
+                $('.first-button').on('click', function () {
 
                 $('.animated-icon1').toggleClass('open');
-            });
-            $('.second-button').on('click', function() {
+                });
+                $('.second-button').on('click', function () {
 
                 $('.animated-icon2').toggleClass('open');
-            });
-            $('.third-button').on('click', function() {
+                });
+                $('.third-button').on('click', function () {
 
                 $('.animated-icon3').toggleClass('open');
+                });
             });
             // End Hamburger
             // Carousel specializzazioni
@@ -75,30 +76,19 @@
                 responsive:{
                     0:{
                     items:1
-
                     },
-                    500: {
-                        items: 2
+                    500:{
+                    items:2
                     },
-                    768: {
-                        items: 3
-                    },
+                    768:{items:3},
                     // 769:{items:3},
-                    900: {
-                        items: 3
-                    },
-                    1100: {
-                        items: 4
-                    },
-                    1400: {
-                        items: 6
-                    },
-                    2000: {
-                        items: 8
-                    }
+                    900:{items:3},
+                    1100:{items:4},
+                    1400:{items:6},
+                    2000:{items:8}
                 }
+                })
             })
-
             // Carousel Sponsorizzati 
             jQuery(document).ready(function($){
                 $('.card_container_sponsorizzati').owlCarousel({
@@ -122,6 +112,7 @@
                     1400:{items:4},
                     2000:{items:5}
                 }
+                })
             })
             // Carousel our_team
             jQuery(document).ready(function($){
@@ -140,8 +131,9 @@
                     900:{items:4},
                     1200:{items:5},
                 }
+                })
             })
-        })
+
             // Carousel recensioni_medico
             jQuery(document).ready(function($){
                 $('.container_recensioni_medico_profilo').owlCarousel({
@@ -159,13 +151,9 @@
                     900:{items:4},
                     1200:{items:5},
                 }
+                })
             })
-        })
-
-
-        
-
-    </script>
+        </script>
 </body>
 
 </html>
