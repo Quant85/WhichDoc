@@ -105,12 +105,4 @@
     table > tbody{
         text-align: center;
     }
-table > tbody> div > textarea.form-control {
-    background-color: blue !important;
-
-}
-table > tbody > tr > td > div > textarea{
-    background-color: transparent !important;
-    border:  2px inset black !important;
-}
 </style>

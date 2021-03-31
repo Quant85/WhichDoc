@@ -68,12 +68,10 @@
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-door-closed"></i></button>
-                                                
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-    
                                             {{-- End Add Model --}}
                                         </tr>
                                     </tbody>
