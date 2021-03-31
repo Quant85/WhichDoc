@@ -2,15 +2,15 @@
     <div class="container_nav d-flex justify-content-between">
             <div class="logo">
                 <a href="{{ url('/') }}">
-                    <img src="{{asset('img/logo.PNG')}}" alt="">
+                    <img src="{{asset('img/logo2.PNG')}}" alt="">
                 </a>
-                <div class="jumbo_medico_profilo">
+                {{-- <div class="jumbo_medico_profilo">
                   @auth
                     <a href="{{ url('/medico/home') }}"><i class="fas fa-home"></i></a>
                   @else
                     <a href="{{ url('/search') }}"><i class="fas fa-arrow-circle-left"></i></a>
                   @endauth
-                </div>
+                </div> --}}
             </div>
 
             <div class="login">
@@ -19,7 +19,10 @@
                         @auth
                             <div class="loggedin">
                                 <span class="notification"><i class="far fa-bell"></i></span>
-                                <div><a class="justify-content-flex-end" href="{{ url('/medico/home') }}">Home</a></div>
+                                <div><a class="justify-content-flex-end" href="{{ url('/medico/home') }}">
+                                    <img class="rounded-circle" src="{{optional(Auth::user()->profile)->foto ? asset( 'storage/'.Auth::user()->profile->foto) : asset('img/default/dottori.jpg')}}" alt="">
+                                  </a>
+                                </a></div>
                             </div>
                         @else
                             <a class="btn btn-grad-secondary" href="{{ route('login') }}">Login</a>
@@ -39,7 +42,7 @@
   <nav class="navbar navbar-light amber lighten-4 mb-4">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#"><img class="logo" src="{{asset('img/logo.jpeg')}}" alt=""></a>
+    <a class="navbar-brand" href="#"><img class="logo" src="{{asset('img/logo2.PNG')}}" alt=""></a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"

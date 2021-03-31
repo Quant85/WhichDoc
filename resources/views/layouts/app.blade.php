@@ -62,20 +62,20 @@
 
                 $('.animated-icon3').toggleClass('open');
             });
-        });
-        // End Hamburger
-        // Carousel specializzazioni
-        jQuery(document).ready(function($) {
-            $('.container_card').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
-                responsive: {
-                    0: {
-                        items: 1
+            // End Hamburger
+            // Carousel specializzazioni
+            jQuery(document).ready(function($){
+                $('.container_card').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
+                responsive:{
+                    0:{
+                    items:1
+
                     },
                     500: {
                         items: 2
@@ -98,104 +98,66 @@
                     }
                 }
             })
-        })
-        // Carousel Sponsorizzati 
-        jQuery(document).ready(function($) {
-            $('.card_container_sponsorizzati').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    575: {
-                        items: 1
-                    },
-                    768: {
-                        items: 2
-                    },
-                    769: {
-                        items: 2
-                    },
-                    900: {
-                        items: 2
-                    },
-                    1100: {
-                        items: 3
-                    },
-                    1400: {
-                        items: 4
-                    },
-                    2000: {
-                        items: 5
-                    }
-                }
-            })
-        })
-        // Carousel our_team
-        jQuery(document).ready(function($) {
-            $('.container_team').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    575: {
-                        items: 2
-                    },
-                    768: {
-                        items: 3
-                    },
-                    769: {
-                        items: 3
-                    },
-                    900: {
-                        items: 4
-                    },
-                    1200: {
-                        items: 5
-                    },
-                }
-            })
-        })
 
-        // Carousel recensioni_medico
-        jQuery(document).ready(function($) {
-            $('.container_recensioni_medico_profilo').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
-                responsive: {
-                    0: {
-                        items: 1
+            // Carousel Sponsorizzati 
+            jQuery(document).ready(function($){
+                $('.card_container_sponsorizzati').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
+                responsive:{
+                    0:{
+                    items:1
                     },
-                    575: {
-                        items: 2
+                    575:{
+                    items:1
                     },
-                    768: {
-                        items: 3
-                    },
-                    769: {
-                        items: 3
-                    },
-                    900: {
-                        items: 4
-                    },
-                    1200: {
-                        items: 5
-                    },
+                    768:{items:2},
+                    769:{items:2},
+                    900:{items:2},
+                    1100:{items:3},
+                    1400:{items:4},
+                    2000:{items:5}
+                }
+            })
+            // Carousel our_team
+            jQuery(document).ready(function($){
+                $('.container_team').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
+                responsive:{
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    769:{items:3},
+                    900:{items:4},
+                    1200:{items:5},
+                }
+            })
+        })
+            // Carousel recensioni_medico
+            jQuery(document).ready(function($){
+                $('.container_recensioni_medico_profilo').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:3000,
+                responsive:{
+                    0:{items:1},
+                    575:{items:2},
+                    768:{items:3},
+                    769:{items:3},
+                    900:{items:4},
+                    1200:{items:5},
                 }
             })
         })

@@ -1,18 +1,19 @@
 footer {
     background-color: $lavanda_sem;
     position: relative;
-        .angolo_destra_alto {
-            position: absolute;
-            top: -2px;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: $viola;
-            border-radius: 0px 0px 106px 0px;
-            transform: rotate(90deg);
-        }
-
+    .angolo_destra_alto {
+        position: absolute;
+        top: -2px;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: $viola;
+        border-radius: 0px 0px 106px 0px;
+        transform: rotate(90deg);
+    }
+    
     .container_footer{
+        padding-top: 35px;
         width: 90%;
         margin: auto;
         align-items: center;

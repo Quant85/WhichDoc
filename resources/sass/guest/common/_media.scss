@@ -35,35 +35,41 @@
     }
     /* /Ricerca avanzata */
 }
+@media(min-width:1590px){
+    .jumbotron {.jumbo_txt {top: 60px!important;}}
+}
+@media (min-width:1200px){
+       .jumbotron {
+            .jumbo_txt {
+                // top: 60px!important;
+                h1{font-size: 4rem;}
+                p{font-size: 2rem;}
+            }
+    } 
+}
 @media (max-width:1200px){
        nav{
            .container_nav {
-               width: 100%;
+                width: 100%;
+                .logo{padding: 0 70px;}
+                .login{padding: 0 70px;}
            }
        }
+          
     .search_comp {
-            position: absolute;
-            top: 2.6%;
-            left: 25%;
-            width: 30%;
-            margin: auto;
-            display: flex;
-            align-items: center;
+        left: 7%!important;
+        width: 45%!important;
+    }
 
-            .btn-grad-secondary {
-                padding: 10px 40px !important;
+    /* Ricerca avanzata */
+    #search{
+        .container_card_search{
+            .card_search{
+                width: 28%;
             }
         }
-
-        /* Ricerca avanzata */
-        #search{
-            .container_card_search{
-                .card_search{
-                    width: 28%;
-                }
-            }
-        }
-        /* /Ricerca avanzata */
+    }
+    /* /Ricerca avanzata */
 }
 
 @media (max-width:992px) {
@@ -90,16 +96,7 @@
                 .angolo_sinistra_alto {
                     z-index: 1;
                 }
-
                 filter: blur(4px);
-
-                // background-repeat: no-repeat;
-                // background-size: cover;
-                // background-position: center;
-                // img {
-                //     width: 100%;
-                //     border-radius: 115px;
-                // }
 
             }
     }
@@ -145,21 +142,25 @@
 }
 
 @media (min-width:993px) {
+    .noveN9 {display: block !important;}
+    .noveN3, .noveN7 {display: none!important;}
     .hamburger {display: none !important;}
     .card_specializzazione {width: 150px;}
+
     .search_comp {
-        position: absolute;
-        top: 2.6%;
-        left: 23%;
-        width: 30%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        
-        .btn-grad-secondary {
-            padding: 10px 40px !important;
-        }
+        top: 37% !important;
     }
+    //     position: absolute;
+    //     top: 2.6%;
+    //     left: 23%;
+    //     width: 30%;
+    //     margin: auto;
+    //     display: flex;
+    //     align-items: center;
+        
+    //     .btn-grad-secondary {
+    //         padding: 10px 40px !important;
+    //     }
         .container_statistiche{
         width: 90%;
         margin: auto;
@@ -191,10 +192,24 @@
         }
     }
 }
+
+@media (min-width:768px) and (max-width:993px) {
+    .search_comp {
+        top: 40%!important;
+        left: 7%;
+        width: 45%;
+    }
+}
 @media (max-width: 768px) {
     .card_sponsorizzato {
         margin-bottom: 10px;
     }
+     
+     .jumbo_txt{
+         h1{
+             font-size: 3rem;
+         }
+     }
         /* Ricerca avanzata */
         #search{
             .filtri{
@@ -249,7 +264,44 @@
         }
         /* /Ricerca avanzata */
 }
+@media (min-width:768px){
+    //  .search_comp {
+    //         top: 42%!important;
+    //         left: 7%;
+    //         width: 45%;
+    //     }
+        .jumbotron{
+        .jumbo_txt{
+            top: 25px;
+
+            h1 {font-size: 3.5rem;}
+            // left: 40px;
+            .noveN7, .noveN9 {display: none;}
+        }
+    }
+}
 @media (min-width: 575px) and (max-width: 768px) {
+    .jumbotron{
+        .jumbo_txt{
+            top: 25px;
+            // left: 40px;
+            .noveN7, .noveN9 {display: none;}
+        }
+    }
+    .search_comp {
+            position: absolute;
+            top: 186px;
+            left: 8%;
+            width: 37%;
+            margin: auto;
+            display: block;
+            z-index: 1;
+            .btn-grad-secondary {
+                margin: 0;
+                margin-top: 10px;
+                padding: 10px 40px !important;
+            }
+        }
     .card_ricerca_rapida {
         padding: 30px 0;
         .card_specializzazione {
@@ -274,6 +326,7 @@
         width: 75px;
         height: 75px;
     }
+
     
     
     footer{
@@ -290,27 +343,48 @@
         }
     }
 }
+@media(min-width: 576px){
+    .noveN7{display: block;}
+    .noveN3, .noveN9 {display: none;}
+    .search_comp {
+        top: 133px;
+        padding: 4px 0px;
+    }
+    .iphone_frame{
+        .container_frame {
+            .iphone_label {
+                padding-left: 265px;
+
+                span {
+                    a {
+                        font-size: 18px;
+                        padding: 5px 20px;
+                    }
+                }
+            }
+
+        }
+    }
+}
 @media (min-width: 375px) and (max-width: 575px) {
     .search_comp {
         position: absolute;
-        top: 19%;
-        left: 3%;
-        width: 35%;
+        top: 25%;
+        left: 9%;
+        width: 37%;
         margin: auto;
         display: block;
         z-index: 1;
         .btn-grad-secondary {
             margin: 0;
             margin-top: 10px;
-            padding: 10px 40px !important;
+            padding: 8px 36px !important;
         }
     }
     .jumbotron {
         overflow: hidden;
-        img {
-            width: 150%;
-            transform: scale(1.29);
-        }
+        .noveN3{display: block;}
+        .noveN7, .noveN9 {display: none;}
     }
     .card_ricerca_rapida {
         padding: 30px 0;
@@ -341,8 +415,8 @@
         .container_frame {
             height: 350px;
             .iphone_label {
-                top: 112px;
-                height: 76px;
+                top: 100px;
+                height: 100px;
                 padding-left: 170px;
                 span {
                     padding: 0 15px;
@@ -358,7 +432,7 @@
             .iphone_top {
                 width: 151.6px;
                 margin-left: 11.7px;
-                padding: 5px 4px;
+                padding: 1px 4px;
                 h4 {font-size: 15px;}
             }
             .iphone_middle {

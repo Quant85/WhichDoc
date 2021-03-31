@@ -3,9 +3,6 @@
 @section('content')   
 
     <main class="content">
-            <div class="search_bar">
-              <search-component></search-component>
-            </div>
         @include('guest.jumbotron')
         @include('guest.ricerca')
         @include('guest.sponsorizzati')
