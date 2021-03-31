@@ -10676,18 +10676,15 @@ footer .container_footer .right_footer div p {
   left: 0;
 }
 
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-  background-color: #423376;
-}
-.container-fluid #search, .container-sm #search, .container-md #search, .container-lg #search, .container-xl #search {
+#search {
   background-color: #6146C6;
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
-.container-fluid #search .selezione_search, .container-sm #search .selezione_search, .container-md #search .selezione_search, .container-lg #search .selezione_search, .container-xl #search .selezione_search {
+#search .selezione_search {
   justify-content: center;
 }
-.container-fluid #search .selezione_search #select_search, .container-sm #search .selezione_search #select_search, .container-md #search .selezione_search #select_search, .container-lg #search .selezione_search #select_search, .container-xl #search .selezione_search #select_search {
+#search .selezione_search #select_search {
   padding: 1rem 1rem;
   background-color: #4a4873;
   font-size: 1.2rem;
@@ -10700,28 +10697,28 @@ footer .container_footer .right_footer div p {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.container-fluid #search .selezione_search #select_search:hover, .container-sm #search .selezione_search #select_search:hover, .container-md #search .selezione_search #select_search:hover, .container-lg #search .selezione_search #select_search:hover, .container-xl #search .selezione_search #select_search:hover, .container-fluid #search .selezione_search #select_search:focus, .container-sm #search .selezione_search #select_search:focus, .container-md #search .selezione_search #select_search:focus, .container-lg #search .selezione_search #select_search:focus, .container-xl #search .selezione_search #select_search:focus {
+#search .selezione_search #select_search:hover, #search .selezione_search #select_search:focus {
   background-size: 2rem;
   outline: none;
 }
-.container-fluid #search .filtri, .container-sm #search .filtri, .container-md #search .filtri, .container-lg #search .filtri, .container-xl #search .filtri {
+#search .filtri {
   margin: 20px 0;
   background-color: #423376;
 }
-.container-fluid #search .filtri .filtri_recensioni, .container-sm #search .filtri .filtri_recensioni, .container-md #search .filtri .filtri_recensioni, .container-lg #search .filtri .filtri_recensioni, .container-xl #search .filtri .filtri_recensioni {
+#search .filtri .filtri_recensioni {
   width: 50%;
 }
-.container-fluid #search .filtri .filtri_recensioni h4, .container-sm #search .filtri .filtri_recensioni h4, .container-md #search .filtri .filtri_recensioni h4, .container-lg #search .filtri .filtri_recensioni h4, .container-xl #search .filtri .filtri_recensioni h4 {
+#search .filtri .filtri_recensioni h4 {
   text-align: center;
   color: #b1b0e4;
 }
-.container-fluid #search .filtri .filtri_recensioni .recensioni_search, .container-sm #search .filtri .filtri_recensioni .recensioni_search, .container-md #search .filtri .filtri_recensioni .recensioni_search, .container-lg #search .filtri .filtri_recensioni .recensioni_search, .container-xl #search .filtri .filtri_recensioni .recensioni_search {
+#search .filtri .filtri_recensioni .recensioni_search {
   width: 100%;
   margin-bottom: 30px;
   justify-content: space-evenly;
   align-items: center;
 }
-.container-fluid #search .filtri .filtri_recensioni .recensioni_search span, .container-sm #search .filtri .filtri_recensioni .recensioni_search span, .container-md #search .filtri .filtri_recensioni .recensioni_search span, .container-lg #search .filtri .filtri_recensioni .recensioni_search span, .container-xl #search .filtri .filtri_recensioni .recensioni_search span {
+#search .filtri .filtri_recensioni .recensioni_search span {
   font-size: 14px;
   padding-top: 9px;
   text-align: center;
@@ -10733,31 +10730,31 @@ footer .container_footer .right_footer div p {
   color: #b1b0e4;
   transition: transform 0.5s;
 }
-.container-fluid #search .filtri .filtri_recensioni .recensioni_search span:hover, .container-sm #search .filtri .filtri_recensioni .recensioni_search span:hover, .container-md #search .filtri .filtri_recensioni .recensioni_search span:hover, .container-lg #search .filtri .filtri_recensioni .recensioni_search span:hover, .container-xl #search .filtri .filtri_recensioni .recensioni_search span:hover {
+#search .filtri .filtri_recensioni .recensioni_search span:hover {
   background-color: #b1b0e4;
   color: white;
   transform: scale(1.2);
 }
-.container-fluid #search .filtri .filtri_recensioni .recensioni_search span label, .container-sm #search .filtri .filtri_recensioni .recensioni_search span label, .container-md #search .filtri .filtri_recensioni .recensioni_search span label, .container-lg #search .filtri .filtri_recensioni .recensioni_search span label, .container-xl #search .filtri .filtri_recensioni .recensioni_search span label {
+#search .filtri .filtri_recensioni .recensioni_search span label {
   cursor: pointer;
 }
-.container-fluid #search .filtri .filtri_recensioni .recensioni_search span input, .container-sm #search .filtri .filtri_recensioni .recensioni_search span input, .container-md #search .filtri .filtri_recensioni .recensioni_search span input, .container-lg #search .filtri .filtri_recensioni .recensioni_search span input, .container-xl #search .filtri .filtri_recensioni .recensioni_search span input {
+#search .filtri .filtri_recensioni .recensioni_search span input {
   display: none;
 }
-.container-fluid #search .filtri .filtri_voti, .container-sm #search .filtri .filtri_voti, .container-md #search .filtri .filtri_voti, .container-lg #search .filtri .filtri_voti, .container-xl #search .filtri .filtri_voti {
+#search .filtri .filtri_voti {
   width: 50%;
 }
-.container-fluid #search .filtri .filtri_voti h4, .container-sm #search .filtri .filtri_voti h4, .container-md #search .filtri .filtri_voti h4, .container-lg #search .filtri .filtri_voti h4, .container-xl #search .filtri .filtri_voti h4 {
+#search .filtri .filtri_voti h4 {
   text-align: center;
   color: #b1b0e4;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search, .container-sm #search .filtri .filtri_voti .voti_search, .container-md #search .filtri .filtri_voti .voti_search, .container-lg #search .filtri .filtri_voti .voti_search, .container-xl #search .filtri .filtri_voti .voti_search {
+#search .filtri .filtri_voti .voti_search {
   width: 100%;
   margin-bottom: 30px;
   align-items: center;
   justify-content: space-evenly;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search span, .container-sm #search .filtri .filtri_voti .voti_search span, .container-md #search .filtri .filtri_voti .voti_search span, .container-lg #search .filtri .filtri_voti .voti_search span, .container-xl #search .filtri .filtri_voti .voti_search span {
+#search .filtri .filtri_voti .voti_search span {
   font-size: 12px;
   padding-top: 9px;
   min-width: 100px;
@@ -10769,216 +10766,221 @@ footer .container_footer .right_footer div p {
   color: #b1b0e4;
   transition: transform 0.5s;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search span:first-child, .container-sm #search .filtri .filtri_voti .voti_search span:first-child, .container-md #search .filtri .filtri_voti .voti_search span:first-child, .container-lg #search .filtri .filtri_voti .voti_search span:first-child, .container-xl #search .filtri .filtri_voti .voti_search span:first-child {
+#search .filtri .filtri_voti .voti_search span:first-child {
   font-size: 14px;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search span:hover, .container-sm #search .filtri .filtri_voti .voti_search span:hover, .container-md #search .filtri .filtri_voti .voti_search span:hover, .container-lg #search .filtri .filtri_voti .voti_search span:hover, .container-xl #search .filtri .filtri_voti .voti_search span:hover {
+#search .filtri .filtri_voti .voti_search span:hover {
   transform: scale(1.2);
   background-color: #b1b0e4;
   color: white;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search span label, .container-sm #search .filtri .filtri_voti .voti_search span label, .container-md #search .filtri .filtri_voti .voti_search span label, .container-lg #search .filtri .filtri_voti .voti_search span label, .container-xl #search .filtri .filtri_voti .voti_search span label {
+#search .filtri .filtri_voti .voti_search span label {
   cursor: pointer;
 }
-.container-fluid #search .filtri .filtri_voti .voti_search span input, .container-sm #search .filtri .filtri_voti .voti_search span input, .container-md #search .filtri .filtri_voti .voti_search span input, .container-lg #search .filtri .filtri_voti .voti_search span input, .container-xl #search .filtri .filtri_voti .voti_search span input {
+#search .filtri .filtri_voti .voti_search span input {
   display: none;
 }
-.container-fluid #search .container_card_search, .container-sm #search .container_card_search, .container-md #search .container_card_search, .container-lg #search .container_card_search, .container-xl #search .container_card_search {
-  width: 100%;
+#search .container_card_search {
+  width: 80%;
+  margin: auto;
   min-height: 100vh;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 20px;
 }
-.container-fluid #search .container_card_search .card_search, .container-sm #search .container_card_search .card_search, .container-md #search .container_card_search .card_search, .container-lg #search .container_card_search .card_search, .container-xl #search .container_card_search .card_search {
+#search .container_card_search .card_search {
   width: 20%;
   height: 450px;
-  margin: 2.5%;
-  margin-bottom: 20px;
+  margin: 20px 2.5%;
   background-color: white;
   box-shadow: 2px 2px 7px 0px black;
   border-radius: 10px;
   background-color: #4a4873;
   transition: transform 0.5s;
 }
-.container-fluid #search .container_card_search .card_search:hover, .container-sm #search .container_card_search .card_search:hover, .container-md #search .container_card_search .card_search:hover, .container-lg #search .container_card_search .card_search:hover, .container-xl #search .container_card_search .card_search:hover {
+#search .container_card_search .card_search:hover {
   transform: scale(1.1);
 }
-.container-fluid #search .container_card_search .card_search a, .container-sm #search .container_card_search .card_search a, .container-md #search .container_card_search .card_search a, .container-lg #search .container_card_search .card_search a, .container-xl #search .container_card_search .card_search a {
+#search .container_card_search .card_search a {
   width: 100%;
   color: white;
   flex-direction: column;
 }
-.container-fluid #search .container_card_search .card_search a:hover, .container-sm #search .container_card_search .card_search a:hover, .container-md #search .container_card_search .card_search a:hover, .container-lg #search .container_card_search .card_search a:hover, .container-xl #search .container_card_search .card_search a:hover {
+#search .container_card_search .card_search a:hover {
   text-decoration: none;
 }
-.container-fluid #search .container_card_search .card_search a .card_top_search, .container-sm #search .container_card_search .card_search a .card_top_search, .container-md #search .container_card_search .card_search a .card_top_search, .container-lg #search .container_card_search .card_search a .card_top_search, .container-xl #search .container_card_search .card_search a .card_top_search {
+#search .container_card_search .card_search a .card_top_search {
   width: 100%;
   background-color: #b1b0e4;
   border-radius: 10px;
 }
-.container-fluid #search .container_card_search .card_search a .card_top_search h4, .container-sm #search .container_card_search .card_search a .card_top_search h4, .container-md #search .container_card_search .card_search a .card_top_search h4, .container-lg #search .container_card_search .card_search a .card_top_search h4, .container-xl #search .container_card_search .card_search a .card_top_search h4 {
+#search .container_card_search .card_search a .card_top_search h4 {
   width: 50%;
   padding: 3px;
 }
-.container-fluid #search .container_card_search .card_search a .card_top_search .immagine_dottore_search, .container-sm #search .container_card_search .card_search a .card_top_search .immagine_dottore_search, .container-md #search .container_card_search .card_search a .card_top_search .immagine_dottore_search, .container-lg #search .container_card_search .card_search a .card_top_search .immagine_dottore_search, .container-xl #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+#search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
   width: 50%;
   height: 100px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
-.container-fluid #search .container_card_search .card_search a .card_top_search .immagine_dottore_search img, .container-sm #search .container_card_search .card_search a .card_top_search .immagine_dottore_search img, .container-md #search .container_card_search .card_search a .card_top_search .immagine_dottore_search img, .container-lg #search .container_card_search .card_search a .card_top_search .immagine_dottore_search img, .container-xl #search .container_card_search .card_search a .card_top_search .immagine_dottore_search img {
+#search .container_card_search .card_search a .card_top_search .immagine_dottore_search img {
   width: 100% !important;
   position: absolute;
   right: 0;
   border-radius: 10px;
 }
-.container-fluid #search .container_card_search .card_search a .dati_dottore_search, .container-sm #search .container_card_search .card_search a .dati_dottore_search, .container-md #search .container_card_search .card_search a .dati_dottore_search, .container-lg #search .container_card_search .card_search a .dati_dottore_search, .container-xl #search .container_card_search .card_search a .dati_dottore_search {
+#search .container_card_search .card_search a .dati_dottore_search {
   height: 350px;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 3px;
   font-size: 18px;
 }
-.container-fluid #search .container_card_search .card_search a .dati_dottore_search div ul, .container-sm #search .container_card_search .card_search a .dati_dottore_search div ul, .container-md #search .container_card_search .card_search a .dati_dottore_search div ul, .container-lg #search .container_card_search .card_search a .dati_dottore_search div ul, .container-xl #search .container_card_search .card_search a .dati_dottore_search div ul {
+#search .container_card_search .card_search a .dati_dottore_search div ul {
   font-size: 22px;
   list-style: none;
 }
-.container-fluid #search .container_card_search .card_search a .dati_dottore_search div ul li, .container-sm #search .container_card_search .card_search a .dati_dottore_search div ul li, .container-md #search .container_card_search .card_search a .dati_dottore_search div ul li, .container-lg #search .container_card_search .card_search a .dati_dottore_search div ul li, .container-xl #search .container_card_search .card_search a .dati_dottore_search div ul li {
+#search .container_card_search .card_search a .dati_dottore_search div ul li {
   font-size: 18px;
 }
-.container-fluid #search .container_card_search .card_search a .dati_dottore_search p strong, .container-sm #search .container_card_search .card_search a .dati_dottore_search p strong, .container-md #search .container_card_search .card_search a .dati_dottore_search p strong, .container-lg #search .container_card_search .card_search a .dati_dottore_search p strong, .container-xl #search .container_card_search .card_search a .dati_dottore_search p strong {
+#search .container_card_search .card_search a .dati_dottore_search p strong {
   padding-right: 1px;
   font-size: 22px;
 }
 
-#profilo_medico {
-  background-color: white;
+#profilo_medico .dati_medico {
+  background: linear-gradient(0deg, rgba(131, 58, 180, 0) 354px, #673ab7 50%);
 }
-#profilo_medico .jumbo_medico_profilo {
-  height: 200px;
-  width: 100%;
-  background: #020024;
-  background: linear-gradient(180deg, #020024 0%, #6146C6 60%, #957af8 100%);
+#profilo_medico .dati_medico .a_container {
+  max-width: 90%;
+  margin: auto;
+  padding-top: 40px;
 }
-#profilo_medico .jumbo_medico_profilo a .fa-arrow-circle-left {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
+#profilo_medico .dati_medico .a_container .img_medico_profilo {
+  min-width: 30%;
 }
-#profilo_medico .jumbo_medico_profilo a .fa-home {
-  color: #53e2ba;
-  font-size: 30px;
-  margin: 5px;
+#profilo_medico .dati_medico .a_container .img_medico_profilo img {
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 12px 13px 14px -7px #d3d3d38a;
+  margin: 45px;
+  margin-top: 20px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo {
+#profilo_medico .dati_medico .a_container .middle_medico_profilo {
+  max-width: 40%;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo {
+  min-width: 50% !important;
+  padding: 30px;
+  border-radius: 40px;
+  color: #4E54D7;
+  box-shadow: 12px 13px 14px -7px #d3d3d38a;
+  background: #ffffffab;
+  text-shadow: 0px 0px 17px black;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo .dati_specifici_medico_profilo ul {
+  list-style: none;
+}
+#profilo_medico .dati_medico .a_container .middle_medico_profilo .bio_medico_profilo .dati_specifici_medico_profilo ul li span {
+  padding-left: 1px;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo {
+  min-width: 30%;
+  padding: 40px 0;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo .special_container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#profilo_medico .dati_medico .a_container .specializzazioni_medico_profilo .badge {
+  padding: 10px;
+  font-size: large;
+  margin: 10px;
+}
+#profilo_medico .b_container {
   width: 90%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo {
-  width: 50%;
+#profilo_medico .b_container .sfondo {
+  background-color: lightgreen;
+  min-width: 30%;
+  padding: 25px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .img_medico_profilo img {
-  width: 50%;
-  position: relative;
-  bottom: 50px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px #646766;
+#profilo_medico .b_container .form_m_r {
+  background-color: #9990ee;
+  min-width: 25%;
+  padding: 25px;
 }
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo {
-  padding: 10px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo h3 {
-  text-transform: capitalize;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .dati_medico_profilo .specializzazioni_medico_profilo {
-  margin-bottom: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo {
-  width: 100%;
-  margin: 20px 0;
-  background-color: #53e2ba;
-  box-shadow: 3px 3px 3px #646766;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-header .card-title {
-  font-weight: bold;
-  height: 30px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body {
-  min-height: 50px;
-}
-#profilo_medico .main_medico_profilo .top_medico_profilo .prestazioni_medico_profilo .card-body .list-unstyled .badge {
-  background-color: #53e2ba;
-}
-#profilo_medico .main_medico_profilo .middle_medico_profilo {
-  height: 300px;
-  width: 100%;
-  margin-top: 50px;
+#profilo_medico .c_container {
+  max-width: 90%;
   margin: auto;
+  min-height: 250px;
 }
-#profilo_medico .main_medico_profilo .middle_medico_profilo .bio_medico_profilo {
+#profilo_medico .c_container .container_recensioni {
+  background-color: #90aeee;
+  min-width: 45%;
+  padding: 25px;
+}
+#profilo_medico .c_container .container_recensioni #pordue {
   width: 90%;
-  height: 90%;
   margin: auto;
-  padding: 10px;
-  border: 3px solid black;
-  border-radius: 10px;
-  color: black;
-  box-shadow: 3px 3px 3px #646766;
+  display: flex !important;
+  margin: 10px;
+  min-width: 30%;
+  max-width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo {
-  height: 200px;
-  justify-content: space-around;
-  align-items: center;
+#profilo_medico .c_container .container_recensioni #pordue .card {
+  width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo {
-  border: 1px solid #4ed3ad;
-  background-color: #53e2ba;
-  border-radius: 10px;
-  padding: 5px;
-  height: 90%;
-  width: 25%;
-  box-shadow: 3px 3px 3px #646766;
+#profilo_medico .c_container .container_recensioni #pordue .card .collapse.show {
+  min-width: 30%;
+  max-width: 30%;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo strong {
-  text-transform: capitalize;
+#profilo_medico .red {
+  background-color: rebeccapurple;
+  height: 100px;
+  width: 100px;
 }
-#profilo_medico .main_medico_profilo .container_recensioni_medico_profilo .card_recensioni_medico_profilo .corpo_recensione {
-  margin-top: 15px;
-}
-#profilo_medico .main_medico_profilo .form_medico_profilo {
-  background: linear-gradient(270deg, #020024 0%, #6146C6 50%, #6146C6 100%);
-  width: 100%;
-  margin-top: 30px;
-  height: 400px;
-  justify-content: space-around;
-  align-items: center;
+#profilo_medico .blue {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
 }
 
 #form_message {
-  width: 35%;
+  width: 50%;
   margin-top: 20px;
   padding: 5px;
   border-radius: 5px;
-  background-color: #6146C6;
+  margin-right: 5%;
+  background-color: #4e55d7;
 }
 #form_message h4 {
   font-weight: bold;
 }
 #form_message form .form_input_message input {
-  width: 60%;
+  width: 50%;
   height: 20px;
   display: inline-block;
   margin-bottom: 5px;
+  font-size: 12px;
   border: none;
+  padding: 11px;
 }
 #form_message form .form_input_message input:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_message form textarea {
-  padding: 20px;
+  padding: 11px;
+  font-size: 12px;
   border: 1px solid #dddddd;
 }
 #form_message form textarea:focus {
@@ -10986,9 +10988,8 @@ footer .container_footer .right_footer div p {
   box-shadow: 1px 1px 2px black;
 }
 #form_message button {
-  background-color: black;
-  color: white;
-  font-weight: bold;
+  background-color: #ccc1e2;
+  color: #4e55d7;
 }
 #form_message button:focus {
   border: 1px solid white;
@@ -10996,14 +10997,25 @@ footer .container_footer .right_footer div p {
 }
 
 #form_recensioni {
-  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-around;
+  width: 50%;
   margin-top: 20px;
+  margin-left: 5%;
   padding: 5px;
   border-radius: 5px;
-  background: linear-gradient(270deg, #020024 0%, #573fae 70%, #553cae 100%);
+  background: #ccc1e2;
 }
 #form_recensioni h4 {
   font-weight: bold;
+}
+#form_recensioni form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #form_recensioni form .form_input_message input {
   width: 50%;
@@ -11011,29 +11023,70 @@ footer .container_footer .right_footer div p {
   display: inline-block;
   margin-bottom: 5px;
   border: none;
+  font-size: 12px;
+  padding: 11px;
 }
 #form_recensioni form .form_input_message input:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_recensioni form textarea {
-  padding: 20px;
+  padding: 11px;
   margin-bottom: 20px;
   border: 1px solid #dddddd;
+  font-size: 12px;
 }
 #form_recensioni form textarea:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_recensioni form button {
-  background-color: black;
+  background-color: #4e55d7;
   color: white;
 }
 #form_recensioni form button:focus {
   border: 1px solid white;
   box-shadow: 1px 1px 2px white;
 }
+#form_recensioni .vote_box label {
+  padding: 0 2px;
+}
+#form_recensioni .button_submit {
+  display: flex;
+  justify-content: flex-end;
+}
 
+@media (min-width: 280px) and (max-width: 1450px) {
+  /* Ricerca avanzata */
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni {
+    width: 100%;
+    border-bottom: 2px solid #b1b0e4;
+  }
+  #search .filtri .filtri_voti {
+    width: 100%;
+  }
+  #search .container_card_search {
+    width: 90%;
+  }
+  #search .container_card_search .card_search {
+    width: 22%;
+    height: 400px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 22px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 80px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 320px;
+  }
+
+  /* /Ricerca avanzata */
+}
 @media (max-width: 1200px) {
   nav .container_nav {
     width: 100%;
@@ -11051,6 +11104,13 @@ footer .container_footer .right_footer div p {
   .search_comp .btn-grad-secondary {
     padding: 10px 40px !important;
   }
+
+  /* Ricerca avanzata */
+  #search .container_card_search .card_search {
+    width: 28%;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (max-width: 992px) {
   .hamburger {
@@ -11082,6 +11142,38 @@ footer .container_footer .right_footer div p {
   .statistiche .statistiche-right .angolo_sinistra_alto {
     z-index: 1;
   }
+
+  /* Ricerca avanzata */
+  #search .container_card_search {
+    width: 95%;
+  }
+  #search .container_card_search .card_search {
+    width: 28%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul li {
+    font-size: 15px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p strong {
+    font-size: 18px;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (min-width: 993px) {
   .hamburger {
@@ -11133,6 +11225,46 @@ footer .container_footer .right_footer div p {
   .card_sponsorizzato {
     margin-bottom: 10px;
   }
+
+  /* Ricerca avanzata */
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span:hover {
+    transform: none;
+  }
+  #search .filtri .filtri_voti {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_voti .voti_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_voti .voti_search span {
+    margin: 5px 0;
+  }
+  #search .filtri .filtri_voti .voti_search span:hover {
+    transform: none;
+  }
+  #search .container_card_search {
+    width: 95%;
+  }
+  #search .container_card_search .card_search {
+    width: 40%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+
+  /* /Ricerca avanzata */
 }
 @media (min-width: 575px) and (max-width: 768px) {
   .card_ricerca_rapida {
@@ -11319,6 +11451,33 @@ footer .container_footer .right_footer div p {
   footer .container_footer .right_footer {
     width: 100%;
   }
+
+  /* Ricerca avanzata */
+  #search .filtri .filtri_recensioni .recensioni_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span {
+    margin: 5px 0;
+  }
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 400px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 80px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 320px;
+  }
+
+  /* /Ricerca avanzata */
 }
 .container_statistiche {
   width: 90%;
@@ -11330,6 +11489,77 @@ footer .container_footer .right_footer div p {
   position: absolute;
 }
 
+@media (min-width: 375px) and (max-width: 475px) {
+  /* Ricerca avanzata */
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 370px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 18px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 70px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 300px;
+  }
+
+  /* /Ricerca avanzata */
+}
+@media (min-width: 280px) and (max-width: 375px) {
+  /* Ricerca avanzata */
+  #search .selezione_search #select_search {
+    width: 100%;
+  }
+  #search .filtri {
+    flex-direction: column;
+  }
+  #search .filtri .filtri_recensioni {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #search .filtri .filtri_recensioni .recensioni_search span {
+    margin: 5px 0;
+  }
+  #search .container_card_search {
+    width: 80%;
+  }
+  #search .container_card_search .card_search {
+    width: 70%;
+    height: 300px;
+  }
+  #search .container_card_search .card_search a .card_top_search h4 {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .card_top_search .immagine_dottore_search {
+    height: 50px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search {
+    height: 250px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search div ul li {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p {
+    font-size: 12px;
+  }
+  #search .container_card_search .card_search a .dati_dottore_search p strong {
+    font-size: 12px;
+  }
+
+  /* /Ricerca avanzata */
+}
 @media (max-width: 768px) {
   .statistiche-right {
     height: 100%;
