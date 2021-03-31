@@ -64,9 +64,9 @@
                 loop:true,
                 margin:10,
                 nav:false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
                 responsive:{
                     0:{
                     items:1
@@ -89,9 +89,9 @@
                 loop:true,
                 margin:10,
                 nav:false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
                 responsive:{
                     0:{
                     items:1
@@ -114,9 +114,9 @@
                 loop:true,
                 margin:10,
                 nav:false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:5000,
                 responsive:{
                     0:{items:1},
                     575:{items:2},
@@ -134,9 +134,9 @@
                 loop:true,
                 margin:10,
                 nav:false,
-                //autoplay:true,
-                //autoplayHoverPause:true,
-                //autoplayTimeout:3000,
+                autoplay:true,
+                autoplayHoverPause:true,
+                autoplayTimeout:3000,
                 responsive:{
                     0:{items:1},
                     575:{items:2},
