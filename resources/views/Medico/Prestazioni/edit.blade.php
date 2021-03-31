@@ -47,14 +47,20 @@
 
                             <div class="box-2 d-flex justify-content-around">
                                 <div class="form-group col-2">
-                                    <label for="tipo" class="labels" style="font-size: 1.25rem">Remoto <i class="fas fa-phone-laptop px-2"></i></label>
-                                    <input type="radio" class="form-control" value="remoto" name="tipo" {{$prestazione->tipo === 'remoto' ? 'checked' : ''}} style="height: 25px;">
+                                    <label for="tipo" class="labels" style="font-size: 1.25rem">Remoto<i class="fas fa-phone-laptop px-2"></i></label>
+                                    <input type="radio" class="form-control" value="remoto" name="tipo" {{optional($prestazione)->tipo === 'remoto' ? 'checked' : ''}} style="height: 25px;">
                                 </div>
-    
+
+                                <div class="form-group col-2">
+                                    <label for="tipo" class="labels" style="font-size: 1.25rem"><i class="fas fa-phone-laptop px-2"></i>Entrambi<i class="fas fa-route px-2"></i></label>
+                                    <input type="radio" class="form-control" value="entrambi" name="tipo" {{optional($prestazione)->tipo === 'entrambi' ? 'checked' : ''}} style="height: 25px;">
+                                </div>
+
                                 <div class="form-group col-2">
                                     <label for="tipo" class="labels" style="font-size: 1.25rem">Loco<i class="fas fa-route px-2"></i></label>
-                                    <input type="radio" class="form-control" value="in-loco" name="tipo" {{$prestazione->tipo === 'in-loco' ? 'checked' : ''}} style="height: 25px;">
+                                    <input type="radio" class="form-control" value="in-loco" name="tipo" {{optional($prestazione)->tipo === 'in-loco' ? 'checked' : ''}} style="height: 25px;">
                                 </div>
+                                
                                 @error('tipo')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror

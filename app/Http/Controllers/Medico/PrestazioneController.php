@@ -56,7 +56,7 @@ class PrestazioneController extends Controller
         //dd($validated_data);
 
         Prestazione::create($validated_data);
-        return redirect('medico/profilo')->with('success', 'Prestazione saved!');
+        return redirect('medico/prestazione')->with('success', 'Prestazione saved!');
     }
 
     /**

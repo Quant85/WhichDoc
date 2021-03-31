@@ -10972,28 +10972,32 @@ footer .container_footer .right_footer div p {
 }
 
 #form_message {
-  width: 35%;
+  width: 50%;
   margin-top: 20px;
   padding: 5px;
   border-radius: 5px;
-  background-color: #6146C6;
+  margin-right: 5%;
+  background-color: #4e55d7;
 }
 #form_message h4 {
   font-weight: bold;
 }
 #form_message form .form_input_message input {
-  width: 60%;
+  width: 50%;
   height: 20px;
   display: inline-block;
   margin-bottom: 5px;
+  font-size: 12px;
   border: none;
+  padding: 11px;
 }
 #form_message form .form_input_message input:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_message form textarea {
-  padding: 20px;
+  padding: 11px;
+  font-size: 12px;
   border: 1px solid #dddddd;
 }
 #form_message form textarea:focus {
@@ -11001,9 +11005,8 @@ footer .container_footer .right_footer div p {
   box-shadow: 1px 1px 2px black;
 }
 #form_message button {
-  background-color: black;
-  color: white;
-  font-weight: bold;
+  background-color: #ccc1e2;
+  color: #4e55d7;
 }
 #form_message button:focus {
   border: 1px solid white;
@@ -11011,14 +11014,25 @@ footer .container_footer .right_footer div p {
 }
 
 #form_recensioni {
-  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-around;
+  width: 50%;
   margin-top: 20px;
+  margin-left: 5%;
   padding: 5px;
   border-radius: 5px;
-  background: linear-gradient(270deg, #020024 0%, #573fae 70%, #553cae 100%);
+  background: #ccc1e2;
 }
 #form_recensioni h4 {
   font-weight: bold;
+}
+#form_recensioni form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #form_recensioni form .form_input_message input {
   width: 50%;
@@ -11026,27 +11040,37 @@ footer .container_footer .right_footer div p {
   display: inline-block;
   margin-bottom: 5px;
   border: none;
+  font-size: 12px;
+  padding: 11px;
 }
 #form_recensioni form .form_input_message input:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_recensioni form textarea {
-  padding: 20px;
+  padding: 11px;
   margin-bottom: 20px;
   border: 1px solid #dddddd;
+  font-size: 12px;
 }
 #form_recensioni form textarea:focus {
   border: 1px solid black;
   box-shadow: 1px 1px 2px black;
 }
 #form_recensioni form button {
-  background-color: black;
+  background-color: #4e55d7;
   color: white;
 }
 #form_recensioni form button:focus {
   border: 1px solid white;
   box-shadow: 1px 1px 2px white;
+}
+#form_recensioni .vote_box label {
+  padding: 0 2px;
+}
+#form_recensioni .button_submit {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (min-width: 280px) and (max-width: 1450px) {

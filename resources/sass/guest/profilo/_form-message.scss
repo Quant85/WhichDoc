@@ -1,20 +1,23 @@
 #form_message{
-    width: 35%;
+    width: 50%;
     margin-top: 20px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #6146C6;
+    margin-right: 5%;
+    background-color: #4e55d7;
     h4{
         font-weight: bold;
     }
     form{
         .form_input_message{
             input{
-                width: 60%;
+                width: 50%;
                 height: 20px;
                 display: inline-block;
                 margin-bottom: 5px ;
+                font-size: 12px;
                 border: none;
+                padding: 11px;
                 &:focus{
                     border:1px solid black;
                     box-shadow: 1px 1px 2px black;
@@ -22,7 +25,8 @@
             }
         }
         textarea{
-            padding: 20px;
+            padding: 11px;
+            font-size: 12px;
             border:1px solid rgba(221,221,221,1);
             &:focus{
                 border:1px solid black;
@@ -31,9 +35,8 @@
         }
     }
     button{
-        background-color: black;
-        color: white;
-        font-weight: bold;
+        background-color: #ccc1e2;
+        color: #4e55d7;
                &:focus{
                 border:1px solid white;
                 box-shadow: 1px 1px 2px white;

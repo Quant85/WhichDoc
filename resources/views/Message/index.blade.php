@@ -13,7 +13,17 @@
 
                 <div class="bottom d-flex flex-row">
                     <div  class="bottom_left d-flex justify-content-around flex-column">      
-                        <h1>Gestione Messaggi Ricevuti</h1>
+                        <h1>Messaggi
+                            @if (optional(Auth::user()->profile)->genere)
+                                @if (optional(Auth::user()->profile)->genere == 'femmina')
+                                    <span>della Dott.ssa </span>
+                                @else
+                                    <span>del Dott.</span> 
+                                @endif
+                                {{Auth::user()->cognome}} {{Auth::user()->nome}}
+                            @endif
+                            <i class="fas fa-user-md" style="font-size: 2.2rem;"></i>
+                        </h1>
                         <div class="container">
                             @foreach ($medico->messages as $message)
                             <div class="messages_wrap my-4">
@@ -31,13 +41,13 @@
                                     <tbody>
                                     
                                         <tr>
-                                            <td>{{$message->nome_paziente}}</td>
                                             <td>
-                                                <div class="form-group">
-                                                    <label for=""></label>
-                                                    <textarea class="form-control"
-                                                                rows="1" disabled 
-                                                                style="border: 0px solid transparent">{{$message->testo_messaggio}}</textarea>
+                                                <span class="text-capitalize">{{$message->nome_paziente}}</span>
+                                            </td>
+                                            <td>
+                                                <div class="body_text text-truncate"><p class="d-inline-block text-truncate" style="max-width: 150px; ver">
+                                                    {{$message->testo_messaggio}}
+                                                    </p>
                                                 </div>
                                             </td>
                                             <td>{{$message->email}}</td>
@@ -95,12 +105,4 @@
     table > tbody{
         text-align: center;
     }
-table > tbody> div > textarea.form-control {
-    background-color: blue !important;
-
-}
-table > tbody > tr > td > div > textarea{
-    background-color: transparent !important;
-    border:  2px inset black !important;
-}
 </style>

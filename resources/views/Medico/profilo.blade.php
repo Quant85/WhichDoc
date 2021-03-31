@@ -33,45 +33,45 @@
                 <div class="col-12 d-flex">                        
                   <div class="col-6">
                     <label for="nome" class="labels">Nome</label>
-                    <input type="text" name="nome" class="form-control" placeholder="first name" value="{{old('nome') ? old('nome') : $medico->nome}}">
+                    <input type="text" name="nome" class="form-control" placeholder="first name" value="{{old('nome') ? old('nome') : $medico->nome}}" required>
                   </div>
-                  @error('nome')
+                  {{-- @error('nome')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
                   <div class="col-6">
                     <label for="cognome" class="labels">Cognome</label>
-                    <input type="text" name="cognome" class="form-control" value="{{old('cognome') ? old('cognome') : $medico->cognome}}" placeholder="surname">
+                    <input type="text" name="cognome" class="form-control" value="{{old('cognome') ? old('cognome') : $medico->cognome}}" placeholder="surname" required>
                   </div>
-                  @error('cognome')
+                  {{-- @error('cognome')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
                 </div>
 
                 <div class="col-12 d-flex py-2">
                   <div class="EMAIL col-5">
                     <label for="email" class="labels">Email</label>
-                    <input type="text" name="email" class="form-control" value="{{old('email') ? old('email') : $medico->email}}" placeholder="email">
+                    <input type="text" name="email" class="form-control" value="{{old('email') ? old('email') : $medico->email}}" placeholder="email" required>
                   </div>
-                  @error('email')
+                  {{-- @error('email')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
                   <div class="CELLULARE col-3">
                     <label for="cellulare"  class="labels">Contact Number</label>
                     <input type="text" name="cellulare" class="form-control" value="{{old('cellulare') ? old('cellulare') : optional($medico->profile)->cellulare}}" placeholder="number">
                   </div>
-                  @error('cellulare')
+                 {{--  @error('cellulare')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
                     <div class="INDIRIZZO col-4">
                       <label for="indirizzo" class="labels">Indirizzo</label>
                       <input type="text" name="indirizzo" class="form-control" value="{{old('indirizzo') ? old('indirizzo')  : $medico->indirizzo}}" placeholder="address">
                     </div>
-                    @error('indirizzo')
+                   {{--  @error('indirizzo')
                       <div class="alert alert-danger">{{ $message }}</div>
-                    @enderror
+                    @enderror --}}
                 </div>
 
 
@@ -80,26 +80,26 @@
                     <label for="città" class="labels">Città</label>
                     <input type="text" name="città" class="form-control" value="{{old('città') ? old('città') : optional($medico->profile)->città}} " placeholder="address">
                   </div>
-                  @error('città')
+                  {{-- @error('città')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
                   <div class="PARTITA-IVA col-6">
                     <label for="piva" class="labels">PIVA</label>
                     <input type="text" name="piva" class="form-control" value="{{old('piva') ? old('piva') : optional($medico->profile)->piva}}" placeholder="address">
                   </div>
-                  @error('piva')
+                  {{-- @error('piva')
                   <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
                 </div>
 
                 <div class="form-group col-12 p-2">
                   <label for="bio">Bio-Curriculare</label>
                   <textarea id="bio" class="ckeditor form-control " name="bio" cols="50" rows="10">{{old('bio') ? old('bio') : optional($medico->profile)->bio}}</textarea>
                 </div>
-                @error('bio')
+                {{-- @error('bio')
                   <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
+                @enderror --}}
 
                 <div class="col-12 d-flex justify-content-around">
                   <div class="GENERE">
@@ -111,27 +111,27 @@
                       <input type="radio" id="donna" class="form-control" value="femmina" name="genere" {{optional($medico->profile)->genere === 'femmina' ? 'checked' : ''}}>
                     </div>
                   </div>
-                  @error('genere')
+                  {{-- @error('genere')
                     <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
                   <div class="CV">
                     <label for="cv"><i class="fas fa-file-pdf"style="font-size: 40px; color: blue; margin-top: 20px; cursor: pointer;" title="Carica il tuo cv"></i></label>
                     <input type="file" class="form-control-file" name="cv" id="cv" placeholder="cerca" accept="{{-- image/*, --}}.pdf" aria-describedby="cvHelper" style="opacity: 0; position: absolute; z-index: -1;">
                     <small id="cvHelper" class="form-text text-muted">Carica il tuo cv.pdf/img</small>
                   </div>
-                  @error('cv')
+                  {{-- @error('cv')
                     <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
   
                   <div class="DISABILITA">
                     <h4 class="py-2">Disability Friendly</h4>
                     <label class="px-2" for="disabilità"><i class="fas fa-hand-holding-heart px-3" style="font-size: 1.8rem"></i> Attenzione alle disabilità: </label>
                     <input type="checkbox" name="disabilità" class="switch-input" value="1" {{ optional($medico->profile)->disabilità === 1 ? 'checked="checked"' : '' }}/> <br>
                   </div>
-                  @error('disabilità')
+                  {{-- @error('disabilità')
                     <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
                 </div>
                 
               </div>
@@ -148,9 +148,9 @@
                     <input type="file" class="form-control-file" name="foto" id="foto" placeholder="cerca" aria-describedby="fotoHelper">
                     <small id="fotoHelper" class="form-text text-muted">Carica la tua foto profilo</small>
                   </div>
-                  @error('foto')
+                  {{-- @error('foto')
                     <div class="alert alert-danger">{{ $message }}</div>
-                  @enderror
+                  @enderror --}}
 
 
                   <div class="form-group col-12 select_specializzazione">
@@ -168,16 +168,16 @@
                           </select>
                       @endif
 
-                      @error('specializzazione')
+                      {{-- @error('specializzazione')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
-                      @enderror
+                      @enderror --}}
                     </div>
                   </div>
                   <div class="sub_menu_profile">
                     <nav class="nav justify-content-center d-flex flex-column">
-                    <button type="submit" class="btn btn-primary m-2 d-flex justify-content-center"><i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i></button>
+                    <button type="submit" class="btn btn-primary m-2 d-flex justify-content-center"> <i class="fas fa-sign-in-alt px-3"></i><i class="fas fa-user"></i> Salva </button>
                       <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.prestazione.index')}}" role="button">Riepilogo Prestazioni</a>    
                       <a name="" id="" class="btn btn-primary m-2" href="{{route('medico.showProfile',[$medico->id])}}" role="button">Vedi Profilo</a>
                     </nav>
